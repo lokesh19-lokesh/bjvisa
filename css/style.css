@@ -13,11 +13,13 @@
   --blue-bright: #009FE3;
   --blue-soft: #E8F3FC;
   --gold: #F5B91B;
-  --gold-premium: #D9A514;
-  --gold-dark: #B8880B;
+  --gold-bright: #FFD747;
+  --gold-premium: #E5A812;
+  --gold-dark: #C28B07;
   --gold-light: #FFF9E6;
-  --gold-gradient: linear-gradient(135deg, #FDE68A 0%, #F5B91B 50%, #D9A514 100%);
-  --gold-text-gradient: linear-gradient(135deg, #FDE68A 0%, #F5B91B 45%, #D9A514 85%, #926E07 100%);
+  --gold-gradient: linear-gradient(135deg, #FFF4A3 0%, #F5B91B 40%, #E0A20D 75%, #A87604 100%);
+  --gold-text-gradient: linear-gradient(135deg, #FFF9D2 0%, #F5B91B 35%, #E2A40E 65%, #9E7404 100%);
+  --gold-badge-gradient: linear-gradient(135deg, #FFE97D 0%, #F5B91B 45%, #CF940B 100%);
   --navy-gradient: linear-gradient(135deg, #031B3A 0%, #062B5C 100%);
   --hero-gradient: linear-gradient(180deg, rgba(3, 27, 58, 0.88) 0%, rgba(6, 43, 92, 0.78) 100%);
   
@@ -29,14 +31,15 @@
   --text-muted: #667085;
   --text-light: #F1F5F9;
   --border-light: #E2E8F0;
-  --border-gold: rgba(245, 185, 27, 0.35);
-  --border-gold-strong: rgba(245, 185, 27, 0.75);
+  --border-gold: rgba(245, 185, 27, 0.45);
+  --border-gold-strong: rgba(245, 185, 27, 0.85);
 
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(3, 27, 58, 0.06);
   --shadow-md: 0 8px 24px rgba(3, 27, 58, 0.08);
   --shadow-lg: 0 16px 36px rgba(3, 27, 58, 0.12);
-  --shadow-gold: 0 8px 25px rgba(245, 185, 27, 0.28);
+  --shadow-gold: 0 8px 25px rgba(245, 185, 27, 0.4);
+  --shadow-gold-glow: 0 0 20px rgba(245, 185, 27, 0.5);
   --shadow-card-hover: 0 18px 40px rgba(6, 43, 92, 0.15);
 
   /* Typography */
@@ -122,35 +125,32 @@ img {
   display: inline-block;
 }
 
-/* Section Eyebrow Header */
+/* Section Eyebrow Header - Signature Brochure Golden Ribbon Badge */
 .section-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 0.80rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--gold-dark);
-  margin-bottom: 0.75rem;
+  letter-spacing: 2.2px;
+  color: #031B3A !important;
+  background: var(--gold-badge-gradient);
+  padding: 6px 18px;
+  border-radius: 4px 16px 16px 4px;
+  box-shadow: 0 4px 15px rgba(245, 185, 27, 0.4);
+  margin-bottom: 0.85rem;
 }
 
 .section-eyebrow::before,
 .section-eyebrow::after {
-  content: "";
-  display: inline-block;
-  width: 24px;
-  height: 2px;
-  background-color: var(--gold);
+  display: none !important;
 }
 
 .section-eyebrow-light {
-  color: var(--gold);
-}
-.section-eyebrow-light::before,
-.section-eyebrow-light::after {
-  background-color: var(--gold);
+  background: var(--gold-badge-gradient) !important;
+  color: #031B3A !important;
 }
 
 .section-title {
@@ -169,11 +169,12 @@ img {
 
 /* Gold Divider */
 .gold-divider {
-  width: 60px;
-  height: 3px;
-  background: var(--gold-gradient);
-  border-radius: 2px;
+  width: 64px;
+  height: 3.5px;
+  background: linear-gradient(90deg, #F5B91B, #FFF099, #F5B91B);
+  border-radius: 4px;
   margin: 12px 0 20px 0;
+  box-shadow: 0 0 12px rgba(245, 185, 27, 0.65);
 }
 .gold-divider.mx-auto {
   margin-left: auto;
@@ -210,17 +211,16 @@ img {
   font-size: 0.9rem;
 }
 
-/* --- Global Sticky Navbar --- */
 .navbar-bj {
   background-color: #FFFFFF;
   box-shadow: 0 4px 20px rgba(6, 43, 92, 0.08);
-  padding: 12px 0;
+  padding: 8px 0;
   transition: all var(--transition-normal);
   z-index: 1030;
 }
 
 .navbar-bj.navbar-scrolled {
-  padding: 8px 0;
+  padding: 6px 0;
   box-shadow: 0 6px 25px rgba(3, 27, 58, 0.14);
 }
 
@@ -231,14 +231,14 @@ img {
 }
 
 .navbar-bj .brand-logo-img {
-  height: 68px;
+  height: 82px;
   width: auto;
   object-fit: contain;
   transition: all var(--transition-fast);
 }
 
 .navbar-bj.navbar-scrolled .brand-logo-img {
-  height: 56px;
+  height: 64px;
 }
 
 /* Nav Links */
@@ -263,7 +263,7 @@ img {
     font-size: 0.82rem;
   }
   .navbar-bj .brand-logo-img {
-    height: 62px;
+    height: 74px;
   }
 }
 
@@ -289,28 +289,28 @@ img {
 
 /* Navbar CTA Button */
 .btn-nav-enquire {
-  background: var(--gold);
+  background: var(--gold-gradient);
   color: var(--navy-dark) !important;
   font-family: var(--font-heading);
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 800;
   padding: 9px 20px;
   border-radius: var(--radius-pill);
-  border: 1.5px solid var(--gold);
+  border: 1.5px solid #FFE47A;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 14px rgba(245, 185, 27, 0.35);
+  box-shadow: 0 4px 18px rgba(245, 185, 27, 0.45);
   transition: all var(--transition-normal);
   white-space: nowrap;
 }
 
 .btn-nav-enquire:hover {
   background: var(--navy-dark);
-  color: #FFFFFF !important;
+  color: var(--gold) !important;
   border-color: var(--gold);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(3, 27, 58, 0.25);
+  box-shadow: 0 6px 22px rgba(245, 185, 27, 0.55);
 }
 
 .btn-nav-enquire i {
@@ -335,14 +335,14 @@ img {
 
 /* --- Buttons --- */
 .btn-gold {
-  background: var(--gold);
+  background: var(--gold-gradient);
   color: var(--navy-dark);
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 0.95rem;
   padding: 12px 28px;
   border-radius: var(--radius-pill);
-  border: 1.5px solid var(--gold);
+  border: 1.5px solid #FFE47A;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -354,10 +354,10 @@ img {
 
 .btn-gold:hover {
   background: var(--navy-dark);
-  color: #FFFFFF;
+  color: var(--gold);
   border-color: var(--gold);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(3, 27, 58, 0.2);
+  box-shadow: 0 8px 26px rgba(245, 185, 27, 0.5);
 }
 
 .btn-gold i {
@@ -1642,10 +1642,10 @@ textarea.form-control-custom {
 }
 
 .footer-logo-img {
-  height: 58px;
+  height: 80px;
   width: auto;
   object-fit: contain;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .footer-brand-title {
