@@ -653,16 +653,34 @@ img {
   z-index: 2;
 }
 
-.form-control-custom,
-.form-select-custom {
+.form-control-custom {
   width: 100%;
-  padding: 10px 14px 10px 42px;
+  padding: 10px 14px 10px 42px !important;
   font-size: 0.9rem;
   border: 1.5px solid var(--border-light);
   border-radius: var(--radius-sm);
   background-color: #FAFCFE;
   color: var(--text-dark);
   transition: all var(--transition-fast);
+}
+
+.form-select-custom {
+  width: 100%;
+  padding: 10px 34px 10px 42px !important;
+  font-size: 0.9rem;
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background-color: #FAFCFE;
+  color: var(--text-dark);
+  transition: all var(--transition-fast);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23004B93' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 13px;
+  cursor: pointer;
 }
 
 .form-control-custom:focus,
