@@ -226,52 +226,44 @@ img {
 .navbar-bj .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
   padding: 0;
 }
 
 .navbar-bj .brand-logo-img {
-  height: 52px;
+  height: 68px;
   width: auto;
   object-fit: contain;
-  transition: transform var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 .navbar-bj.navbar-scrolled .brand-logo-img {
-  height: 46px;
-}
-
-.navbar-bj .brand-text-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.navbar-bj .brand-title {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--navy-deep);
-  letter-spacing: 0.5px;
-  line-height: 1.1;
-}
-
-.navbar-bj .brand-tagline {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--gold-dark);
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
+  height: 56px;
 }
 
 /* Nav Links */
 .navbar-bj .nav-link {
   font-family: var(--font-heading);
-  font-size: 0.92rem;
+  font-size: 0.90rem;
   font-weight: 600;
   color: var(--navy-deep);
-  padding: 8px 12px !important;
+  padding: 8px 10px !important;
   position: relative;
   transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .navbar-bj .nav-link {
+    font-size: 0.86rem;
+    padding: 8px 7px !important;
+  }
+  .navbar-bj .btn-nav-enquire {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+  }
+  .navbar-bj .brand-logo-img {
+    height: 62px;
+  }
 }
 
 .navbar-bj .nav-link:hover {
@@ -1601,16 +1593,33 @@ textarea.form-control-custom {
   padding-top: 25px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.85rem;
-  color: #64748B;
+  color: #94A3B8;
 }
 
 .footer-bottom a {
   color: #94A3B8;
-  margin-left: 16px;
+  text-decoration: none;
+  transition: color var(--transition-fast);
 }
 
 .footer-bottom a:hover {
   color: var(--gold);
+}
+
+.footer-bottom a.designer-credit-link {
+  color: var(--gold) !important;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.footer-bottom a.designer-credit-link:hover {
+  color: #FFFFFF !important;
+  text-decoration: underline;
+}
+
+.footer-bottom .footer-legal-links a {
+  margin-left: 16px;
 }
 
 /* --- Floating Actions --- */
