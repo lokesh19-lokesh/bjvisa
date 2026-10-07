@@ -117,6 +117,7 @@ img {
 .gold-gradient-text {
   background: var(--gold-text-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
@@ -498,6 +499,7 @@ img {
   letter-spacing: 2px;
   background: linear-gradient(135deg, #FFF6D1 0%, #F5B91B 40%, #E6AC10 70%, #9F7505 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.35rem;
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
