@@ -226,6 +226,10 @@ img {
   z-index: 1030;
 }
 
+.navbar-bj .container {
+  max-width: 1540px;
+}
+
 .navbar-bj.navbar-scrolled {
   padding: 6px 0;
   border-bottom: 2.5px solid var(--gold);
@@ -249,34 +253,71 @@ img {
   height: 64px;
 }
 
-/* Nav Links */
+/* Nav Links - Increased font size and prominence in desktop view */
 .navbar-bj .nav-link {
   font-family: var(--font-heading);
-  font-size: 0.90rem;
-  font-weight: 600;
+  font-size: 1.02rem;
+  font-weight: 700;
   color: var(--navy-deep);
-  padding: 8px 10px !important;
+  padding: 8px 12px !important;
   position: relative;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
   white-space: nowrap;
 }
 
-@media (min-width: 992px) and (max-width: 1399.98px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
   .navbar-bj .nav-link {
-    font-size: 0.86rem;
+    font-size: 0.95rem;
     padding: 8px 7px !important;
   }
-  .navbar-bj .btn-nav-enquire {
-    padding: 8px 14px;
-    font-size: 0.82rem;
-  }
   .navbar-bj .brand-logo-img {
-    height: 74px;
+    height: 72px;
+  }
+  .btn-nav-b2b {
+    padding: 7px 14px !important;
+    font-size: 0.88rem !important;
+  }
+  .btn-nav-enquire {
+    padding: 7px 16px !important;
+    font-size: 0.88rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar-bj .nav-link {
+    font-size: 1.08rem;
+    font-weight: 700;
+    padding: 9px 13px !important;
+    letter-spacing: -0.15px;
+  }
+  .btn-nav-b2b {
+    padding: 8px 20px !important;
+    font-size: 0.96rem !important;
+  }
+  .btn-nav-enquire {
+    padding: 9px 22px !important;
+    font-size: 0.96rem !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .navbar-bj .nav-link {
+    font-size: 1.14rem;
+    font-weight: 700;
+    padding: 10px 16px !important;
+  }
+  .btn-nav-b2b {
+    padding: 9px 22px !important;
+    font-size: 1.0rem !important;
+  }
+  .btn-nav-enquire {
+    padding: 10px 24px !important;
+    font-size: 1.0rem !important;
   }
 }
 
 .navbar-bj .nav-link:hover {
-  color: var(--gold-dark);
+  color: var(--blue-royal);
 }
 
 .navbar-bj .nav-link.active {
@@ -287,30 +328,89 @@ img {
 .navbar-bj .nav-link:hover::after {
   content: "";
   position: absolute;
-  bottom: 0px;
-  left: 12px;
-  right: 12px;
-  height: 2.5px;
+  bottom: -2px;
+  left: 10px;
+  right: 10px;
+  height: 3px;
   background: var(--gold-gradient);
-  border-radius: 2px;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(245, 185, 27, 0.45);
 }
 
-/* Navbar CTA Button */
+/* Navbar CTA Buttons Group */
+.nav-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* B2B CTA Button */
+.btn-nav-b2b {
+  background: var(--navy-dark);
+  color: #FFFFFF !important;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  box-shadow: 0 4px 14px rgba(3, 27, 58, 0.15);
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn-nav-b2b i {
+  color: var(--gold);
+  font-size: 0.95rem;
+  transition: transform var(--transition-fast);
+}
+
+.btn-nav-b2b:hover {
+  background: linear-gradient(135deg, #062B5C 0%, #004B93 100%);
+  color: #FFFFFF !important;
+  border-color: var(--gold-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(6, 43, 92, 0.25), 0 0 14px rgba(245, 185, 27, 0.4);
+}
+
+.btn-nav-b2b:hover i {
+  transform: scale(1.15);
+}
+
+.btn-nav-b2b.active {
+  background: var(--gold-gradient);
+  color: var(--navy-dark) !important;
+  border-color: #FFE47A;
+  box-shadow: 0 4px 16px rgba(245, 185, 27, 0.45);
+}
+
+.btn-nav-b2b.active i {
+  color: var(--navy-dark);
+}
+
+/* Enquire Now CTA Button */
 .btn-nav-enquire {
   background: var(--gold-gradient);
   color: var(--navy-dark) !important;
   font-family: var(--font-heading);
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 800;
   padding: 9px 20px;
   border-radius: var(--radius-pill);
   border: 1.5px solid #FFE47A;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   box-shadow: 0 4px 18px rgba(245, 185, 27, 0.45);
   transition: all var(--transition-normal);
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .btn-nav-enquire:hover {

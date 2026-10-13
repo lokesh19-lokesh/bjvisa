@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Highlight Active Navigation Item Based on URL
-  const navLinks = document.querySelectorAll('.navbar-bj .nav-link');
+  const navLinks = document.querySelectorAll('.navbar-bj .nav-link, .navbar-bj .btn-nav-b2b');
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 
   navLinks.forEach(link => {
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile nav auto-close when clicking links
   const navbarCollapse = document.querySelector('.navbar-collapse');
   if (navbarCollapse) {
-    const mobileNavLinks = navbarCollapse.querySelectorAll('.nav-link, .btn-nav-enquire');
+    const mobileNavLinks = navbarCollapse.querySelectorAll('.nav-link, .btn-nav-enquire, .btn-nav-b2b');
     mobileNavLinks.forEach(link => {
       link.addEventListener('click', () => {
         const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
