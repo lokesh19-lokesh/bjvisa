@@ -10,8 +10,8 @@
 A complete, production-ready, multi-page website developed for **BJ VISA CONSULTANCY**. Built using semantic HTML5, modern CSS3 with custom variables, and vanilla ES6+ JavaScript, styled using Bootstrap 5 and customized to match the brand identity established by the official BJ Visa Consultancy logo and brochures.
 
 The design adheres to the defined luxury, trusted, and corporate visual palette:
-- **Deep Navy:** `#062B5C`
-- **Dark Navy:** `#031B3A`
+- **Primary Midnight Navy:** `#00072D`
+- **Dark Navy:** `#00072D`
 - **Royal Blue:** `#004B93`
 - **Bright Blue:** `#009FE3`
 - **Gold:** `#F5B91B`
