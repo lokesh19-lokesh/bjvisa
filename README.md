@@ -1,6 +1,6 @@
 # BJ VISA CONSULTANCY
 > **Tagline:** "Your Trusted Visa Partner"  
-> **Headquarters:** Hyderabad, Telangana, India  
+> **Headquarters:** Survey No.36, Balaji Residency, 3rd Floor Uppal, Hyderabad - Warangal Hwy, Peerzadiguda, Hyderabad, Telangana 500092 ([Google Maps / GMB](https://share.google/ky13hybeJLBPz149o))  
 > **Contact:** +91 79959 74956 / +91 94937 40904 | bjvisaconsultancy@gmail.com | support.bjvisa@gmail.com  
 
 ---
