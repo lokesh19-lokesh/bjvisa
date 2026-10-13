@@ -1,7 +1,7 @@
 # BJ VISA CONSULTANCY
 > **Tagline:** "Your Trusted Visa Partner"  
 > **Headquarters:** Hyderabad, Telangana, India  
-> **Contact:** +91 79959 74956 | bjvisaconsultancy@gmail.com | support.bjvisa@gmail.com  
+> **Contact:** +91 79959 74956 / +91 94937 40904 | bjvisaconsultancy@gmail.com | support.bjvisa@gmail.com  
 
 ---
 
