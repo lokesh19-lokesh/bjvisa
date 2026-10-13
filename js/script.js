@@ -235,4 +235,15 @@ document.addEventListener('DOMContentLoaded', () => {
       toastEl.remove();
     });
   }
+
+  // 8. Hero Background Video Autoplay Assurance
+  const heroVideo = document.querySelector('.hero-bg-video');
+  if (heroVideo) {
+    const playPromise = heroVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Autoplay policy prevented playback (e.g. low-power mode); fallback poster stays visible
+      });
+    }
+  }
 });
