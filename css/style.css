@@ -1578,15 +1578,80 @@ textarea.form-control-custom {
 /* --- Ready to Travel CTA Banner --- */
 .ready-cta-section {
   background: var(--navy-dark);
-  padding: 40px 0 60px 0;
+  padding: 35px 0 55px 0;
+  position: relative;
 }
 
 .ready-cta-box {
   background: #FFFFFF;
   border-radius: var(--radius-pill);
-  padding: 24px 40px;
+  padding: 22px 38px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25), 0 0 25px rgba(245, 185, 27, 0.3);
   border: 2.5px solid var(--gold);
+}
+
+.ready-cta-box > div:first-child {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.ready-cta-box > div:first-child h3 {
+  font-size: 1.65rem;
+  margin-bottom: 4px;
+}
+
+.ready-cta-box > div:first-child p {
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.ready-cta-box > div:last-child {
+  flex-shrink: 0;
+}
+
+@media (min-width: 992px) {
+  .ready-cta-box > div:last-child.d-flex {
+    flex-wrap: nowrap !important;
+    align-items: center;
+    gap: 12px !important;
+  }
+  .ready-cta-box .btn-gold,
+  .ready-cta-box .btn-whatsapp {
+    white-space: nowrap;
+    padding: 11px 22px;
+    font-size: 0.92rem;
+  }
+}
+
+/* Optimized display for 1280x800 and laptop screens */
+@media (min-width: 992px) and (max-width: 1366px) {
+  .ready-cta-section {
+    padding: 28px 0 46px 0;
+  }
+  .ready-cta-box {
+    padding: 16px 30px;
+    gap: 16px !important;
+  }
+  .ready-cta-box > div:first-child h3 {
+    font-size: 1.42rem;
+    margin-bottom: 2px;
+  }
+  .ready-cta-box > div:first-child p {
+    font-size: 0.88rem;
+    max-width: 580px;
+  }
+  .ready-cta-box > div:last-child.d-flex {
+    gap: 10px !important;
+  }
+  .ready-cta-box .btn-gold,
+  .ready-cta-box .btn-whatsapp {
+    padding: 10px 18px;
+    font-size: 0.88rem;
+  }
+  .brochure-script-tagline {
+    font-size: 1.85rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 /* --- Inner Page Banners (Subpage Hero) --- */
