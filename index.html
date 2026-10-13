@@ -101,8 +101,17 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero-vayd">
-    <div class="container position-relative">
+  <header class="hero-vayd position-relative overflow-hidden">
+    <!-- AI Concept Background Video -->
+    <div class="hero-video-wrapper">
+      <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" poster="images/hero/vayd-hero.jpg">
+        <source src="videos/hero-concept.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+
+    <div class="container position-relative" style="z-index: 3;">
       <div class="row align-items-center g-4">
         <!-- Hero Left Content -->
         <div class="col-lg-7 text-start">
