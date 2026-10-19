@@ -2267,11 +2267,97 @@ textarea.form-control-custom {
 @media (max-width: 991.98px) {
   .hero-vayd {
     min-height: auto;
-    padding: 60px 0;
+    padding: 30px 0 35px 0;
+  }
+  .hero-brochure-eyebrow {
+    font-size: 0.74rem;
+    letter-spacing: 1.5px;
+    gap: 8px;
+    margin-bottom: 0.4rem;
+  }
+  .hero-brochure-eyebrow .hero-gold-line {
+    width: 20px;
+  }
+  .hero-partner-title {
+    font-size: clamp(1.75rem, 5.2vw, 2.4rem);
+    letter-spacing: 1.2px;
+    line-height: 1.15;
+    margin-bottom: 0.45rem;
+  }
+  .hero-gold-divider {
+    width: 60px;
+    height: 3px;
+    margin: 6px 0 12px 0;
+  }
+  .hero-sub-motto {
+    font-size: 1.02rem;
+    line-height: 1.4;
+    margin-bottom: 0.85rem;
+  }
+  .hero-vayd-desc {
+    font-size: 0.94rem;
+    line-height: 1.55;
+    margin-bottom: 0.75rem;
+  }
+  .hero-narrative-sub {
+    font-size: 0.86rem;
+    line-height: 1.5;
+    margin-bottom: 1rem !important;
+  }
+  .hero-country-badges {
+    gap: 6px;
+    margin-bottom: 1.25rem;
+  }
+  .country-pill {
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    gap: 6px;
+  }
+  .country-pill-flag {
+    font-size: 1rem;
+  }
+  .hero-action-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1.5rem !important;
+  }
+  .hero-action-btns .btn-gold,
+  .hero-action-btns .btn-outline-gold {
+    width: 100%;
+    text-align: center;
+    padding: 12px 18px;
+    font-size: 0.92rem;
   }
   .hero-vayd-features {
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 2rem;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+  }
+  .hero-vayd-feature-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+  }
+  .hero-vayd-feature-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    font-size: 1rem;
+  }
+  .hero-vayd-feature-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .hero-enquiry-card {
+    margin-top: 1rem;
+    padding: 24px 20px 20px;
   }
   .service-strip-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -2312,17 +2398,38 @@ textarea.form-control-custom {
     display: none;
   }
   .section-padding {
-    padding: 55px 0;
+    padding: 45px 0;
   }
   .section-title {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
   }
   .service-strip-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
-  .hero-vayd-title {
-    font-size: 3.4rem;
+  .hero-partner-title {
+    font-size: 1.85rem;
+    letter-spacing: 1px;
+    line-height: 1.15;
+  }
+  .hero-brochure-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 1px;
+  }
+  .hero-brochure-eyebrow .hero-gold-line {
+    display: none;
+  }
+  .hero-vayd-desc {
+    font-size: 0.90rem;
+    line-height: 1.5;
+  }
+  .hero-narrative-sub {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+  .country-pill {
+    padding: 4px 10px;
+    font-size: 0.76rem;
   }
   .why-choose-grid {
     grid-template-columns: 1fr;
@@ -2341,14 +2448,27 @@ textarea.form-control-custom {
 }
 
 @media (max-width: 480px) {
-  .hero-vayd-title {
-    font-size: 2.8rem;
+  .hero-vayd {
+    padding: 18px 0 26px 0;
   }
-  .hero-vayd-subheading {
-    font-size: 1.35rem;
+  .hero-partner-title {
+    font-size: 1.6rem;
+    letter-spacing: 0.6px;
+    line-height: 1.16;
+  }
+  .hero-sub-motto {
+    font-size: 0.92rem;
+    margin-bottom: 0.55rem;
   }
   .hero-enquiry-card {
-    padding: 24px 18px;
+    padding: 20px 16px;
+  }
+  .hero-enquiry-card .card-title {
+    font-size: 1.25rem;
+  }
+  .hero-enquiry-card .card-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 12px;
   }
   .btn-gold,
   .btn-outline-gold,
