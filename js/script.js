@@ -239,11 +239,33 @@ document.addEventListener('DOMContentLoaded', () => {
   // 8. Hero Background Video Autoplay Assurance
   const heroVideo = document.querySelector('.hero-bg-video');
   if (heroVideo) {
-    const playPromise = heroVideo.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        // Autoplay policy prevented playback (e.g. low-power mode); fallback poster stays visible
-      });
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+    heroVideo.playsInline = true;
+
+    const playVideo = () => {
+      const playPromise = heroVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // If browser policy paused it, auto-play on first user touch/scroll/click
+          const unlockPlay = () => {
+            heroVideo.play().catch(() => {});
+            window.removeEventListener('click', unlockPlay);
+            window.removeEventListener('touchstart', unlockPlay);
+            window.removeEventListener('scroll', unlockPlay);
+          };
+          window.addEventListener('click', unlockPlay, { once: true, passive: true });
+          window.addEventListener('touchstart', unlockPlay, { once: true, passive: true });
+          window.addEventListener('scroll', unlockPlay, { once: true, passive: true });
+        });
+      }
+    };
+
+    if (heroVideo.readyState >= 2) {
+      playVideo();
+    } else {
+      heroVideo.addEventListener('loadeddata', playVideo, { once: true });
+      playVideo();
     }
   }
 });

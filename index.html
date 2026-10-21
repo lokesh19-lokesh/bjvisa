@@ -101,19 +101,19 @@
   </nav>
 
   <!-- HERO SECTION -->
-  <header class="hero-vayd position-relative overflow-hidden">
+  <header class="hero-vayd position-relative overflow-hidden" id="heroSection">
     <!-- Background Video with Fallback Poster -->
     <div class="hero-video-wrapper">
-      <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" poster="images/hero/vayd-hero.jpg">
+      <video class="hero-bg-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="images/hero/hero-poster.jpg">
         <source src="videos/hero.mp4" type="video/mp4">
       </video>
       <div class="hero-video-overlay"></div>
     </div>
 
-    <div class="container position-relative py-3 py-lg-5">
-      <div class="row align-items-center g-4">
+    <div class="container position-relative hero-content-container py-3 py-lg-4">
+      <div class="row align-items-center g-4 g-xl-5">
         <!-- Hero Left Content -->
-        <div class="col-lg-7 text-start">
+        <div class="col-lg-7 col-xl-7 text-start hero-left-col">
           <div class="hero-brochure-eyebrow mb-2">
             <span class="hero-gold-line"></span>
             <span>BJ VISA CONSULTANCY &bull; YOUR JOURNEY. OUR GUIDANCE.</span>
@@ -130,34 +130,23 @@
           <p class="hero-vayd-desc">
             A family holiday you've been planning for years. A loved one waiting for you abroad. An important business opportunity. A destination you've always dreamed of visiting. Whatever takes you across borders, your journey deserves the right guidance.
           </p>
-          <p class="small text-light opacity-90 mb-3 hero-narrative-sub">
+          <p class="hero-narrative-sub">
             At <strong>BJ VISA CONSULTANCY</strong>, we provide personalized visa assistance, documentation guidance and professional support to help make your international travel journey clearer, simpler and more reassuring. <em>Your destination matters. Your documents matter. And your peace of mind matters to us.</em>
           </p>
 
           <!-- Country Focus Badges -->
-          <div class="hero-country-badges mb-4">
-            <span class="country-pill">
-              <span class="country-pill-flag">🇪🇺</span> Schengen
-            </span>
-            <span class="country-pill">
-              <span class="country-pill-flag">🇬🇧</span> United Kingdom
-            </span>
-            <span class="country-pill">
-              <span class="country-pill-flag">🇯🇵</span> Japan
-            </span>
-            <span class="country-pill">
-              <span class="country-pill-flag">🇦🇺</span> Australia
-            </span>
-            <span class="country-pill">
-              <span class="country-pill-flag">🇦🇪</span> UAE
-            </span>
-            <span class="country-pill">
-              <i class="bi bi-shield-check text-gold"></i> Professional Guidance
-            </span>
+          <div class="hero-country-badges mb-3">
+            <span class="country-pill"><span class="country-pill-flag">🇪🇺</span> Schengen</span>
+            <span class="country-pill"><span class="country-pill-flag">🇬🇧</span> United Kingdom</span>
+            <span class="country-pill"><span class="country-pill-flag">🇯🇵</span> Japan</span>
+            <span class="country-pill"><span class="country-pill-flag">🇦🇺</span> Australia</span>
+            <span class="country-pill"><span class="country-pill-flag">🇦🇪</span> UAE</span>
+            <span class="country-pill"><span class="country-pill-flag">🇸🇬</span> Singapore</span>
+            <span class="country-pill"><i class="bi bi-shield-check text-gold"></i> Professional Guidance</span>
           </div>
 
           <!-- Action Buttons -->
-          <div class="d-flex flex-wrap gap-3 mb-4 hero-action-btns">
+          <div class="d-flex flex-wrap gap-3 hero-action-btns">
             <button class="btn-gold" data-bs-toggle="modal" data-bs-target="#enquiryModal">
               Check Your Visa Eligibility <i class="bi bi-arrow-right"></i>
             </button>
@@ -165,41 +154,16 @@
               <i class="bi bi-whatsapp me-1"></i> Talk to Our Visa Expert
             </a>
           </div>
-
-          <!-- 4 Core Trust Highlights Strip -->
-          <div class="hero-vayd-features">
-            <div class="hero-vayd-feature-item">
-              <div class="hero-vayd-feature-icon">
-                <i class="bi bi-globe-americas"></i>
-              </div>
-              <div class="hero-vayd-feature-label">Tourist Visa</div>
-            </div>
-            <div class="hero-vayd-feature-item">
-              <div class="hero-vayd-feature-icon">
-                <i class="bi bi-briefcase"></i>
-              </div>
-              <div class="hero-vayd-feature-label">Business Visa</div>
-            </div>
-            <div class="hero-vayd-feature-item">
-              <div class="hero-vayd-feature-icon">
-                <i class="bi bi-people"></i>
-              </div>
-              <div class="hero-vayd-feature-label">Family Visit</div>
-            </div>
-            <div class="hero-vayd-feature-item">
-              <div class="hero-vayd-feature-icon">
-                <i class="bi bi-gem"></i>
-              </div>
-              <div class="hero-vayd-feature-label">Premium VAYD</div>
-            </div>
-          </div>
         </div>
 
         <!-- Hero Right: Quick Enquiry Form Card -->
-        <div class="col-lg-5">
+        <div class="col-lg-5 col-xl-5 hero-right-col">
           <div class="hero-enquiry-card">
-            <h3 class="card-title">Check Your Visa Eligibility</h3>
-            <p class="card-subtitle">Tell us about your plans &bull; Our team will guide the next steps</p>
+            <div class="hero-card-header mb-3">
+              <span class="hero-card-tag"><i class="bi bi-patch-check-fill text-gold me-1"></i> Quick Eligibility Check</span>
+              <h3 class="card-title">Check Your Visa Eligibility</h3>
+              <p class="card-subtitle">Tell us about your plans &bull; Our visa specialists will guide you</p>
+            </div>
 
             <form id="heroEnquiryForm" novalidate>
               <div class="row g-2 mb-2">
@@ -217,12 +181,13 @@
                 </div>
               </div>
 
-              <div class="form-group-custom mb-2">
-                <i class="bi bi-envelope"></i>
-                <input type="email" class="form-control-custom" placeholder="Email Address *" required>
-              </div>
-
               <div class="row g-2 mb-2">
+                <div class="col-sm-6">
+                  <div class="form-group-custom mb-0">
+                    <i class="bi bi-envelope"></i>
+                    <input type="email" class="form-control-custom" placeholder="Email Address *" required>
+                  </div>
+                </div>
                 <div class="col-sm-6">
                   <div class="form-group-custom mb-0">
                     <i class="bi bi-send"></i>
@@ -237,6 +202,9 @@
                     </select>
                   </div>
                 </div>
+              </div>
+
+              <div class="row g-2 mb-2">
                 <div class="col-sm-6">
                   <div class="form-group-custom mb-0">
                     <i class="bi bi-geo-alt"></i>
@@ -254,16 +222,17 @@
                     </select>
                   </div>
                 </div>
-              </div>
-
-              <div class="form-group-custom mb-2">
-                <i class="bi bi-calendar3"></i>
-                <input type="date" class="form-control-custom" placeholder="Tentative Travel Date">
+                <div class="col-sm-6">
+                  <div class="form-group-custom mb-0">
+                    <i class="bi bi-calendar3"></i>
+                    <input type="date" class="form-control-custom" placeholder="Travel Date" title="Tentative Travel Date">
+                  </div>
+                </div>
               </div>
 
               <div class="form-group-custom has-textarea mb-3">
                 <i class="bi bi-chat-text"></i>
-                <textarea class="form-control-custom" rows="2" placeholder="Your requirements or specific questions"></textarea>
+                <textarea class="form-control-custom" rows="2" placeholder="Your requirements or specific questions (optional)"></textarea>
               </div>
 
               <button type="submit" class="btn-gold w-100 py-2 fs-6">
@@ -271,11 +240,61 @@
               </button>
 
               <div class="text-center mt-2">
-                <small class="text-muted" style="font-size: 0.76rem;">
-                  <i class="bi bi-lock-fill text-gold me-1"></i> Your information will be handled responsibly and used to respond to your enquiry.
+                <small class="text-muted hero-trust-privacy">
+                  <i class="bi bi-shield-lock-fill text-gold me-1"></i> Your information is handled securely &bull; Prompt response by specialists
                 </small>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Core Trust Highlights Strip -->
+      <div class="hero-bottom-strip mt-4 pt-3">
+        <div class="row g-2 g-md-3">
+          <div class="col-6 col-lg-3">
+            <a href="visa-services.html#touristVisa" class="hero-feature-pill">
+              <div class="hero-feature-pill-icon">
+                <i class="bi bi-globe-americas"></i>
+              </div>
+              <div class="hero-feature-pill-text">
+                <span class="hero-feature-pill-title">Tourist Visa</span>
+                <span class="hero-feature-pill-sub">Holidays &amp; Leisure</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-lg-3">
+            <a href="visa-services.html#businessVisa" class="hero-feature-pill">
+              <div class="hero-feature-pill-icon">
+                <i class="bi bi-briefcase"></i>
+              </div>
+              <div class="hero-feature-pill-text">
+                <span class="hero-feature-pill-title">Business Visa</span>
+                <span class="hero-feature-pill-sub">Corporate &amp; Meetings</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-lg-3">
+            <a href="visa-services.html#familyVisit" class="hero-feature-pill">
+              <div class="hero-feature-pill-icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <div class="hero-feature-pill-text">
+                <span class="hero-feature-pill-title">Family Visit</span>
+                <span class="hero-feature-pill-sub">Loved Ones Abroad</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-lg-3">
+            <a href="premium-vayd.html" class="hero-feature-pill highlight-vayd">
+              <div class="hero-feature-pill-icon">
+                <i class="bi bi-gem"></i>
+              </div>
+              <div class="hero-feature-pill-text">
+                <span class="hero-feature-pill-title">Premium VAYD</span>
+                <span class="hero-feature-pill-sub">Doorstep Biometrics</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
