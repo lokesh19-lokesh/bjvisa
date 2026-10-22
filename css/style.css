@@ -1719,6 +1719,86 @@ textarea.form-control-custom {
   margin: 0;
 }
 
+/* --- More Than Visa Assistance Section --- */
+.more-travel-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(0, 7, 45, 0.08);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 16px rgba(0, 7, 45, 0.04);
+  position: relative;
+  text-decoration: none;
+}
+
+.more-travel-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+  box-shadow: 0 16px 32px rgba(0, 7, 45, 0.08), 0 0 16px rgba(245, 185, 27, 0.18);
+}
+
+.more-travel-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--blue-soft);
+  color: var(--navy-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  transition: all var(--transition-fast);
+  border: 1.5px solid rgba(245, 185, 27, 0.35);
+}
+
+.more-travel-card:hover .more-travel-icon-box {
+  background: var(--navy-deep);
+  color: var(--gold);
+  transform: scale(1.08);
+  border-color: var(--gold);
+}
+
+.more-travel-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy-deep);
+  margin-bottom: 10px;
+}
+
+.more-travel-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.more-travel-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--navy-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.more-travel-card:hover .more-travel-link {
+  color: #B8860B;
+  transform: translateX(4px);
+}
+
+.travel-services-cta-banner {
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-dark) 100%);
+  border: 1.5px solid rgba(245, 185, 27, 0.35);
+  box-shadow: 0 12px 32px rgba(0, 7, 45, 0.15);
+}
+
 /* --- Ready to Travel CTA Banner --- */
 .ready-cta-section {
   background: var(--navy-dark);

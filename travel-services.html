@@ -127,47 +127,69 @@
     </div>
   </section>
 
-  <!-- 5 Core Travel Services -->
+  <!-- 6 Core Travel Services -->
   <section class="section-padding bg-light-soft">
     <div class="container">
-      <div class="text-center max-w-700 mx-auto mb-5">
+      <div class="text-center max-w-700 mx-auto mb-4">
         <div class="section-eyebrow">OUR SPECIALIZED SERVICES</div>
         <h2 class="section-title">What We Offer</h2>
         <div class="gold-divider mx-auto"></div>
         <p class="section-subtitle">
-          From flight reservations to customized tour packages, discover our specialized travel support.
+          From passport issuance and flight bookings to private transfers and customized tour packages, discover our specialized travel support.
         </p>
       </div>
 
-      <!-- Service 1: International Travel Packages -->
-      <div class="service-detail-block" id="packages">
+      <!-- Quick Anchor Navigation Pills -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+        <a href="#passport" class="btn btn-sm btn-outline-navy rounded-pill px-3 py-2">
+          <i class="bi bi-person-vcard text-gold me-1"></i> Passport Services
+        </a>
+        <a href="#insurance" class="btn btn-sm btn-outline-navy rounded-pill px-3 py-2">
+          <i class="bi bi-shield-check text-gold me-1"></i> Travel Insurance
+        </a>
+        <a href="#ticketing" class="btn btn-sm btn-outline-navy rounded-pill px-3 py-2">
+          <i class="bi bi-airplane text-gold me-1"></i> Flight Tickets
+        </a>
+        <a href="#hotels" class="btn btn-sm btn-outline-navy rounded-pill px-3 py-2">
+          <i class="bi bi-buildings text-gold me-1"></i> Hotel Booking
+        </a>
+        <a href="#transportation" class="btn btn-sm btn-outline-navy rounded-pill px-3 py-2">
+          <i class="bi bi-car-front text-gold me-1"></i> Transportation
+        </a>
+        <a href="#packages" class="btn btn-sm btn-outline-navy rounded-pill px-3 py-2">
+          <i class="bi bi-compass text-gold me-1"></i> Tour Packages
+        </a>
+      </div>
+
+      <!-- Service 1: Passport Services -->
+      <div class="service-detail-block" id="passport">
         <div class="row align-items-center g-4">
           <div class="col-lg-7">
             <div class="d-flex align-items-center gap-3 mb-3">
               <div class="service-strip-icon-box" style="width: 52px; height: 52px; font-size: 1.4rem;">
-                <i class="bi bi-compass"></i>
+                <i class="bi bi-person-vcard"></i>
               </div>
-              <h3 class="font-heading fw-bold mb-0 text-navy">1. International Travel Packages</h3>
+              <h3 class="font-heading fw-bold mb-0 text-navy">1. Passport Services</h3>
             </div>
             <p class="text-muted">
-              We curate bespoke holiday and tour packages designed for families, honeymooners, solo explorers, and group travelers. Whether discovering European historical landmarks, tropical Maldives escapes, or cultural immersion in Japan, our packages include hand-picked itineraries and complete visa guidance.
+              A valid passport is the essential first step of every international journey. We provide end-to-end guidance and appointment coordination for Indian passport applications, renewals, Tatkaal express processing, ECR/Non-ECR status modification, minor/spouse endorsements, and police clearance certificate (PCC) assistance at Passport Seva Kendras (PSK/POPSK).
             </p>
             <ul class="service-benefit-list">
-              <li><i class="bi bi-check-circle-fill"></i> Customized daily itineraries matched with visa requirements.</li>
-              <li><i class="bi bi-check-circle-fill"></i> Curated luxury, premium, and budget-friendly stay options.</li>
-              <li><i class="bi bi-check-circle-fill"></i> Guided sightseeing tours, museum skip-the-line passes &amp; transfers.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Fresh passport applications, renewals &amp; Tatkaal urgent appointment booking.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Comprehensive document scrutiny to avoid query slips or PSK resubmissions.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Assistance with damaged/lost passports, name corrections, and address endorsements.</li>
             </ul>
-            <a href="destinations.html" class="btn-gold btn-sm px-4">
-              Explore Tour Packages <i class="bi bi-arrow-right"></i>
-            </a>
+            <button class="btn-gold btn-sm px-4" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-visa-type="Passport Services">
+              Request Passport Assistance <i class="bi bi-arrow-right"></i>
+            </button>
           </div>
           <div class="col-lg-5">
-            <img src="images/destinations/europe.jpg" alt="European Tour Packages" class="rounded-3 w-100 shadow-sm" style="height: 260px; object-fit: cover;">
+            <img src="images/services/passport-services.jpg" alt="Passport Services in Hyderabad" class="rounded-3 w-100 shadow-sm" style="height: 260px; object-fit: cover;">
           </div>
         </div>
       </div>
 
-      <!-- Service 2: Travel Insurance -->
+      <!-- Service 2: Travel Insurance Assistance -->
       <div class="service-detail-block" id="insurance">
         <div class="row align-items-center g-4">
           <div class="col-lg-7">
@@ -175,7 +197,7 @@
               <div class="service-strip-icon-box" style="width: 52px; height: 52px; font-size: 1.4rem;">
                 <i class="bi bi-shield-check"></i>
               </div>
-              <h3 class="font-heading fw-bold mb-0 text-navy">2. Travel Insurance</h3>
+              <h3 class="font-heading fw-bold mb-0 text-navy">2. Travel Insurance Assistance</h3>
             </div>
             <p class="text-muted">
               Medical emergencies abroad can lead to crippling expenses. We issue government and embassy-approved travel insurance covering medical hospitalization, emergency evacuation, baggage loss, passport theft, and unexpected trip cancellations.
@@ -183,7 +205,7 @@
             <ul class="service-benefit-list">
               <li><i class="bi bi-check-circle-fill"></i> Mandatory Schengen policy compliant with minimum €30,000 medical coverage.</li>
               <li><i class="bi bi-check-circle-fill"></i> Zero-deductible claims assistance and 24/7 global emergency helpline.</li>
-              <li><i class="bi bi-check-circle-fill"></i> Coverage for pre-existing emergency stabilization and COVID-19 care.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Coverage for trip delays, lost baggage, medical evacuation, and COVID-19 care.</li>
             </ul>
             <button class="btn-navy btn-sm px-4" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-visa-type="Travel Insurance">
               Get Insurance Quote <i class="bi bi-arrow-right"></i>
@@ -195,7 +217,7 @@
         </div>
       </div>
 
-      <!-- Service 3: Air Ticketing Assistance -->
+      <!-- Service 3: Flight Ticket Assistance -->
       <div class="service-detail-block" id="ticketing">
         <div class="row align-items-center g-4">
           <div class="col-lg-7">
@@ -203,10 +225,10 @@
               <div class="service-strip-icon-box" style="width: 52px; height: 52px; font-size: 1.4rem;">
                 <i class="bi bi-airplane"></i>
               </div>
-              <h3 class="font-heading fw-bold mb-0 text-navy">3. Air Ticketing Assistance</h3>
+              <h3 class="font-heading fw-bold mb-0 text-navy">3. Flight Ticket Assistance</h3>
             </div>
             <p class="text-muted">
-              Most embassies recommend submitting flight reservations rather than purchasing non-refundable air tickets before visa issuance. We generate authentic, verifiable round-trip flight itineraries for your application dossier, and help you lock in competitive airfares once the visa is approved.
+              Most embassies recommend submitting verifiable flight reservations rather than purchasing non-refundable air tickets before visa issuance. We generate authentic, verifiable round-trip flight itineraries for your application dossier, and help you lock in competitive airfares once the visa is approved.
             </p>
             <ul class="service-benefit-list">
               <li><i class="bi bi-check-circle-fill"></i> Verifiable flight itineraries for embassy submission without upfront full purchase risks.</li>
@@ -223,7 +245,7 @@
         </div>
       </div>
 
-      <!-- Service 4: Hotel Reservation Assistance -->
+      <!-- Service 4: Hotel Booking Assistance -->
       <div class="service-detail-block" id="hotels">
         <div class="row align-items-center g-4">
           <div class="col-lg-7">
@@ -231,7 +253,7 @@
               <div class="service-strip-icon-box" style="width: 52px; height: 52px; font-size: 1.4rem;">
                 <i class="bi bi-buildings"></i>
               </div>
-              <h3 class="font-heading fw-bold mb-0 text-navy">4. Hotel Reservation Assistance</h3>
+              <h3 class="font-heading fw-bold mb-0 text-navy">4. Hotel Booking Assistance</h3>
             </div>
             <p class="text-muted">
               Consulates demand authentic proof of accommodation that strictly correlates with your travel itinerary dates and locations. We provide confirmed hotel bookings across trusted global hospitality chains with flexible cancellation terms.
@@ -251,30 +273,63 @@
         </div>
       </div>
 
-      <!-- Service 5: Travel Planning Guidance -->
-      <div class="service-detail-block" id="guidance">
+      <!-- Service 5: Transportation Arrangements -->
+      <div class="service-detail-block" id="transportation">
         <div class="row align-items-center g-4">
           <div class="col-lg-7">
             <div class="d-flex align-items-center gap-3 mb-3">
               <div class="service-strip-icon-box" style="width: 52px; height: 52px; font-size: 1.4rem;">
-                <i class="bi bi-map"></i>
+                <i class="bi bi-car-front"></i>
               </div>
-              <h3 class="font-heading fw-bold mb-0 text-navy">5. Travel Planning Guidance</h3>
+              <h3 class="font-heading fw-bold mb-0 text-navy">5. Transportation Arrangements</h3>
             </div>
             <p class="text-muted">
-              Navigating immigration protocols, forex card options, overseas SIM cards, customs regulations, and local transit passes can be overwhelming. We equip our travelers with practical, up-to-date travel dossiers before departure.
+              Arrive at your international destination with total confidence and ease. We arrange dedicated airport meet-and-greet transfers, private chauffeur services, intercity transfers, and international rail passes (such as Eurail, Swiss Travel Pass, and Japan Rail Pass) tailored to your exact travel itinerary.
             </p>
             <ul class="service-benefit-list">
-              <li><i class="bi bi-check-circle-fill"></i> Pre-departure briefing covering immigration counter interview tips.</li>
-              <li><i class="bi bi-check-circle-fill"></i> Guidance on multi-currency travel forex cards &amp; international e-SIMs.</li>
-              <li><i class="bi bi-check-circle-fill"></i> Destination safety, local laws, transit cards, and seasonal packing tips.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Pre-arranged private airport arrivals and departures with professional drivers.</li>
+              <li><i class="bi bi-check-circle-fill"></i> International train reservations, Eurail passes &amp; intercity express coaches.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Chauffeur-driven executive cars, family minivans, and local rental coordination.</li>
             </ul>
-            <button class="btn-gold btn-sm px-4" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-visa-type="Travel Guidance">
-              Book Travel Briefing <i class="bi bi-arrow-right"></i>
+            <button class="btn-gold btn-sm px-4" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-visa-type="Transportation">
+              Arrange Transportation <i class="bi bi-arrow-right"></i>
             </button>
           </div>
           <div class="col-lg-5">
-            <img src="images/destinations/japan.jpg" alt="Travel Planning Guidance" class="rounded-3 w-100 shadow-sm" style="height: 260px; object-fit: cover;">
+            <img src="images/services/transportation.jpg" alt="International Airport Transfers and Transportation Arrangements" class="rounded-3 w-100 shadow-sm" style="height: 260px; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 6: International Tour Packages -->
+      <div class="service-detail-block" id="packages">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="service-strip-icon-box" style="width: 52px; height: 52px; font-size: 1.4rem;">
+                <i class="bi bi-compass"></i>
+              </div>
+              <h3 class="font-heading fw-bold mb-0 text-navy">6. International Tour Packages</h3>
+            </div>
+            <p class="text-muted">
+              We curate bespoke holiday and tour packages designed for families, honeymooners, solo explorers, and group travelers. Whether discovering European historical landmarks, tropical Maldives escapes, or cultural immersion in Japan, our packages include hand-picked itineraries and complete visa guidance.
+            </p>
+            <ul class="service-benefit-list">
+              <li><i class="bi bi-check-circle-fill"></i> Customized daily itineraries matched with visa requirements.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Curated luxury, premium, and budget-friendly stay options.</li>
+              <li><i class="bi bi-check-circle-fill"></i> Guided sightseeing tours, museum skip-the-line passes &amp; transfers.</li>
+            </ul>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="destinations.html" class="btn-gold btn-sm px-4">
+                Explore Tour Packages <i class="bi bi-arrow-right"></i>
+              </a>
+              <button class="btn-navy btn-sm px-4" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-visa-type="Tour Package">
+                Customize Package
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <img src="images/services/tour-packages.jpg" alt="International Tour Packages" class="rounded-3 w-100 shadow-sm" style="height: 260px; object-fit: cover;">
           </div>
         </div>
       </div>
