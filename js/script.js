@@ -185,9 +185,9 @@ document.addEventListener('DOMContentLoaded', () => {
     handleFormSubmit(contactPageForm, 'Thank you for reaching out to BJ Visa Consultancy. Our Hyderabad team will contact you shortly.');
   }
 
-  const b2bPartnerForm = document.getElementById('b2bPartnerForm');
+  const b2bPartnerForm = document.getElementById('b2bPartnerRegistrationForm') || document.getElementById('b2bPartnerForm');
   if (b2bPartnerForm) {
-    handleFormSubmit(b2bPartnerForm, 'Thank you for your B2B Partner registration. Our partner management team will review your application and contact you within 24 hours.');
+    handleFormSubmit(b2bPartnerForm, 'Thank you for your B2B Partner enquiry. Our team will review your enquiry and contact you regarding the available services and partnership process.');
   }
 
   const careersForm = document.getElementById('careersForm');
