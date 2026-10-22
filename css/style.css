@@ -1822,6 +1822,87 @@ textarea.form-control-custom {
   color: var(--gold);
 }
 
+/* --- Final Call To Action Section --- */
+.final-cta-section {
+  background: linear-gradient(135deg, var(--navy-deep) 0%, #000F36 50%, var(--navy-dark) 100%);
+  padding: 85px 0;
+  position: relative;
+  border-top: 2px solid rgba(245, 185, 27, 0.25);
+  border-bottom: 2px solid rgba(245, 185, 27, 0.25);
+}
+
+.final-cta-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(245, 185, 27, 0.12) 0%, rgba(0, 180, 216, 0.04) 50%, transparent 70%);
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+.final-cta-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(245, 185, 27, 0.45);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 48px rgba(0, 7, 45, 0.35), 0 0 32px rgba(245, 185, 27, 0.1);
+  backdrop-filter: blur(8px);
+  max-width: 900px;
+}
+
+.final-cta-title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  color: #FFFFFF;
+  line-height: 1.25;
+}
+
+.final-cta-lead {
+  font-size: 1.2rem;
+  color: #F8F9FA;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.final-cta-desc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.65;
+}
+
+.final-cta-brand-box {
+  background: rgba(0, 7, 45, 0.55);
+  border: 1px solid rgba(245, 185, 27, 0.35);
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+  display: inline-block;
+}
+
+.final-cta-brand-name {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  font-size: 1.05rem;
+}
+
+.final-cta-tagline {
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.final-cta-motto {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 4px;
+}
+
 /* --- Ready to Travel CTA Banner --- */
 .ready-cta-section {
   background: var(--navy-dark);
