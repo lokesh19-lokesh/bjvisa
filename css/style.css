@@ -3086,3 +3086,285 @@ textarea.form-control-custom {
   box-shadow: 0 16px 32px rgba(0, 7, 45, 0.08);
 }
 
+/* ==========================================================================
+   BJ VISA CONSULTANCY - LUXURY LOGO PRELOADER
+   Appears on initial website open and home page reload; suppressed on redirect
+   ========================================================================== */
+
+/* Synchronous suppression when navigating from other subpages */
+html.no-preloader #bj-preloader {
+  display: none !important;
+}
+
+body.preloader-active {
+  overflow: hidden !important;
+}
+
+.bj-preloader {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(ellipse at 50% 45%, #001248 0%, #00072D 60%, #00041A 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: all;
+  user-select: none;
+}
+
+.bj-preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.bj-preloader-backdrop {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bj-preloader-glow {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 185, 27, 0.24) 0%, rgba(0, 75, 147, 0.16) 45%, transparent 70%);
+  filter: blur(50px);
+  animation: bjPreloaderPulseGlow 3s ease-in-out infinite;
+}
+
+.bj-preloader-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  transform: scale(1);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.5s ease;
+}
+
+.bj-preloader.fade-out .bj-preloader-content {
+  transform: scale(1.05);
+  opacity: 0;
+}
+
+/* Logo & Orbital Rings Container */
+.bj-preloader-logo-wrap {
+  position: relative;
+  width: 156px;
+  height: 156px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+/* Outer Orbit - Dashed Golden Rotating Ring */
+.bj-preloader-orbit-outer {
+  position: absolute;
+  width: 154px;
+  height: 154px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(245, 185, 27, 0.45);
+  animation: bjPreloaderSpin 16s linear infinite;
+}
+
+/* Inner Orbit - Glowing Gold Arc with Satellite Spark */
+.bj-preloader-orbit-inner {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top: 2px solid #FFD747;
+  border-right: 2px solid rgba(245, 185, 27, 0.5);
+  border-bottom: 2px solid #E5A812;
+  filter: drop-shadow(0 0 10px rgba(245, 185, 27, 0.6));
+  animation: bjPreloaderSpinReverse 3.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.bj-preloader-orbit-inner::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FFF9E6;
+  box-shadow: 0 0 8px #FFD747, 0 0 16px #F5B91B;
+}
+
+/* Center Logo Emblem with Breathing Pulse */
+.bj-preloader-logo {
+  width: 92px;
+  height: 92px;
+  object-fit: contain;
+  position: relative;
+  z-index: 3;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.7)) 
+          drop-shadow(0 0 16px rgba(245, 185, 27, 0.4));
+  animation: bjPreloaderLogoBreath 2.6s ease-in-out infinite;
+}
+
+/* Brand Name & Tagline */
+.bj-preloader-brand {
+  margin-bottom: 8px;
+}
+
+.bj-preloader-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #FFF9D2 0%, #FFD747 30%, #F5B91B 65%, #C28B07 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 6px 0;
+  text-shadow: 0 4px 20px rgba(245, 185, 27, 0.25);
+}
+
+.bj-preloader-tagline {
+  font-family: var(--font-main);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(241, 245, 249, 0.85);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.bj-preloader-tagline::before,
+.bj-preloader-tagline::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: rgba(245, 185, 27, 0.5);
+}
+
+/* Luxury Progress Bar */
+.bj-preloader-progress-track {
+  width: 150px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+  margin: 20px auto 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.bj-preloader-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #F5B91B 0%, #FFD747 50%, #FFF4A3 100%);
+  border-radius: 99px;
+  box-shadow: 0 0 10px rgba(245, 185, 27, 0.9);
+  animation: bjPreloaderFill 1.25s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Keyframe Animations */
+@keyframes bjPreloaderSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bjPreloaderSpinReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes bjPreloaderLogoBreath {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.7)) 
+            drop-shadow(0 0 14px rgba(245, 185, 27, 0.35));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 14px 30px rgba(0, 0, 0, 0.8)) 
+            drop-shadow(0 0 24px rgba(245, 185, 27, 0.65));
+  }
+}
+
+@keyframes bjPreloaderPulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.95;
+  }
+}
+
+@keyframes bjPreloaderFill {
+  0% { width: 0%; }
+  35% { width: 45%; }
+  75% { width: 85%; }
+  100% { width: 100%; }
+}
+
+@media (max-width: 575.98px) {
+  .bj-preloader-logo-wrap {
+    width: 136px;
+    height: 136px;
+  }
+  .bj-preloader-orbit-outer {
+    width: 134px;
+    height: 134px;
+  }
+  .bj-preloader-orbit-inner {
+    width: 114px;
+    height: 114px;
+  }
+  .bj-preloader-logo {
+    width: 78px;
+    height: 78px;
+  }
+  .bj-preloader-title {
+    font-size: 1.05rem;
+    letter-spacing: 0.18em;
+  }
+  .bj-preloader-tagline {
+    font-size: 0.66rem;
+    letter-spacing: 0.2em;
+  }
+  .bj-preloader-progress-track {
+    width: 130px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bj-preloader-orbit-outer,
+  .bj-preloader-orbit-inner,
+  .bj-preloader-logo,
+  .bj-preloader-glow,
+  .bj-preloader-progress-bar {
+    animation: none !important;
+  }
+  .bj-preloader.fade-out {
+    transition: opacity 0.15s ease !important;
+  }
+}
+
+

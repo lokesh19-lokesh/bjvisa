@@ -3,6 +3,112 @@
  * Tagline: "Your Trusted Visa Partner"
  */
 
+// ============================================================================
+// 0. Session Navigation & Logo Preloader Controller
+// ============================================================================
+(function initNavigationAndPreloader() {
+  const currentFileName = window.location.pathname.split('/').pop() || 'index.html';
+
+  // Track internal link navigation across all pages
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (link && link.getAttribute('href')) {
+      const href = link.getAttribute('href').trim();
+      // Internal navigation (not external, mailto, tel, or fragment anchor)
+      if (
+        !href.startsWith('http://') &&
+        !href.startsWith('https://') &&
+        !href.startsWith('mailto:') &&
+        !href.startsWith('tel:') &&
+        !href.startsWith('#') &&
+        !href.startsWith('javascript:')
+      ) {
+        try {
+          sessionStorage.setItem('bj_nav_source', 'internal');
+          sessionStorage.setItem('bj_last_page', currentFileName);
+        } catch (err) {}
+      }
+    }
+  }, true);
+
+  // Handle BFCache (back-forward cache) restoration
+  window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+      const preloader = document.getElementById('bj-preloader');
+      if (preloader) {
+        preloader.style.display = 'none';
+        document.body.classList.remove('preloader-active');
+      }
+    }
+  });
+
+  // Home Page Preloader Logic
+  const preloader = document.getElementById('bj-preloader');
+  if (preloader) {
+    if (document.documentElement.classList.contains('no-preloader')) {
+      // Suppressed because of redirect/navigation from another page
+      if (preloader.parentNode) {
+        preloader.parentNode.removeChild(preloader);
+      } else {
+        preloader.style.display = 'none';
+      }
+      try {
+        sessionStorage.setItem('bj_site_opened', 'true');
+        sessionStorage.setItem('bj_last_page', 'index.html');
+        sessionStorage.removeItem('bj_nav_source');
+      } catch (err) {}
+      return;
+    }
+
+    // Active Preloader: Lock scroll and coordinate animation
+    document.body.classList.add('preloader-active');
+
+    const startTime = Date.now();
+    const minDisplayTime = 1100; // minimum duration (ms) for luxury animation
+    let dismissed = false;
+
+    const dismissPreloader = () => {
+      if (dismissed) return;
+      dismissed = true;
+
+      const elapsed = Date.now() - startTime;
+      const delay = Math.max(0, minDisplayTime - elapsed);
+
+      setTimeout(() => {
+        preloader.classList.add('fade-out');
+        document.body.classList.remove('preloader-active');
+
+        try {
+          sessionStorage.setItem('bj_site_opened', 'true');
+          sessionStorage.setItem('bj_last_page', 'index.html');
+          sessionStorage.removeItem('bj_nav_source');
+        } catch (err) {}
+
+        setTimeout(() => {
+          if (preloader.parentNode) {
+            preloader.parentNode.removeChild(preloader);
+          } else {
+            preloader.style.display = 'none';
+          }
+        }, 700);
+      }, delay);
+    };
+
+    if (document.readyState === 'complete') {
+      dismissPreloader();
+    } else {
+      window.addEventListener('load', dismissPreloader);
+      // Safety timeout in case heavy media takes too long
+      setTimeout(dismissPreloader, 2400);
+    }
+  } else {
+    // On subpages: record current page in sessionStorage
+    try {
+      sessionStorage.setItem('bj_last_page', currentFileName);
+    } catch (err) {}
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Dynamic Year in Footer
   const yearSpans = document.querySelectorAll('.current-year');

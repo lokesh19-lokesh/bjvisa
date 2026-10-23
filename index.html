@@ -55,9 +55,105 @@
     "description": "Professional visa consultancy providing Tourist, Business, Family, and Premium Doorstep Biometric Visa Services (VAYD)."
   }
   </script>
+
+  <!-- Critical Preloader Style & Detection Script -->
+  <style>
+    html.no-preloader #bj-preloader { display: none !important; }
+    body.preloader-active { overflow: hidden !important; }
+  </style>
+  <script>
+    (function() {
+      try {
+        // 1. Detect if this is a Page Reload
+        var navEntries = performance.getEntriesByType && performance.getEntriesByType('navigation');
+        var isReload = false;
+        if (navEntries && navEntries.length > 0) {
+          isReload = (navEntries[0].type === 'reload');
+        } else if (window.performance && window.performance.navigation) {
+          isReload = (window.performance.navigation.type === 1);
+        }
+
+        // 2. Detect redirect / navigation from another internal page
+        var referrer = document.referrer || '';
+        var lastPage = sessionStorage.getItem('bj_last_page');
+        var navSource = sessionStorage.getItem('bj_nav_source');
+        var siteOpened = sessionStorage.getItem('bj_site_opened');
+
+        var internalSubpages = [
+          'about.html',
+          'b2b.html',
+          'careers.html',
+          'contact.html',
+          'destinations.html',
+          'premium-vayd.html',
+          'travel-services.html',
+          'visa-services.html'
+        ];
+
+        var cameFromSubpageReferrer = internalSubpages.some(function(page) {
+          return referrer.indexOf(page) !== -1;
+        });
+
+        var cameFromSubpageStorage = lastPage && internalSubpages.some(function(page) {
+          return lastPage.indexOf(page) !== -1;
+        });
+
+        var isFromAnotherPage = cameFromSubpageReferrer || cameFromSubpageStorage || (navSource === 'internal' && lastPage && lastPage !== 'index.html');
+
+        // Condition check:
+        // Preloader should ONLY come when website is opened OR when home page is reloaded.
+        // It should NOT come when redirected from another page.
+        var shouldShow = false;
+
+        if (isReload) {
+          shouldShow = true;
+        } else if (isFromAnotherPage) {
+          shouldShow = false;
+        } else if (!siteOpened) {
+          shouldShow = true;
+        } else {
+          // Internal within-session navigation to home
+          shouldShow = false;
+        }
+
+        if (!shouldShow) {
+          document.documentElement.classList.add('no-preloader');
+        }
+      } catch (e) {
+        document.documentElement.classList.add('no-preloader');
+      }
+    })();
+  </script>
 </head>
 
 <body>
+
+  <!-- ========================================================================
+       BJ VISA CONSULTANCY - LUXURY ANIMATED LOGO PRELOADER
+       Shows on website open & home page reload; suppressed on redirect
+       ======================================================================== -->
+  <div id="bj-preloader" class="bj-preloader" role="status" aria-live="polite" aria-label="Loading BJ Visa Consultancy">
+    <div class="bj-preloader-backdrop">
+      <div class="bj-preloader-glow"></div>
+    </div>
+    <div class="bj-preloader-content">
+      <div class="bj-preloader-logo-wrap">
+        <!-- Dual Golden Orbital Animation Rings -->
+        <div class="bj-preloader-orbit-outer"></div>
+        <div class="bj-preloader-orbit-inner"></div>
+        <!-- Center Brand Logo Emblem -->
+        <img src="images/logo.png" alt="BJ Visa Consultancy" class="bj-preloader-logo" width="92" height="92">
+      </div>
+      <div class="bj-preloader-brand">
+        <h2 class="bj-preloader-title">BJ VISA CONSULTANCY</h2>
+        <p class="bj-preloader-tagline">Your Trusted Visa Partner</p>
+      </div>
+      <!-- Luxury Gold Progress Bar -->
+      <div class="bj-preloader-progress-track">
+        <div class="bj-preloader-progress-bar"></div>
+      </div>
+    </div>
+  </div>
 
   <!-- Top Utility Bar -->
   <div class="top-bar">
