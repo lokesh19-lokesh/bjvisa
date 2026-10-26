@@ -3450,6 +3450,7 @@ body.preloader-active {
   text-transform: uppercase;
   background: linear-gradient(135deg, #FFF9D2 0%, #FFD747 30%, #F5B91B 65%, #C28B07 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0 0 6px 0;
   text-shadow: 0 4px 20px rgba(245, 185, 27, 0.25);
