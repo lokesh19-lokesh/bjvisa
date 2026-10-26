@@ -298,6 +298,7 @@
             <p class="card-subtitle">Fill in your details for prompt consultation</p>
 
             <form id="heroEnquiryForm" novalidate>
+              <!-- 1. Full Name & 2. WhatsApp Number -->
               <div class="row g-2 mb-2">
                 <div class="col-sm-6">
                   <div class="form-group-custom mb-0">
@@ -313,70 +314,110 @@
                 </div>
               </div>
 
-              <div class="form-group-custom mb-2">
-                <i class="bi bi-envelope"></i>
-                <input type="email" class="form-control-custom" placeholder="Email Address *" required>
-              </div>
-
+              <!-- 3. Email Id & 4. Destination -->
               <div class="row g-2 mb-2">
                 <div class="col-sm-6">
                   <div class="form-group-custom mb-0">
-                    <i class="bi bi-send"></i>
-                    <select class="form-select-custom" required>
-                      <option value="" selected disabled>Visa Type *</option>
-                      <option value="Tourist Visa">Tourist Visa</option>
-                      <option value="Business Visa">Business Visa</option>
-                      <option value="Family Visit Visa">Family Visit Visa</option>
-                      <option value="Premium VAYD">Premium VAYD (UK &amp; Schengen)</option>
-                      <option value="Passport Services">Passport Services</option>
-                      <option value="Visa Documentation">Visa Documentation Review</option>
-                    </select>
+                    <i class="bi bi-envelope"></i>
+                    <input type="email" class="form-control-custom" placeholder="Email Id *" required>
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group-custom mb-0">
                     <i class="bi bi-geo-alt"></i>
+                    <input type="text" class="form-control-custom" placeholder="Destination *" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5. Departure City & 11. Approximate Budget -->
+              <div class="row g-2 mb-2">
+                <div class="col-sm-6">
+                  <div class="form-group-custom mb-0">
+                    <i class="bi bi-building"></i>
+                    <input type="text" class="form-control-custom" placeholder="Departure City (e.g. Hyderabad) *" required>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group-custom mb-0">
+                    <i class="bi bi-wallet2"></i>
                     <select class="form-select-custom" required>
-                      <option value="" selected disabled>Country *</option>
-                      <option value="United Kingdom">United Kingdom</option>
-                      <option value="Schengen Countries">Schengen Countries (Europe)</option>
-                      <option value="Dubai / UAE">Dubai / UAE</option>
-                      <option value="Singapore">Singapore</option>
-                      <option value="Thailand">Thailand</option>
-                      <option value="Bali / Indonesia">Bali / Indonesia</option>
-                      <option value="Maldives">Maldives</option>
-                      <option value="Vietnam">Vietnam</option>
-                      <option value="Australia">Australia</option>
-                      <option value="Japan">Japan</option>
-                      <option value="China">China</option>
-                      <option value="Other Destination">Other Destination</option>
+                      <option value="" selected disabled>Approximate Budget *</option>
+                      <option value="Under ₹50,000 / person">Under ₹50,000 / person</option>
+                      <option value="₹50,000 - ₹1,00,000 / person">₹50,000 - ₹1,00,000 / person</option>
+                      <option value="₹1,00,000 - ₹2,00,000 / person">₹1,00,000 - ₹2,00,000 / person</option>
+                      <option value="₹2,00,000 - ₹3,50,000 / person">₹2,00,000 - ₹3,50,000 / person</option>
+                      <option value="₹3,50,000+ / Luxury">₹3,50,000+ / Luxury</option>
                     </select>
                   </div>
                 </div>
               </div>
 
+              <!-- 6. Preferred Travel Date & 7. Return Date -->
               <div class="row g-2 mb-2">
-                <div class="col-sm-5">
+                <div class="col-sm-6">
                   <div class="form-group-custom mb-0">
-                    <i class="bi bi-calendar3"></i>
-                    <input type="date" class="form-control-custom" placeholder="Travel Date" title="Travel Date">
+                    <i class="bi bi-calendar-event"></i>
+                    <input type="date" class="form-control-custom" placeholder="Preferred Travel Date" title="Preferred Travel Date" required>
+                  </div>
+                  <small class="text-muted ps-1" style="font-size: 0.70rem;">Preferred Travel Date *</small>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group-custom mb-0">
+                    <i class="bi bi-calendar-check"></i>
+                    <input type="date" class="form-control-custom" placeholder="Return Date" title="Return Date" required>
+                  </div>
+                  <small class="text-muted ps-1" style="font-size: 0.70rem;">Return Date *</small>
+                </div>
+              </div>
+
+              <!-- 8. Number of Adults, 9. Number of Children & 10. Age of Children -->
+              <div class="row g-2 mb-2">
+                <div class="col-4">
+                  <div class="form-group-custom mb-0">
+                    <i class="bi bi-people"></i>
+                    <select class="form-select-custom" required>
+                      <option value="" selected disabled>Adults *</option>
+                      <option value="1 Adult">1 Adult</option>
+                      <option value="2 Adults">2 Adults</option>
+                      <option value="3 Adults">3 Adults</option>
+                      <option value="4 Adults">4 Adults</option>
+                      <option value="5+ Adults">5+ Adults</option>
+                    </select>
                   </div>
                 </div>
-                <div class="col-sm-7">
+                <div class="col-4">
                   <div class="form-group-custom mb-0">
-                    <i class="bi bi-chat-text"></i>
-                    <input type="text" class="form-control-custom" placeholder="Travel Details / Query">
+                    <i class="bi bi-person"></i>
+                    <select class="form-select-custom">
+                      <option value="" selected disabled>Children</option>
+                      <option value="0 Children">0 Children</option>
+                      <option value="1 Child">1 Child</option>
+                      <option value="2 Children">2 Children</option>
+                      <option value="3+ Children">3+ Children</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-group-custom mb-0">
+                    <i class="bi bi-balloon"></i>
+                    <input type="text" class="form-control-custom" placeholder="Age of Children (e.g. 5, 9 / NA)">
                   </div>
                 </div>
               </div>
 
-              <button type="submit" class="btn-gold w-100 mt-2 py-2">
-                Send Enquiry <i class="bi bi-arrow-right"></i>
+              <!-- 12. Additional Requirements -->
+              <div class="form-group-custom has-textarea mb-2">
+                <i class="bi bi-chat-text"></i>
+                <input type="text" class="form-control-custom" placeholder="Additional Requirements (Visa, Flights, VAYD...)">
+              </div>
+
+              <button type="submit" class="btn-gold w-100 py-2">
+                Start Your Journey <i class="bi bi-arrow-right"></i>
               </button>
 
               <div class="text-center mt-2">
-                <small class="text-muted"><i class="bi bi-lock-fill text-gold me-1"></i> Our team will get in touch with
-                  you shortly.</small>
+                <small class="text-muted"><i class="bi bi-lock-fill text-gold me-1"></i> Quick response via WhatsApp or Phone</small>
               </div>
             </form>
           </div>
@@ -1335,7 +1376,7 @@
 
   <!-- Universal Enquiry Modal -->
   <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
       <div class="modal-content border-0 shadow-lg rounded-4 overflow-hidden">
         <div class="modal-header bg-navy text-white border-0 py-3 px-4 position-relative">
           <div class="gold-divider position-absolute top-0 start-0 end-0 m-0 w-100" style="height: 4px;"></div>
@@ -1347,50 +1388,125 @@
         </div>
         <div class="modal-body p-4 bg-light">
           <form id="modalEnquiryForm" novalidate>
-            <div class="form-group-custom">
-              <i class="bi bi-person"></i>
-              <input type="text" class="form-control-custom" placeholder="Full Name *" required>
+            <!-- 1. Full Name & 2. WhatsApp Number -->
+            <div class="row g-2 mb-2">
+              <div class="col-md-6">
+                <div class="form-group-custom mb-0">
+                  <i class="bi bi-person"></i>
+                  <input type="text" class="form-control-custom" placeholder="Full Name *" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group-custom mb-0">
+                  <i class="bi bi-whatsapp"></i>
+                  <input type="tel" class="form-control-custom" placeholder="WhatsApp Number *" required>
+                </div>
+              </div>
             </div>
-            <div class="form-group-custom">
-              <i class="bi bi-whatsapp"></i>
-              <input type="tel" class="form-control-custom" placeholder="WhatsApp Number *" required>
+
+            <!-- 3. Email Id & 4. Destination -->
+            <div class="row g-2 mb-2">
+              <div class="col-md-6">
+                <div class="form-group-custom mb-0">
+                  <i class="bi bi-envelope"></i>
+                  <input type="email" class="form-control-custom" placeholder="Email Id *" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group-custom mb-0">
+                  <i class="bi bi-geo-alt"></i>
+                  <input type="text" class="form-control-custom" id="modalCountry" placeholder="Destination *" required>
+                </div>
+              </div>
             </div>
-            <div class="form-group-custom">
-              <i class="bi bi-envelope"></i>
-              <input type="email" class="form-control-custom" placeholder="Email Address *" required>
+
+            <!-- 5. Departure City & 11. Approximate Budget -->
+            <div class="row g-2 mb-2">
+              <div class="col-md-6">
+                <div class="form-group-custom mb-0">
+                  <i class="bi bi-building"></i>
+                  <input type="text" class="form-control-custom" placeholder="Departure City (e.g. Hyderabad) *" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group-custom mb-0">
+                  <i class="bi bi-wallet2"></i>
+                  <select class="form-select-custom" required>
+                    <option value="" selected disabled>Approximate Budget *</option>
+                    <option value="Under ₹50,000 / person">Under ₹50,000 / person</option>
+                    <option value="₹50,000 - ₹1,00,000 / person">₹50,000 - ₹1,00,000 / person</option>
+                    <option value="₹1,00,000 - ₹2,00,000 / person">₹1,00,000 - ₹2,00,000 / person</option>
+                    <option value="₹2,00,000 - ₹3,50,000 / person">₹2,00,000 - ₹3,50,000 / person</option>
+                    <option value="₹3,50,000+ / Luxury">₹3,50,000+ / Luxury</option>
+                  </select>
+                </div>
+              </div>
             </div>
-            <div class="form-group-custom">
-              <i class="bi bi-send"></i>
-              <select class="form-select-custom" id="modalVisaType" required>
-                <option value="" selected disabled>Select Visa Type *</option>
-                <option value="Tourist Visa">Tourist Visa Assistance</option>
-                <option value="Business Visa">Business Visa Assistance</option>
-                <option value="Family Visit Visa">Family Visit Visa</option>
-                <option value="Premium VAYD">Premium VAYD (Doorstep Biometrics)</option>
-                <option value="Passport Services">Passport Services</option>
-                <option value="Visa Documentation">Visa Documentation Review</option>
-                <option value="Travel Package">International Tour Package</option>
-              </select>
+
+            <!-- 6. Preferred Travel Date & 7. Return Date -->
+            <div class="row g-2 mb-2">
+              <div class="col-md-6">
+                <div class="form-group-custom mb-0">
+                  <i class="bi bi-calendar-event"></i>
+                  <input type="date" class="form-control-custom" placeholder="Preferred Travel Date" title="Preferred Travel Date" required>
+                </div>
+                <small class="text-muted ps-1" style="font-size: 0.72rem;">Preferred Travel Date *</small>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group-custom mb-0">
+                  <i class="bi bi-calendar-check"></i>
+                  <input type="date" class="form-control-custom" placeholder="Return Date" title="Return Date" required>
+                </div>
+                <small class="text-muted ps-1" style="font-size: 0.72rem;">Return Date *</small>
+              </div>
             </div>
-            <div class="form-group-custom">
-              <i class="bi bi-geo-alt"></i>
-              <input type="text" class="form-control-custom" id="modalCountry"
-                placeholder="Preferred Country / Destination *" required>
+
+            <!-- 8. Number of Adults, 9. Number of Children & 10. Age of Children -->
+            <div class="row g-2 mb-2">
+              <div class="col-md-4">
+                <div class="form-group-custom mb-0">
+                  <i class="bi bi-people"></i>
+                  <select class="form-select-custom" required>
+                    <option value="" selected disabled>Number of Adults *</option>
+                    <option value="1 Adult">1 Adult</option>
+                    <option value="2 Adults">2 Adults</option>
+                    <option value="3 Adults">3 Adults</option>
+                    <option value="4 Adults">4 Adults</option>
+                    <option value="5+ Adults">5+ Adults</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group-custom mb-0">
+                  <i class="bi bi-person"></i>
+                  <select class="form-select-custom">
+                    <option value="" selected disabled>Number of Children</option>
+                    <option value="0 Children">0 Children</option>
+                    <option value="1 Child">1 Child</option>
+                    <option value="2 Children">2 Children</option>
+                    <option value="3+ Children">3+ Children</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group-custom mb-0">
+                  <i class="bi bi-balloon"></i>
+                  <input type="text" class="form-control-custom" placeholder="Age of Children (e.g. 5, 9 / NA)">
+                </div>
+              </div>
             </div>
-            <div class="form-group-custom">
-              <i class="bi bi-calendar3"></i>
-              <input type="date" class="form-control-custom">
-            </div>
-            <div class="form-group-custom has-textarea">
+
+            <!-- 12. Additional Requirements -->
+            <div class="form-group-custom has-textarea mb-3">
               <i class="bi bi-chat-text"></i>
-              <textarea class="form-control-custom" rows="2"
-                placeholder="Tell us about your travel dates and requirements"></textarea>
+              <textarea class="form-control-custom" rows="2" placeholder="Additional Requirements (e.g. Visa Assistance, Flights, Hotel Preference, Premium VAYD)"></textarea>
             </div>
-            <button type="submit" class="btn-gold w-100 mt-2">
+
+            <button type="submit" class="btn-gold w-100 py-2">
               Submit Enquiry <i class="bi bi-arrow-right"></i>
             </button>
             <p class="small text-muted text-center mt-2 mb-0">
-              <i class="bi bi-shield-check text-gold"></i> We respect your privacy. No spam.
+              <i class="bi bi-shield-check text-gold"></i> We respect your privacy. Our specialists will reach out promptly.
             </p>
           </form>
         </div>
