@@ -183,32 +183,48 @@ document.addEventListener('DOMContentLoaded', () => {
   const destinationItems = document.querySelectorAll('.destination-filter-item');
 
   if (filterBtns.length > 0 && destinationItems.length > 0) {
+    const activateFilter = (filterValue) => {
+      filterBtns.forEach(b => {
+        if (b.getAttribute('data-filter') === filterValue) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+
+      destinationItems.forEach(item => {
+        const category = item.getAttribute('data-category');
+        if (filterValue === 'all' || category === filterValue) {
+          item.style.display = 'block';
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          }, 10);
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            item.style.display = 'none';
+          }, 250);
+        }
+      });
+    };
+
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Toggle active button state
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const filterValue = btn.getAttribute('data-filter');
-
-        destinationItems.forEach(item => {
-          const category = item.getAttribute('data-category');
-          if (filterValue === 'all' || category === filterValue) {
-            item.style.display = 'block';
-            setTimeout(() => {
-              item.style.opacity = '1';
-              item.style.transform = 'scale(1)';
-            }, 10);
-          } else {
-            item.style.opacity = '0';
-            item.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-              item.style.display = 'none';
-            }, 250);
-          }
-        });
+        activateFilter(btn.getAttribute('data-filter'));
       });
     });
+
+    // Check URL parameters or hash on page load
+    const urlParams = new URLSearchParams(window.location.search);
+    const filterParam = urlParams.get('filter') || (window.location.hash ? window.location.hash.replace('#', '') : null);
+    if (filterParam) {
+      const matchBtn = Array.from(filterBtns).find(b => b.getAttribute('data-filter') === filterParam);
+      if (matchBtn) {
+        activateFilter(filterParam);
+      }
+    }
   }
 
   // 5. Pre-fill Universal Enquiry Modal

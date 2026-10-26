@@ -112,85 +112,86 @@
       <!-- Filter Buttons -->
       <div class="filter-tabs">
         <button class="filter-btn active" data-filter="all">All Destinations</button>
+        <button class="filter-btn" data-filter="domestic"><i class="bi bi-geo-alt-fill text-gold me-1"></i> Domestic (India)</button>
+        <button class="filter-btn" data-filter="asia">Asia</button>
         <button class="filter-btn" data-filter="europe">Europe</button>
         <button class="filter-btn" data-filter="uk">United Kingdom</button>
-        <button class="filter-btn" data-filter="asia">Asia</button>
         <button class="filter-btn" data-filter="middle-east">Middle East</button>
         <button class="filter-btn" data-filter="australia">Australia</button>
       </div>
 
-      <!-- 12 Destination Cards Grid -->
+      <!-- Destination Cards Grid (Ordered: Thailand, Vietnam, Maldives, Singapore, Malaysia, Bali, Japan, then remaining) -->
       <div class="row g-4" id="destinationsGrid">
 
-        <!-- 1. Europe (Schengen) -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="europe">
+        <!-- 1. Thailand -->
+        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
-              <img src="images/destinations/europe.jpg" alt="Europe Schengen Visa" class="w-100 h-100 object-fit-cover transition-slow">
-              <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">Schengen Europe</span>
+              <img src="images/destinations/thailand.jpg" alt="Thailand Bangkok Temples" class="w-100 h-100 object-fit-cover transition-slow">
+              <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">Southeast Asia</span>
             </div>
             <div class="card-body p-4 d-flex flex-column">
-              <h4 class="font-heading fw-bold text-navy mb-2">Europe (Schengen)</h4>
+              <h4 class="font-heading fw-bold text-navy mb-2">Thailand</h4>
               <p class="text-muted small mb-3">
-                Experience France, Switzerland, Italy, Germany, and 29 member states with a single Schengen Visa.
+                Golden temples of Bangkok, pristine beaches of Phuket and Krabi, vibrant night markets, and warm hospitality.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> Short Stay Tourist Visa (Type C)</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> ~15 Working Days</div>
+                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> Visa Exemption / e-Visa on Arrival</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Tour Support:</strong> Hotels, Transfers &amp; Island Tours</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Europe (Schengen)" data-visa-type="Schengen Visa">
-                  Explore Europe <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Thailand" data-visa-type="Tourist Visa">
+                  Explore Thailand <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 2. United Kingdom -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="uk">
+        <!-- 2. Vietnam -->
+        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
-              <img src="images/destinations/uk.jpg" alt="United Kingdom London Big Ben" class="w-100 h-100 object-fit-cover transition-slow">
-              <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">Great Britain</span>
+              <img src="images/destinations/vietnam.jpg" alt="Vietnam Ha Long Bay" class="w-100 h-100 object-fit-cover transition-slow">
+              <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">Southeast Asia</span>
             </div>
             <div class="card-body p-4 d-flex flex-column">
-              <h4 class="font-heading fw-bold text-navy mb-2">United Kingdom (UK)</h4>
+              <h4 class="font-heading fw-bold text-navy mb-2">Vietnam</h4>
               <p class="text-muted small mb-3">
-                London, Edinburgh, Scottish Highlands, and Welsh landscapes. Full UKVI documentation and VAYD doorstep options.
+                Emerald waters of Ha Long Bay cruise, lantern-lit alleys of Hoi An ancient town, golden bridge of Da Nang, and Hanoi street food.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> UK Standard Visitor Visa</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Validity:</strong> 6 Months to 10 Years</div>
+                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> 90 Days Multiple-Entry eVisa</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> 3 - 4 Working Days</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="United Kingdom" data-visa-type="UK Visa">
-                  Explore UK <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Vietnam" data-visa-type="Tourist Visa">
+                  Explore Vietnam <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 3. Dubai / UAE -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="middle-east">
+        <!-- 3. Maldives -->
+        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
-              <img src="images/destinations/dubai.jpg" alt="Dubai UAE Burj Khalifa" class="w-100 h-100 object-fit-cover transition-slow">
-              <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">Middle East</span>
+              <img src="images/destinations/maldives.jpg" alt="Maldives Overwater Bungalows" class="w-100 h-100 object-fit-cover transition-slow">
+              <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">Luxury Honeymoon</span>
             </div>
             <div class="card-body p-4 d-flex flex-column">
-              <h4 class="font-heading fw-bold text-navy mb-2">Dubai / UAE</h4>
+              <h4 class="font-heading fw-bold text-navy mb-2">Maldives</h4>
               <p class="text-muted small mb-3">
-                Iconic skyscrapers, desert safaris, luxury shopping festivals, and family-friendly world-class amusement parks.
+                Overwater private bungalows, turquoise coral lagoons, seaplane transfers, and premier all-inclusive resorts.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> 30 Days / 60 Days Tourist eVisa</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> 48 - 72 Hours</div>
+                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> 30 Days Free Tourist Visa on Arrival</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Support:</strong> Resort Transfers &amp; IMUGA Declarations</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Dubai / UAE" data-visa-type="Tourist Visa">
-                  Explore Dubai <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Maldives" data-visa-type="Travel Package">
+                  Explore Maldives <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -222,25 +223,25 @@
           </div>
         </div>
 
-        <!-- 5. Thailand -->
+        <!-- 5. Malaysia -->
         <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
-              <img src="images/destinations/thailand.jpg" alt="Thailand Bangkok Temples" class="w-100 h-100 object-fit-cover transition-slow">
+              <img src="images/destinations/malaysia.jpg" alt="Malaysia Kuala Lumpur Petronas Towers" class="w-100 h-100 object-fit-cover transition-slow">
               <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">Southeast Asia</span>
             </div>
             <div class="card-body p-4 d-flex flex-column">
-              <h4 class="font-heading fw-bold text-navy mb-2">Thailand</h4>
+              <h4 class="font-heading fw-bold text-navy mb-2">Malaysia</h4>
               <p class="text-muted small mb-3">
-                Golden temples of Bangkok, pristine beaches of Phuket and Krabi, vibrant night markets, and warm hospitality.
+                Kuala Lumpur Petronas Towers, Batu Caves, Genting Highlands, Langkawi beaches, and Penang street food heritage.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> Visa Exemption / e-Visa on Arrival</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Tour Support:</strong> Hotels, Transfers &amp; Island Tours</div>
+                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> Visa Exemption / Malaysia MDAC Card</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> Instant / 24 - 48 Hours</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Thailand" data-visa-type="Tourist Visa">
-                  Explore Thailand <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Malaysia" data-visa-type="Tourist Visa">
+                  Explore Malaysia <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -272,100 +273,100 @@
           </div>
         </div>
 
-        <!-- 7. Maldives -->
+        <!-- 7. Japan -->
         <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
-              <img src="images/destinations/maldives.jpg" alt="Maldives Overwater Bungalows" class="w-100 h-100 object-fit-cover transition-slow">
-              <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">Luxury Honeymoon</span>
-            </div>
-            <div class="card-body p-4 d-flex flex-column">
-              <h4 class="font-heading fw-bold text-navy mb-2">Maldives</h4>
-              <p class="text-muted small mb-3">
-                Overwater private bungalows, turquoise coral lagoons, seaplane transfers, and premier all-inclusive resorts.
-              </p>
-              <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> 30 Days Free Tourist Visa on Arrival</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Support:</strong> Resort Transfers &amp; IMUGA Declarations</div>
-              </div>
-              <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Maldives" data-visa-type="Travel Package">
-                  Explore Maldives <i class="bi bi-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. China -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
-            <div class="position-relative" style="height: 220px; overflow: hidden;">
-              <img src="images/destinations/china.jpg" alt="China Great Wall" class="w-100 h-100 object-fit-cover transition-slow">
+              <img src="images/destinations/japan.jpg" alt="Japan Mount Fuji Cherry Blossoms" class="w-100 h-100 object-fit-cover transition-slow">
               <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">East Asia</span>
             </div>
             <div class="card-body p-4 d-flex flex-column">
-              <h4 class="font-heading fw-bold text-navy mb-2">China</h4>
+              <h4 class="font-heading fw-bold text-navy mb-2">Japan</h4>
               <p class="text-muted small mb-3">
-                The Great Wall, Forbidden City Beijing, futuristic Shanghai skyline, and Canton Fair commercial trade delegations.
+                Shinkansen bullet trains, cherry blossoms of Kyoto, vibrant Tokyo shopping, sacred Mount Fuji, and traditional onsen ryokans.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> L Tourist / M Business Visa</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> Biometric Appointment &amp; Verification</div>
+                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> Japan eVisa / Single &amp; Multi-Entry Sticker</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> ~7 - 10 Working Days</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="China" data-visa-type="Business Visa">
-                  Explore China <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Japan" data-visa-type="Tourist Visa">
+                  Explore Japan <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 9. Darjeeling -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
+        <!-- 8. Europe (Schengen) -->
+        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="europe">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
-              <img src="images/destinations/darjeeling.jpg" alt="Darjeeling Himalayan Tea Gardens" class="w-100 h-100 object-fit-cover transition-slow">
-              <span class="badge bg-success text-white position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">Domestic Special</span>
+              <img src="images/destinations/europe.jpg" alt="Europe Schengen Visa" class="w-100 h-100 object-fit-cover transition-slow">
+              <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">Schengen Europe</span>
             </div>
             <div class="card-body p-4 d-flex flex-column">
-              <h4 class="font-heading fw-bold text-navy mb-2">Darjeeling (Himalayas)</h4>
+              <h4 class="font-heading fw-bold text-navy mb-2">Europe (Schengen)</h4>
               <p class="text-muted small mb-3">
-                Queen of the Hills, panoramic Kanchenjunga sunrise views from Tiger Hill, heritage Himalayan toy train, and lush tea gardens.
+                Experience France, Switzerland, Italy, Germany, and 29 member states with a single Schengen Visa.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Package:</strong> Complete Hotel, Transfers &amp; Sightseeing</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 4 Nights / 5 Days</div>
+                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> Short Stay Tourist Visa (Type C)</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> ~15 Working Days</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Darjeeling" data-visa-type="Travel Package">
-                  Explore Darjeeling <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Europe (Schengen)" data-visa-type="Schengen Visa">
+                  Explore Europe <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 10. Vietnam -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
+        <!-- 9. United Kingdom -->
+        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="uk">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
-              <img src="images/destinations/vietnam.jpg" alt="Vietnam Ha Long Bay" class="w-100 h-100 object-fit-cover transition-slow">
-              <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">Southeast Asia</span>
+              <img src="images/destinations/uk.jpg" alt="United Kingdom London Big Ben" class="w-100 h-100 object-fit-cover transition-slow">
+              <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">Great Britain</span>
             </div>
             <div class="card-body p-4 d-flex flex-column">
-              <h4 class="font-heading fw-bold text-navy mb-2">Vietnam</h4>
+              <h4 class="font-heading fw-bold text-navy mb-2">United Kingdom (UK)</h4>
               <p class="text-muted small mb-3">
-                Emerald waters of Ha Long Bay cruise, lantern-lit alleys of Hoi An ancient town, golden bridge of Da Nang, and Hanoi street food.
+                London, Edinburgh, Scottish Highlands, and Welsh landscapes. Full UKVI documentation and VAYD doorstep options.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> 90 Days Multiple-Entry eVisa</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> 3 - 4 Working Days</div>
+                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> UK Standard Visitor Visa</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Validity:</strong> 6 Months to 10 Years</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Vietnam" data-visa-type="Tourist Visa">
-                  Explore Vietnam <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="United Kingdom" data-visa-type="UK Visa">
+                  Explore UK <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Dubai / UAE -->
+        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="middle-east">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+            <div class="position-relative" style="height: 220px; overflow: hidden;">
+              <img src="images/destinations/dubai.jpg" alt="Dubai UAE Burj Khalifa" class="w-100 h-100 object-fit-cover transition-slow">
+              <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">Middle East</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h4 class="font-heading fw-bold text-navy mb-2">Dubai / UAE</h4>
+              <p class="text-muted small mb-3">
+                Iconic skyscrapers, desert safaris, luxury shopping festivals, and family-friendly world-class amusement parks.
+              </p>
+              <div class="p-3 bg-light rounded-3 mb-3 small">
+                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> 30 Days / 60 Days Tourist eVisa</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> 48 - 72 Hours</div>
+              </div>
+              <div class="mt-auto">
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Dubai / UAE" data-visa-type="Tourist Visa">
+                  Explore Dubai <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -397,25 +398,151 @@
           </div>
         </div>
 
-        <!-- 12. Japan -->
+        <!-- 12. China -->
         <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
-              <img src="images/destinations/japan.jpg" alt="Japan Mount Fuji Cherry Blossoms" class="w-100 h-100 object-fit-cover transition-slow">
+              <img src="images/destinations/china.jpg" alt="China Great Wall" class="w-100 h-100 object-fit-cover transition-slow">
               <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">East Asia</span>
             </div>
             <div class="card-body p-4 d-flex flex-column">
-              <h4 class="font-heading fw-bold text-navy mb-2">Japan</h4>
+              <h4 class="font-heading fw-bold text-navy mb-2">China</h4>
               <p class="text-muted small mb-3">
-                Shinkansen bullet trains, cherry blossoms of Kyoto, vibrant Tokyo shopping, sacred Mount Fuji, and traditional onsen ryokans.
+                The Great Wall, Forbidden City Beijing, futuristic Shanghai skyline, and Canton Fair commercial trade delegations.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> Japan eVisa / Single &amp; Multi-Entry Sticker</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> ~7 - 10 Working Days</div>
+                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> L Tourist / M Business Visa</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> Biometric Appointment &amp; Verification</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Japan" data-visa-type="Tourist Visa">
-                  Explore Japan <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="China" data-visa-type="Business Visa">
+                  Explore China <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DOMESTIC DESTINATIONS (INDIA) -->
+        <!-- 13. Kashmir -->
+        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+            <div class="position-relative" style="height: 220px; overflow: hidden;">
+              <img src="images/destinations/kashmir.jpg" alt="Kashmir Dal Lake Srinagar Shikara" class="w-100 h-100 object-fit-cover transition-slow">
+              <span class="badge bg-success text-white position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold"><i class="bi bi-geo-alt-fill me-1"></i> Domestic • Kashmir</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h4 class="font-heading fw-bold text-navy mb-2">Kashmir (Paradise on Earth)</h4>
+              <p class="text-muted small mb-3">
+                Srinagar Dal Lake shikara rides, snow activities in Gulmarg, lush meadows of Pahalgam, and Sonamarg glaciers.
+              </p>
+              <div class="p-3 bg-light rounded-3 mb-3 small">
+                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Package:</strong> Srinagar, Gulmarg, Pahalgam Houseboat Stay</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 5 Nights / 6 Days</div>
+              </div>
+              <div class="mt-auto">
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Kashmir" data-visa-type="Domestic Package">
+                  Explore Kashmir <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14. Kerala -->
+        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+            <div class="position-relative" style="height: 220px; overflow: hidden;">
+              <img src="images/destinations/kerala.jpg" alt="Kerala Alleppey Backwaters Houseboat" class="w-100 h-100 object-fit-cover transition-slow">
+              <span class="badge bg-success text-white position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold"><i class="bi bi-geo-alt-fill me-1"></i> Domestic • Kerala</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h4 class="font-heading fw-bold text-navy mb-2">Kerala (God's Own Country)</h4>
+              <p class="text-muted small mb-3">
+                Private luxury houseboat cruise in Alleppey backwaters, misty Munnar tea plantations, and scenic waterfalls.
+              </p>
+              <div class="p-3 bg-light rounded-3 mb-3 small">
+                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Package:</strong> Cochin, Munnar, Thekkady &amp; Alleppey</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 4 Nights / 5 Days</div>
+              </div>
+              <div class="mt-auto">
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Kerala" data-visa-type="Domestic Package">
+                  Explore Kerala <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15. Goa -->
+        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+            <div class="position-relative" style="height: 220px; overflow: hidden;">
+              <img src="images/destinations/goa.jpg" alt="Goa Beaches and Resorts" class="w-100 h-100 object-fit-cover transition-slow">
+              <span class="badge bg-success text-white position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold"><i class="bi bi-geo-alt-fill me-1"></i> Domestic • Goa</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h4 class="font-heading fw-bold text-navy mb-2">Goa (Sun, Sand &amp; Luxury)</h4>
+              <p class="text-muted small mb-3">
+                Golden sand beaches, luxury beachfront resorts, sunset cruises on Mandovi river, water sports, and heritage churches.
+              </p>
+              <div class="p-3 bg-light rounded-3 mb-3 small">
+                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Package:</strong> North &amp; South Goa with 4-Star Resort</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 3 Nights / 4 Days</div>
+              </div>
+              <div class="mt-auto">
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Goa" data-visa-type="Domestic Package">
+                  Explore Goa <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 16. Himachal Pradesh -->
+        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+            <div class="position-relative" style="height: 220px; overflow: hidden;">
+              <img src="images/destinations/himachal.jpg" alt="Himachal Pradesh Manali Solang Valley" class="w-100 h-100 object-fit-cover transition-slow">
+              <span class="badge bg-success text-white position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold"><i class="bi bi-geo-alt-fill me-1"></i> Domestic • Himachal</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h4 class="font-heading fw-bold text-navy mb-2">Himachal (Manali &amp; Shimla)</h4>
+              <p class="text-muted small mb-3">
+                Snow adventures in Solang Valley, Rohtang Pass, Mall Road Shimla, Atal Tunnel, and scenic cedar pine forests.
+              </p>
+              <div class="p-3 bg-light rounded-3 mb-3 small">
+                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Package:</strong> Shimla, Kullu, Manali &amp; Rohtang Pass</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 5 Nights / 6 Days</div>
+              </div>
+              <div class="mt-auto">
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Himachal Pradesh" data-visa-type="Domestic Package">
+                  Explore Himachal <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 17. Darjeeling -->
+        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+            <div class="position-relative" style="height: 220px; overflow: hidden;">
+              <img src="images/destinations/darjeeling.jpg" alt="Darjeeling Himalayan Tea Gardens" class="w-100 h-100 object-fit-cover transition-slow">
+              <span class="badge bg-success text-white position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold"><i class="bi bi-geo-alt-fill me-1"></i> Domestic • Darjeeling</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h4 class="font-heading fw-bold text-navy mb-2">Darjeeling &amp; Gangtok</h4>
+              <p class="text-muted small mb-3">
+                Panoramic Kanchenjunga sunrise from Tiger Hill, heritage Himalayan toy train, lush tea estates, and Tsomgo Lake.
+              </p>
+              <div class="p-3 bg-light rounded-3 mb-3 small">
+                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Package:</strong> Darjeeling, Kalimpong &amp; Gangtok Tour</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 4 Nights / 5 Days</div>
+              </div>
+              <div class="mt-auto">
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Darjeeling" data-visa-type="Domestic Package">
+                  Explore Darjeeling <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
