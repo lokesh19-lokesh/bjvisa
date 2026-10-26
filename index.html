@@ -58,11 +58,16 @@
 
   <!-- Critical Preloader Style & Detection Script -->
   <style>
-    html.no-preloader #bj-preloader { display: none !important; }
-    body.preloader-active { overflow: hidden !important; }
+    html.no-preloader #bj-preloader {
+      display: none !important;
+    }
+
+    body.preloader-active {
+      overflow: hidden !important;
+    }
   </style>
   <script>
-    (function() {
+    (function () {
       try {
         // 1. Detect if this is a Page Reload
         var navEntries = performance.getEntriesByType && performance.getEntriesByType('navigation');
@@ -90,11 +95,11 @@
           'visa-services.html'
         ];
 
-        var cameFromSubpageReferrer = internalSubpages.some(function(page) {
+        var cameFromSubpageReferrer = internalSubpages.some(function (page) {
           return referrer.indexOf(page) !== -1;
         });
 
-        var cameFromSubpageStorage = lastPage && internalSubpages.some(function(page) {
+        var cameFromSubpageStorage = lastPage && internalSubpages.some(function (page) {
           return lastPage.indexOf(page) !== -1;
         });
 
@@ -219,75 +224,70 @@
 
     <div class="container position-relative" style="z-index: 3;">
       <div class="row align-items-center g-4">
-        <!-- Hero Left Content -->
+        <!-- Hero Left Content (Matching Flyer / 3rd Pic) -->
         <div class="col-lg-7 text-start">
-          <div class="hero-brochure-eyebrow mb-2">
-            <span class="hero-gold-line"></span>
-            <span>VISA CONSULTANCY</span>
-            <span class="hero-gold-line"></span>
+          <div class="hero-journey-eyebrow">
+            <span class="hero-gold-dot"></span>
+            <span>YOUR JOURNEY DESERVES</span>
           </div>
-          <h1 class="hero-partner-title font-serif">
-            <span class="gold-gradient-text">YOUR TRUSTED</span><br>
-            <span class="gold-gradient-text">Doorstep PARTNER</span>
+
+          <h1 class="hero-guidance-title">
+            <span class="title-white">THE RIGHT</span> <span class="gold-gradient-text">GUIDANCE</span>
           </h1>
-          <div class="hero-gold-divider"></div>
-          <p class="hero-sub-motto">
-            Making International Travel <strong class="text-white">Simple, Reliable &amp; Hassle-Free</strong>
-          </p>
-          <p class="hero-vayd-desc">
-            Professional visa assistance, travel support and personalized guidance for individuals, families and
-            businesses.
+
+          <p class="hero-guidance-subtitle">
+            Professional Visa &amp; Travel Assistance for Your International Travel Plans.
           </p>
 
-          <!-- Country Focus Badges -->
-          <div class="hero-country-badges">
-            <span class="country-pill">
-              <span class="country-pill-flag">🇬🇧</span> UK Visa
-            </span>
-            <span class="country-pill">
-              <span class="country-pill-flag">🇪🇺</span> Schengen Visa
-            </span>
-            <span class="country-pill">
-              <i class="bi bi-shield-check text-gold"></i> Authorized Guidance
-            </span>
+          <!-- Premium VAYD Showcase Box (Matching 3rd Pic) -->
+          <div class="hero-vayd-box">
+            <div class="hero-vayd-box-header">
+              <div class="vayd-box-brand">
+                <span class="vayd-box-tag">PREMIUM</span>
+                <span class="vayd-box-logo-text">VAYD</span>
+              </div>
+              <div class="vayd-box-divider"></div>
+              <div class="vayd-box-doorstep">
+                <i class="bi bi-house-door-fill text-gold fs-4"></i>
+                <div class="vayd-doorstep-text">
+                  <span class="doorstep-title">Visa At Your</span>
+                  <span class="doorstep-sub">Doorstep</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-vayd-ribbon">
+              UK &amp; SCHENGEN VISA BIOMETRICS AT YOUR DOORSTEP
+            </div>
+
+            <div class="hero-vayd-pills-grid">
+              <div class="vayd-pill-item">
+                <i class="bi bi-house-check-fill"></i>
+                <span>More Convenience</span>
+              </div>
+              <div class="vayd-pill-item">
+                <i class="bi bi-person-fill-check"></i>
+                <span>Personalised Assistance</span>
+              </div>
+              <div class="vayd-pill-item">
+                <i class="bi bi-shield-fill-check"></i>
+                <span>For Eligible Applicants</span>
+              </div>
+              <div class="vayd-pill-item">
+                <i class="bi bi-calendar2-check-fill"></i>
+                <span>Subject to Service Availability</span>
+              </div>
+            </div>
           </div>
 
-          <!-- Action Buttons -->
-          <div class="d-flex flex-wrap gap-3 mb-3 hero-action-btns">
-            <a href="visa-services.html" class="btn-gold">
-              Explore Visa Services <i class="bi bi-arrow-right"></i>
+          <!-- Action Buttons (Matching 3rd Pic) -->
+          <div class="d-flex flex-wrap gap-3 hero-action-btns">
+            <a href="premium-vayd.html" class="hero-btn-vayd">
+              <i class="bi bi-file-earmark-text-fill me-2"></i> Explore Premium VAYD <i class="bi bi-arrow-right ms-2"></i>
             </a>
-            <button class="btn-outline-gold" data-bs-toggle="modal" data-bs-target="#enquiryModal">
-              Enquire Now
-            </button>
-          </div>
-
-          <!-- 4 Core Trust Highlights Strip -->
-          <div class="hero-vayd-features">
-            <div class="hero-vayd-feature-item">
-              <div class="hero-vayd-feature-icon">
-                <i class="bi bi-globe-americas"></i>
-              </div>
-              <div class="hero-vayd-feature-label">Tourist Visa</div>
-            </div>
-            <div class="hero-vayd-feature-item">
-              <div class="hero-vayd-feature-icon">
-                <i class="bi bi-briefcase"></i>
-              </div>
-              <div class="hero-vayd-feature-label">Business Visa</div>
-            </div>
-            <div class="hero-vayd-feature-item">
-              <div class="hero-vayd-feature-icon">
-                <i class="bi bi-people"></i>
-              </div>
-              <div class="hero-vayd-feature-label">Family Visit Visa</div>
-            </div>
-            <div class="hero-vayd-feature-item">
-              <div class="hero-vayd-feature-icon">
-                <i class="bi bi-gem"></i>
-              </div>
-              <div class="hero-vayd-feature-label">Premium VAYD</div>
-            </div>
+            <a href="https://wa.me/917995974956?text=Hi%20BJ%20Visa%20Consultancy,%20I%20would%20like%20to%20enquire%20about%20visa%20services" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-hero">
+              <i class="bi bi-whatsapp me-2"></i> WhatsApp Us <i class="bi bi-arrow-right ms-2"></i>
+            </a>
           </div>
         </div>
 
@@ -380,6 +380,34 @@
               </div>
             </form>
           </div>
+        </div>
+      </div>
+
+      <!-- Bottom Trust Highlights Strip (Matching 3rd Pic) -->
+      <div class="hero-trust-bar">
+        <div class="hero-trust-item">
+          <div class="hero-trust-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <div class="hero-trust-label">Professional Guidance</div>
+        </div>
+        <div class="hero-trust-item">
+          <div class="hero-trust-icon">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+          <div class="hero-trust-label">Transparent Process</div>
+        </div>
+        <div class="hero-trust-item">
+          <div class="hero-trust-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="hero-trust-label">Confidential Handling</div>
+        </div>
+        <div class="hero-trust-item">
+          <div class="hero-trust-icon">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <div class="hero-trust-label">Ethical Assistance</div>
         </div>
       </div>
     </div>

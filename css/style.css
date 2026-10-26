@@ -555,13 +555,13 @@ img {
   min-height: calc(100vh - 110px);
   display: flex;
   align-items: center;
-  background-color: var(--navy-dark);
-  background-image: linear-gradient(135deg, rgba(0, 7, 45, 0.90) 0%, rgba(0, 15, 65, 0.82) 45%, rgba(0, 7, 45, 0.70) 100%), url('../images/hero/vayd-hero.jpg');
+  background-color: #050c1d;
+  background-image: url('../images/hero/vayd-hero.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   color: #FFFFFF;
-  padding: 40px 0 35px 0;
+  padding: 36px 0 28px 0;
   overflow: hidden;
 }
 
@@ -588,16 +588,20 @@ img {
   transform: translate(-50%, -50%);
   object-fit: cover;
   display: block;
-  opacity: 0.95;
+  opacity: 1; /* Fully visible, crisp video */
 }
 
+/* Clear transparent overlay - Blue layer REMOVED so video is vibrant and clearly visible */
 .hero-video-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(0, 7, 45, 0.88) 0%, rgba(0, 15, 65, 0.80) 45%, rgba(0, 7, 45, 0.72) 100%);
+  /* Gentle, natural contrast scrim to ensure text legibility while keeping the video clear */
+  background: 
+    linear-gradient(90deg, rgba(2, 6, 23, 0.50) 0%, rgba(2, 6, 23, 0.30) 45%, rgba(2, 6, 23, 0.05) 75%, rgba(2, 6, 23, 0.18) 100%),
+    linear-gradient(180deg, rgba(2, 6, 23, 0.20) 0%, transparent 20%, transparent 80%, rgba(2, 6, 23, 0.35) 100%);
   z-index: 2;
 }
 
@@ -607,222 +611,305 @@ img {
 }
 
 .hero-vayd::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 20% 40%, rgba(245, 185, 27, 0.08) 0%, transparent 60%);
-  pointer-events: none;
-  z-index: 2;
+  display: none; /* Removed blue radial tint */
 }
 
-/* Big Display Title VAYD & Brochure Headlines */
-.hero-brochure-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.65rem;
-}
-
-.hero-brochure-eyebrow .hero-gold-line {
-  display: inline-block;
-  width: 32px;
-  height: 2px;
-  background: var(--gold);
-  box-shadow: 0 0 8px rgba(245, 185, 27, 0.6);
-}
-
-.hero-partner-title {
-  font-family: var(--font-serif);
-  font-size: clamp(2.3rem, 4.4vw, 3.8rem);
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  margin-bottom: 0.6rem;
-  text-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
-}
-
-.hero-partner-title .gold-gradient-text {
-  background: var(--gold-text-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-}
-
-.hero-gold-divider {
-  width: 80px;
-  height: 3.5px;
-  background: var(--gold-gradient);
-  border-radius: 4px;
-  margin: 8px 0 16px 0;
-  box-shadow: 0 0 14px rgba(245, 185, 27, 0.7);
-}
-
-.hero-sub-motto {
-  font-size: 1.15rem;
-  color: #F1F5F9;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
-  max-width: 540px;
-}
-
-.hero-vayd-eyebrow {
+/* Hero Content (Matching 3rd Pic) */
+.hero-journey-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  background: rgba(3, 10, 32, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(245, 185, 27, 0.5);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
   font-family: var(--font-heading);
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.5rem;
-}
-
-.hero-vayd-eyebrow::before,
-.hero-vayd-eyebrow::after {
-  content: "";
-  display: inline-block;
-  width: 30px;
-  height: 2px;
-  background: var(--gold);
-}
-
-.hero-vayd-title {
-  font-family: var(--font-serif);
-  font-size: clamp(3.8rem, 8vw, 6.2rem);
+  font-size: 0.85rem;
   font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: 2px;
-  background: linear-gradient(135deg, #FFF6D1 0%, #F5B91B 40%, #E6AC10 70%, #9F7505 100%);
+  letter-spacing: 2.5px;
+  color: #FFFFFF;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 0.75rem;
+}
+
+.hero-journey-eyebrow .hero-gold-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(245, 185, 27, 0.9);
+}
+
+.hero-guidance-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 3.8vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.hero-guidance-title .title-white {
+  color: #FFFFFF;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+.hero-guidance-title .gold-gradient-text {
+  color: #FFC107;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFD54F 30%, #FFB300 70%, #FF8F00 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 0.35rem;
-  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 12px rgba(245, 185, 27, 0.5));
+  display: inline-block;
+  text-shadow: none;
 }
 
-.hero-vayd-subheading {
-  font-family: var(--font-heading);
-  font-size: clamp(1.6rem, 3.2vw, 2.5rem);
-  font-weight: 700;
+.hero-guidance-subtitle {
+  font-size: 1.15rem;
+  font-weight: 500;
   color: #FFFFFF;
-  line-height: 1.15;
-  margin-bottom: 1rem;
+  line-height: 1.45;
+  margin-bottom: 1.1rem;
+  max-width: 560px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
 }
 
-.hero-vayd-desc {
-  font-size: 1.12rem;
-  color: #E2E8F0;
-  max-width: 540px;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+/* Premium VAYD Showcase Box (From 3rd Pic) */
+.hero-vayd-box {
+  background: rgba(3, 10, 32, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(245, 185, 27, 0.55);
+  border-radius: 16px;
+  padding: 16px 20px;
+  max-width: 560px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+  margin-bottom: 1.25rem;
 }
 
-/* Country Badges */
-.hero-country-badges {
+.hero-vayd-box-header {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 2rem;
-}
-
-.country-pill {
-  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(0, 7, 45, 0.70);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1.5px solid var(--gold);
-  padding: 8px 16px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-heading);
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: #FFFFFF;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: all var(--transition-fast);
-}
-
-.country-pill:hover {
-  background: rgba(245, 185, 27, 0.18);
-  border-color: var(--gold-bright);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(245, 185, 27, 0.35);
-}
-
-.country-pill-flag {
-  font-size: 1.25rem;
-}
-
-/* Hero Feature Grid (4 icons) */
-.hero-vayd-features {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
   gap: 14px;
-  padding-top: 1.25rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(245, 185, 27, 0.25);
 }
 
-.hero-vayd-feature-item {
+.vayd-box-brand {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 8px;
+  line-height: 1;
 }
 
-.hero-vayd-feature-icon {
-  width: 48px;
-  height: 48px;
+.vayd-box-tag {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.vayd-box-logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.95rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.05;
+}
+
+.vayd-box-divider {
+  width: 1px;
+  height: 38px;
+  background: rgba(245, 185, 27, 0.35);
+}
+
+.vayd-box-doorstep {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(245, 185, 27, 0.35);
+  border-radius: 10px;
+}
+
+.vayd-doorstep-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.vayd-doorstep-text .doorstep-title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.vayd-doorstep-text .doorstep-sub {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.hero-vayd-ribbon {
+  background: var(--gold-gradient);
+  color: #02081d;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(245, 185, 27, 0.35);
+}
+
+.hero-vayd-pills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 14px;
+}
+
+.vayd-pill-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #F8FAFC;
+}
+
+.vayd-pill-item i {
+  font-size: 0.95rem;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* Action Buttons */
+.hero-btn-vayd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold-gradient);
+  color: #030a21 !important;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 6px 20px rgba(245, 185, 27, 0.45);
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.hero-btn-vayd:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(245, 185, 27, 0.65);
+  color: #030a21 !important;
+}
+
+.btn-whatsapp-hero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  color: #128C7E !important;
+  border: 1.5px solid #25D366;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.btn-whatsapp-hero i {
+  color: #25D366;
+  font-size: 1.2rem;
+  transition: color var(--transition-fast);
+}
+
+.btn-whatsapp-hero:hover {
+  background: #25D366;
+  color: #FFFFFF !important;
+  border-color: #25D366;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+}
+
+.btn-whatsapp-hero:hover i {
+  color: #FFFFFF;
+}
+
+/* Bottom Trust Highlights Strip (Matching 3rd Pic) */
+.hero-trust-bar {
+  background: rgba(3, 10, 32, 0.80);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(245, 185, 27, 0.45);
+  border-radius: 14px;
+  padding: 12px 22px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  align-items: center;
+  margin-top: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-trust-icon {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 2px solid var(--gold);
+  background: rgba(245, 185, 27, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--gold);
-  font-size: 1.2rem;
-  background: rgba(245, 185, 27, 0.12);
+  font-size: 1.15rem;
+  flex-shrink: 0;
   box-shadow: 0 0 12px rgba(245, 185, 27, 0.25);
-  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-  animation: iconFloat 3.8s ease-in-out infinite alternate;
+  transition: all var(--transition-fast);
 }
 
-.hero-vayd-features .hero-vayd-feature-item:nth-child(1) .hero-vayd-feature-icon { animation-delay: 0s; }
-.hero-vayd-features .hero-vayd-feature-item:nth-child(2) .hero-vayd-feature-icon { animation-delay: 0.6s; }
-.hero-vayd-features .hero-vayd-feature-item:nth-child(3) .hero-vayd-feature-icon { animation-delay: 1.2s; }
-.hero-vayd-features .hero-vayd-feature-item:nth-child(4) .hero-vayd-feature-icon { animation-delay: 1.8s; }
-
-.hero-vayd-feature-item:hover .hero-vayd-feature-icon {
+.hero-trust-item:hover .hero-trust-icon {
   background: var(--gold);
   color: var(--navy-dark);
-  transform: translateY(-6px) scale(1.14);
-  box-shadow: 0 8px 22px rgba(245, 185, 27, 0.55);
-  animation-play-state: paused;
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(245, 185, 27, 0.5);
 }
 
-.hero-vayd-feature-item:hover .hero-vayd-feature-icon i {
-  display: inline-block;
-  animation: iconPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.hero-vayd-feature-label {
+.hero-trust-label {
   font-family: var(--font-heading);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #F1F5F9;
-  line-height: 1.3;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.25;
+  letter-spacing: 0.3px;
 }
 
 /* Floating Hero Enquiry Card */
@@ -883,59 +970,76 @@ img {
     min-height: calc(100vh - 105px);
     padding: 16px 0 16px 0;
   }
-  .hero-brochure-eyebrow {
+  .hero-journey-eyebrow {
     font-size: 0.76rem !important;
-    margin-bottom: 0.25rem !important;
+    padding: 4px 12px !important;
+    margin-bottom: 0.35rem !important;
   }
-  .hero-partner-title {
-    font-size: clamp(1.8rem, 2.6vw, 2.4rem) !important;
+  .hero-guidance-title {
+    font-size: clamp(1.8rem, 2.7vw, 2.5rem) !important;
     line-height: 1.05 !important;
     margin-bottom: 0.35rem !important;
   }
-  .hero-gold-divider {
-    margin: 6px 0 10px 0 !important;
-  }
-  .hero-sub-motto {
+  .hero-guidance-subtitle {
     font-size: 0.95rem !important;
-    margin-bottom: 0.6rem !important;
+    margin-bottom: 0.65rem !important;
     line-height: 1.35 !important;
   }
-  .hero-vayd-eyebrow {
-    font-size: 0.8rem;
-    margin-bottom: 0.25rem;
-  }
-  .hero-vayd-subheading {
-    font-size: clamp(1.75rem, 2.3vw, 2.25rem) !important;
-    line-height: 1.15 !important;
-    margin-bottom: 0.45rem !important;
-  }
-  .hero-vayd-desc {
-    font-size: 0.90rem;
-    margin-bottom: 0.65rem;
-    line-height: 1.4;
-  }
-  .hero-country-badges {
-    gap: 6px;
-    margin-bottom: 0.75rem;
-  }
-  .country-pill {
-    padding: 4px 10px;
-    font-size: 0.78rem;
-  }
-  .hero-action-btns {
+  .hero-vayd-box {
+    padding: 10px 14px !important;
     margin-bottom: 0.75rem !important;
   }
-  .hero-vayd-features {
-    padding-top: 0.65rem;
-    gap: 8px;
+  .vayd-box-tag {
+    font-size: 0.68rem !important;
   }
-  .hero-vayd-feature-icon {
-    width: 38px;
-    height: 38px;
-    font-size: 1rem;
+  .vayd-box-logo-text {
+    font-size: 1.5rem !important;
   }
-  .hero-vayd-feature-label {
-    font-size: 0.72rem;
+  .vayd-box-divider {
+    height: 28px !important;
+  }
+  .vayd-box-doorstep {
+    padding: 4px 10px !important;
+    gap: 8px !important;
+  }
+  .vayd-doorstep-text .doorstep-title,
+  .vayd-doorstep-text .doorstep-sub {
+    font-size: 0.82rem !important;
+  }
+  .hero-vayd-ribbon {
+    font-size: 0.72rem !important;
+    padding: 4px 8px !important;
+    margin-bottom: 8px !important;
+  }
+  .hero-vayd-pills-grid {
+    gap: 6px 10px !important;
+  }
+  .vayd-pill-item {
+    font-size: 0.78rem !important;
+  }
+  .vayd-pill-item i {
+    font-size: 0.85rem !important;
+  }
+  .hero-btn-vayd,
+  .btn-whatsapp-hero {
+    padding: 8px 16px !important;
+    font-size: 0.86rem !important;
+  }
+  .hero-action-btns {
+    margin-bottom: 0.4rem !important;
+  }
+  .hero-trust-bar {
+    margin-top: 14px !important;
+    padding: 8px 16px !important;
+    gap: 12px !important;
+  }
+  .hero-trust-icon {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 0.92rem !important;
+  }
+  .hero-trust-label {
+    font-size: 0.80rem !important;
   }
   .hero-enquiry-card {
     padding: 18px 20px 14px;
@@ -2049,13 +2153,20 @@ textarea.form-control-custom {
 
 /* --- Inner Page Banners (Subpage Hero) --- */
 .page-hero-banner {
-  background: var(--navy-gradient);
-  color: #FFFFFF;
-  padding: 70px 0 60px 0;
   position: relative;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  background-color: #050c1d;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+  padding: 80px 0 70px 0;
   overflow: hidden;
 }
 
+/* Clear transparent scrim - Blue murky layer REMOVED so the hero picture is clearly visible */
 .page-hero-banner::before {
   content: "";
   position: absolute;
@@ -2063,34 +2174,105 @@ textarea.form-control-custom {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../images/hero/airport-sunset.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.15;
+  background: 
+    linear-gradient(90deg, rgba(2, 6, 23, 0.72) 0%, rgba(2, 6, 23, 0.48) 50%, rgba(2, 6, 23, 0.18) 80%, rgba(2, 6, 23, 0.32) 100%),
+    linear-gradient(180deg, rgba(2, 6, 23, 0.30) 0%, transparent 25%, transparent 75%, rgba(2, 6, 23, 0.50) 100%);
   pointer-events: none;
+  z-index: 1;
 }
 
+.page-hero-banner > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Per-Page Dedicated Hero Images */
+.hero-visa-services {
+  background-image: url('../images/hero/visa-services-hero.jpg');
+  background-position: center 40%;
+}
+
+.hero-premium-vayd {
+  background-image: url('../images/hero/vayd-doorstep-hero.jpg');
+  background-position: center 30%;
+}
+
+.hero-travel-services {
+  background-image: url('../images/hero/travel-services-hero.jpg');
+  background-position: center 45%;
+}
+
+.hero-destinations {
+  background-image: url('../images/hero/destinations-hero.jpg');
+  background-position: center 35%;
+}
+
+.hero-careers {
+  background-image: url('../images/hero/careers-hero.jpg');
+  background-position: center 30%;
+}
+
+.hero-about {
+  background-image: url('../images/hero/about-hero.jpg');
+  background-position: center 35%;
+}
+
+.hero-contact {
+  background-image: url('../images/hero/contact-hero.jpg');
+  background-position: center 40%;
+}
+
+/* Page Hero Typography & Elements */
 .page-hero-title {
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
   font-weight: 800;
   color: #FFFFFF;
-  margin-bottom: 0.75rem;
+  line-height: 1.12;
+  margin-bottom: 0.85rem;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+.page-hero-banner p.lead {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #F8FAFC;
+  line-height: 1.5;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+  max-width: 680px;
 }
 
 .page-hero-breadcrumb {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.9rem;
-  color: #94A3B8;
+  gap: 10px;
+  background: rgba(3, 10, 32, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #E2E8F0;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .page-hero-breadcrumb a {
-  color: var(--gold);
+  color: var(--gold-bright);
+  text-decoration: none;
+  transition: color var(--transition-fast);
 }
 
 .page-hero-breadcrumb a:hover {
+  color: #FFFFFF;
   text-decoration: underline;
+}
+
+.page-hero-breadcrumb i {
+  font-size: 0.75rem;
+  color: #94A3B8;
 }
 
 /* --- 10-Step Timeline (B2B Page) --- */
@@ -2574,11 +2756,27 @@ textarea.form-control-custom {
 @media (max-width: 991.98px) {
   .hero-vayd {
     min-height: auto;
-    padding: 60px 0;
+    padding: 50px 0 35px;
   }
-  .hero-vayd-features {
+  .hero-trust-bar {
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 2rem;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .hero-vayd-box {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .page-hero-banner {
+    min-height: auto;
+    padding: 60px 0 50px 0;
+  }
+  .page-hero-title {
+    font-size: clamp(1.85rem, 5vw, 2.5rem);
+  }
+  .page-hero-banner p.lead {
+    font-size: 1rem;
+    line-height: 1.45;
   }
   .service-strip-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -2628,8 +2826,25 @@ textarea.form-control-custom {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
-  .hero-vayd-title {
-    font-size: 3.4rem;
+  .hero-guidance-title {
+    font-size: 2.1rem;
+  }
+  .hero-trust-bar {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px 16px;
+  }
+  .page-hero-banner {
+    padding: 48px 0 38px 0;
+    min-height: auto;
+  }
+  .page-hero-title {
+    font-size: 1.85rem;
+    line-height: 1.2;
+  }
+  .page-hero-breadcrumb {
+    font-size: 0.82rem;
+    padding: 5px 12px;
   }
   .why-choose-grid {
     grid-template-columns: 1fr;
@@ -2869,9 +3084,10 @@ textarea.form-control-custom {
 
 /* --- B2B Partner Dedicated Styles --- */
 .b2b-hero-section {
-  background: linear-gradient(135deg, rgba(0, 7, 45, 0.96) 0%, rgba(13, 27, 74, 0.93) 100%),
-              url('../images/b2b/b2b-hero.jpg') center/cover no-repeat;
-  padding: 125px 0 85px;
+  background: 
+    linear-gradient(90deg, rgba(2, 6, 23, 0.78) 0%, rgba(2, 6, 23, 0.52) 50%, rgba(2, 6, 23, 0.22) 80%, rgba(2, 6, 23, 0.40) 100%),
+    url('../images/hero/b2b-hero.jpg') center 30%/cover no-repeat;
+  padding: 110px 0 75px;
   position: relative;
   overflow: hidden;
   color: #FFFFFF;
