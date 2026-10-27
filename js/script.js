@@ -235,15 +235,22 @@ document.addEventListener('DOMContentLoaded', () => {
       if (button) {
         const visaType = button.getAttribute('data-visa-type');
         const destination = button.getAttribute('data-destination');
+        const customMessage = button.getAttribute('data-message');
         
         const visaSelect = enquiryModal.querySelector('#modalVisaType');
         const countryInput = enquiryModal.querySelector('#modalCountry');
+        const messageTextarea = enquiryModal.querySelector('textarea');
 
         if (visaSelect && visaType) {
           visaSelect.value = visaType;
         }
         if (countryInput && destination) {
           countryInput.value = destination;
+        }
+        if (messageTextarea && customMessage) {
+          messageTextarea.value = customMessage;
+        } else if (messageTextarea && destination && (destination.includes('Jet') || destination.includes('Helicopter'))) {
+          messageTextarea.value = `Enquiring about ${destination}. Please share private charter options tailored to my itinerary.`;
         }
       }
     });
@@ -366,6 +373,28 @@ document.addEventListener('DOMContentLoaded', () => {
       playPromise.catch(() => {
         // Autoplay policy prevented playback (e.g. low-power mode); fallback poster stays visible
       });
+    }
+  }
+
+  // 9. Scroll Reveal Animation for Aviation & Interactive Showcase Elements
+  const revealElements = document.querySelectorAll('.aviation-reveal');
+  if (revealElements.length > 0) {
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+    } else {
+      revealElements.forEach(el => el.classList.add('is-visible'));
     }
   }
 });
