@@ -182,10 +182,16 @@
         <img src="images/logo.png" alt="BJ Visa Consultancy" class="brand-logo-img">
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+      <!-- Right Header Actions on Mobile (B2B Button + Toggler) -->
+      <div class="navbar-mobile-actions d-flex align-items-center gap-2 d-lg-none">
+        <a href="b2b.html" class="btn-nav-b2b btn-nav-b2b-header">
+          <i class="bi bi-briefcase-fill"></i> B2B
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
         aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      </div>
 
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
@@ -200,7 +206,7 @@
         </ul>
         <div
           class="nav-cta-group ms-lg-3 mt-3 mt-lg-0 d-flex flex-column flex-sm-row flex-lg-row align-items-stretch align-items-lg-center gap-2">
-          <a href="b2b.html" class="btn-nav-b2b">
+          <a href="b2b.html" class="btn-nav-b2b d-none d-lg-inline-flex">
             <i class="bi bi-briefcase-fill"></i> B2B
           </a>
           <button class="btn-nav-enquire" data-bs-toggle="modal" data-bs-target="#enquiryModal">
@@ -376,48 +382,6 @@
                 </div>
               </div>
 
-              <!-- 8. Number of Adults, 9. Number of Children & 10. Age of Children -->
-              <div class="row g-2 mb-2">
-                <div class="col-4">
-                  <div class="form-group-custom mb-0">
-                    <i class="bi bi-people"></i>
-                    <select class="form-select-custom" required>
-                      <option value="" selected disabled>Adults *</option>
-                      <option value="1 Adult">1 Adult</option>
-                      <option value="2 Adults">2 Adults</option>
-                      <option value="3 Adults">3 Adults</option>
-                      <option value="4 Adults">4 Adults</option>
-                      <option value="5+ Adults">5+ Adults</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="form-group-custom mb-0">
-                    <i class="bi bi-person"></i>
-                    <select class="form-select-custom">
-                      <option value="" selected disabled>Children</option>
-                      <option value="0 Children">0 Children</option>
-                      <option value="1 Child">1 Child</option>
-                      <option value="2 Children">2 Children</option>
-                      <option value="3+ Children">3+ Children</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="form-group-custom mb-0">
-                    <i class="bi bi-balloon"></i>
-                    <input type="text" class="form-control-custom" placeholder="Age of Children (e.g. 5, 9 / NA)">
-                  </div>
-                </div>
-              </div>
-
-              <!-- 12. Additional Requirements -->
-              <div class="form-group-custom has-textarea mb-2">
-                <i class="bi bi-chat-text"></i>
-                <input type="text" class="form-control-custom"
-                  placeholder="Additional Requirements (Visa, Flights, VAYD...)">
-              </div>
-
               <button type="submit" class="btn-gold w-100 py-2">
                 Start Your Journey <i class="bi bi-arrow-right"></i>
               </button>
@@ -471,17 +435,9 @@
       </p>
 
       <div class="service-strip-grid">
-        <a href="visa-services.html#tourist" class="service-strip-card">
-          <div class="service-strip-icon-box"><i class="bi bi-globe-americas"></i></div>
-          <span class="service-strip-title">Tourist Visa Assistance</span>
-        </a>
-        <a href="visa-services.html#business" class="service-strip-card">
-          <div class="service-strip-icon-box"><i class="bi bi-briefcase"></i></div>
-          <span class="service-strip-title">Business Visa Assistance</span>
-        </a>
-        <a href="visa-services.html#family" class="service-strip-card">
-          <div class="service-strip-icon-box"><i class="bi bi-people"></i></div>
-          <span class="service-strip-title">Family Visit Visa</span>
+        <a href="visa-services.html" class="service-strip-card">
+          <div class="service-strip-icon-box"><i class="fa-solid fa-passport"></i></div>
+          <span class="service-strip-title">Visa Services</span>
         </a>
         <a href="premium-vayd.html" class="service-strip-card">
           <div class="service-strip-icon-box"><i class="bi bi-gem"></i></div>
@@ -517,7 +473,7 @@
               <source srcset="images/about/bjvc-customer-support.webp" type="image/webp">
               <img src="images/about/bjvc-customer-support.png"
                 alt="BJ Visa Consultancy Professional Visa Consultation and Documentation Support" class="w-100"
-                style="height: 480px; object-fit: cover;">
+                style="height: 480px; object-fit: cover; object-position: left center;">
             </picture>
             <div class="about-badge-floating">
               <h5 class="font-heading mb-1 text-gold"><i class="bi bi-award-fill me-2"></i>Dedicated Guidance</h5>
@@ -745,58 +701,12 @@
           <h5 class="text-gold mb-3 font-heading">Premium Visa At Your Doorstep (VAYD) Assistance</h5>
           <div class="gold-divider"></div>
 
-          <p class="text-light opacity-90 mb-3">
-            <strong>Your time is valuable. Your comfort matters.</strong> For travellers who prefer convenience, privacy
-            and personalized assistance, BJ VISA CONSULTANCY offers premium Visa At Your Doorstep assistance for
-            eligible UK and Schengen applicants, subject to applicable VFS Global requirements, service availability and
-            appointment conditions.
-          </p>
-          <p class="text-light opacity-90 mb-4">
-            Whether you are a busy professional, a business traveller, a family or someone who values a more convenient
-            experience, we help you understand and navigate the applicable process. Premium assistance designed around
-            your convenience.
+          <p class="text-light opacity-90 mb-4 fs-6">
+            Enjoy convenient, personalized visa assistance for eligible UK and Schengen applicants, right at your doorstep.
           </p>
 
-          <div class="row g-3 mb-4">
-            <div class="col-sm-6">
-              <div class="vayd-benefit-pill">
-                <i class="bi bi-house-door"></i>
-                <span class="fw-semibold">At Your Home or Office</span>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="vayd-benefit-pill">
-                <i class="bi bi-stopwatch"></i>
-                <span class="fw-semibold">Time Saving Convenience</span>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="vayd-benefit-pill">
-                <i class="bi bi-shield-lock"></i>
-                <span class="fw-semibold">Secure &amp; Reliable</span>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="vayd-benefit-pill">
-                <i class="bi bi-person-check"></i>
-                <span class="fw-semibold">Complete Assistance</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="p-3 rounded-3 mb-4"
-            style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);">
-            <div class="d-flex align-items-center gap-3">
-              <i class="bi bi-info-circle text-gold fs-4"></i>
-              <small class="text-light opacity-75">
-                Doorstep services and biometric appointments are subject to eligibility, location, availability and
-                applicable official requirements.
-              </small>
-            </div>
-          </div>
-
-          <a href="premium-vayd.html" class="btn-gold">
-            Explore Premium VAYD <i class="bi bi-arrow-right"></i>
+          <a href="visa-services.html" class="btn-gold">
+            Explore Visa Services <i class="bi bi-arrow-right"></i>
           </a>
         </div>
 
@@ -820,138 +730,81 @@
     </div>
   </section>
 
-  <!-- Destinations Section -->
-  <section class="section-padding destinations-section">
+  <!-- Curated Holiday Packages Section -->
+  <section class="section-padding destinations-section bg-light-soft">
     <div class="container">
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
         <div>
-          <div class="section-eyebrow">EXPLORE DESTINATIONS</div>
-          <h2 class="section-title mb-0">Explore the World With Confidence</h2>
-          <p class="section-subtitle mt-2">Discover popular international destinations with our visa and travel support.
-          </p>
+          <div class="section-eyebrow">CURATED TOUR PACKAGES</div>
+          <h2 class="section-title mb-0">Domestic &amp; International Journeys</h2>
+          <p class="section-subtitle mt-2 mb-0">Handpicked holiday experiences with end-to-end visa assistance, premium stays, and seamless transfers.</p>
         </div>
         <div class="mt-3 mt-md-0">
           <a href="destinations.html" class="btn-gold">
-            Explore Visa Services <i class="bi bi-arrow-right"></i>
+            Explore All 20+ Destinations <i class="bi bi-arrow-right"></i>
           </a>
         </div>
       </div>
 
       <div class="row g-4">
-        <!-- 1. Thailand -->
+        <!-- 1. Europe & UK -->
         <div class="col-lg-3 col-md-6">
-          <a href="destinations.html" class="destination-card">
-            <img src="images/destinations/thailand.jpg" alt="Thailand Visa and Travel Assistance">
+          <a href="destinations.html#europe" class="destination-card">
+            <img src="images/destinations/europe.jpg" alt="Europe Tour Package" loading="lazy">
             <div class="destination-card-overlay">
-              <h4 class="destination-name">Thailand</h4>
-              <p class="destination-desc">Bangkok, Phuket, Krabi. Visa exemption / e-Visa on arrival support.</p>
+              <span class="badge bg-gold text-navy fw-bold mb-2 align-self-start px-2 py-1 small">International</span>
+              <h4 class="destination-name">Europe &amp; UK</h4>
+              <p class="destination-desc">Paris, Swiss Alps, Rome, and London heritage tours with full Schengen &amp; UK visa guidance.</p>
               <div class="destination-card-btn">
-                <span>View Details</span>
+                <span>Explore</span>
                 <span class="arrow-circle"><i class="bi bi-arrow-right"></i></span>
               </div>
             </div>
           </a>
         </div>
 
-        <!-- 2. Vietnam -->
+        <!-- 2. Dubai & UAE -->
         <div class="col-lg-3 col-md-6">
-          <a href="destinations.html" class="destination-card">
-            <img src="images/destinations/vietnam.jpg" alt="Vietnam Visa and Tour Support">
+          <a href="destinations.html#dubai" class="destination-card">
+            <img src="images/destinations/dubai.jpg" alt="Dubai UAE Travel Package" loading="lazy">
             <div class="destination-card-overlay">
-              <h4 class="destination-name">Vietnam</h4>
-              <p class="destination-desc">Ha Long Bay, Da Nang, Hoi An. 90-day multiple entry eVisa.</p>
+              <span class="badge bg-gold text-navy fw-bold mb-2 align-self-start px-2 py-1 small">International</span>
+              <h4 class="destination-name">Dubai &amp; UAE</h4>
+              <p class="destination-desc">Burj Khalifa, Desert Safari, Marina luxury yachts, and express e-visa processing support.</p>
               <div class="destination-card-btn">
-                <span>View Details</span>
+                <span>Explore</span>
                 <span class="arrow-circle"><i class="bi bi-arrow-right"></i></span>
               </div>
             </div>
           </a>
         </div>
 
-        <!-- 3. Maldives -->
+        <!-- 3. Kashmir Valley -->
         <div class="col-lg-3 col-md-6">
-          <a href="destinations.html" class="destination-card">
-            <img src="images/destinations/maldives.jpg" alt="Maldives Honeymoon and Tour Support">
+          <a href="destinations.html?filter=domestic#kashmir" class="destination-card">
+            <img src="images/destinations/kashmir.jpg" alt="Kashmir Holiday Package" loading="lazy">
             <div class="destination-card-overlay">
-              <h4 class="destination-name">Maldives</h4>
-              <p class="destination-desc">Overwater villas, turquoise lagoons. Free visa on arrival &amp; resort transfers.</p>
+              <span class="badge bg-navy text-gold border border-warning fw-bold mb-2 align-self-start px-2 py-1 small">Incredible India</span>
+              <h4 class="destination-name">Kashmir</h4>
+              <p class="destination-desc">Dal Lake shikara rides, Gulmarg snow meadows, luxury houseboats, and scenic valley excursions.</p>
               <div class="destination-card-btn">
-                <span>View Details</span>
+                <span>Explore</span>
                 <span class="arrow-circle"><i class="bi bi-arrow-right"></i></span>
               </div>
             </div>
           </a>
         </div>
 
-        <!-- 4. Singapore -->
+        <!-- 4. Kerala Backwaters -->
         <div class="col-lg-3 col-md-6">
-          <a href="destinations.html" class="destination-card">
-            <img src="images/destinations/singapore.jpg" alt="Singapore Visa Support">
+          <a href="destinations.html?filter=domestic#kerala" class="destination-card">
+            <img src="images/destinations/kerala.jpg" alt="Kerala Holiday Package" loading="lazy">
             <div class="destination-card-overlay">
-              <h4 class="destination-name">Singapore</h4>
-              <p class="destination-desc">Marina Bay Sands, Universal Studios. Authorized Singapore eVisa.</p>
+              <span class="badge bg-navy text-gold border border-warning fw-bold mb-2 align-self-start px-2 py-1 small">Incredible India</span>
+              <h4 class="destination-name">Kerala</h4>
+              <p class="destination-desc">Alleppey private houseboats, Munnar tea hills, and serene Ayurvedic wellness retreats.</p>
               <div class="destination-card-btn">
-                <span>View Details</span>
-                <span class="arrow-circle"><i class="bi bi-arrow-right"></i></span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- 5. Malaysia -->
-        <div class="col-lg-3 col-md-6">
-          <a href="destinations.html" class="destination-card">
-            <img src="images/destinations/malaysia.jpg" alt="Malaysia Visa and Tour Support">
-            <div class="destination-card-overlay">
-              <h4 class="destination-name">Malaysia</h4>
-              <p class="destination-desc">Kuala Lumpur, Genting, Langkawi. Visa exemption &amp; MDAC digital arrival card.</p>
-              <div class="destination-card-btn">
-                <span>View Details</span>
-                <span class="arrow-circle"><i class="bi bi-arrow-right"></i></span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- 6. Bali (Indonesia) -->
-        <div class="col-lg-3 col-md-6">
-          <a href="destinations.html" class="destination-card">
-            <img src="images/destinations/bali.jpg" alt="Bali Indonesia Visa and Holiday">
-            <div class="destination-card-overlay">
-              <h4 class="destination-name">Bali (Indonesia)</h4>
-              <p class="destination-desc">Ubud rice terraces, Uluwatu sunsets. Electronic Visa on Arrival (e-VOA).</p>
-              <div class="destination-card-btn">
-                <span>View Details</span>
-                <span class="arrow-circle"><i class="bi bi-arrow-right"></i></span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- 7. Japan -->
-        <div class="col-lg-3 col-md-6">
-          <a href="destinations.html" class="destination-card">
-            <img src="images/destinations/japan.jpg" alt="Japan Visa and Tour Support">
-            <div class="destination-card-overlay">
-              <h4 class="destination-name">Japan</h4>
-              <p class="destination-desc">Tokyo, Kyoto, Mount Fuji. Comprehensive eVisa &amp; sticker application review.</p>
-              <div class="destination-card-btn">
-                <span>View Details</span>
-                <span class="arrow-circle"><i class="bi bi-arrow-right"></i></span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- 8. Europe (Schengen) -->
-        <div class="col-lg-3 col-md-6">
-          <a href="destinations.html" class="destination-card">
-            <img src="images/destinations/europe.jpg" alt="Europe Visa and Travel Assistance">
-            <div class="destination-card-overlay">
-              <h4 class="destination-name">Europe (Schengen)</h4>
-              <p class="destination-desc">France, Switzerland, Italy, Germany &amp; 29 European member states.</p>
-              <div class="destination-card-btn">
-                <span>View Details</span>
+                <span>Explore</span>
                 <span class="arrow-circle"><i class="bi bi-arrow-right"></i></span>
               </div>
             </div>
@@ -959,233 +812,65 @@
         </div>
       </div>
 
-      <div class="text-center mt-5">
-        <a href="destinations.html" class="btn-navy">
-          View All Worldwide Destinations &amp; Packages <i class="bi bi-arrow-right"></i>
+      <div class="text-center mt-4 pt-2">
+        <a href="destinations.html" class="btn-navy me-2">
+          View All International Packages <i class="bi bi-globe-americas ms-1"></i>
+        </a>
+        <a href="destinations.html?filter=domestic" class="btn btn-outline-dark rounded-pill px-4 py-2 fw-semibold">
+          View All Domestic Tours <i class="bi bi-compass ms-1"></i>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Domestic Destinations Section (Famous Destinations in India) -->
-  <section class="section-padding domestic-destinations-section" style="background: linear-gradient(180deg, #FDFBF7 0%, #F5F0E6 100%); position: relative; border-top: 1px solid rgba(245, 185, 27, 0.2); border-bottom: 1px solid rgba(245, 185, 27, 0.2);">
-    <div class="container">
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
-        <div>
-          <div class="section-eyebrow text-gold"><i class="bi bi-geo-alt-fill me-1"></i> INCREDIBLE INDIA HOLIDAYS</div>
-          <h2 class="section-title text-navy mb-0">Famous Domestic Destinations</h2>
-          <p class="section-subtitle mt-2 mb-0">Experience royal heritage, misty hill stations, peaceful backwaters, and pristine beaches with all-inclusive curated holiday packages from Hyderabad.</p>
-        </div>
-        <div class="mt-3 mt-md-0">
-          <a href="destinations.html?filter=domestic" class="btn-navy">
-            View All Domestic Tours <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="row g-4">
-        <!-- 1. Kashmir -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white hover-lift">
-            <div class="position-relative" style="height: 230px; overflow: hidden;">
-              <img src="images/destinations/kashmir.jpg" alt="Kashmir Dal Lake Srinagar Shikara" class="w-100 h-100 object-fit-cover transition-slow">
-              <span class="badge bg-success text-white position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold shadow-sm"><i class="bi bi-snow me-1"></i> Paradise on Earth</span>
-            </div>
-            <div class="card-body p-4 d-flex flex-column">
-              <h4 class="font-heading fw-bold text-navy mb-2">Kashmir (Srinagar &amp; Gulmarg)</h4>
-              <p class="text-muted small mb-3">
-                Scenic Dal Lake shikara rides, snow activities in Gulmarg, lush meadows of Pahalgam, and traditional luxury houseboat stays.
-              </p>
-              <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-calendar3 text-gold me-2"></i><strong>Duration:</strong> 5 Nights / 6 Days</div>
-                <div><i class="bi bi-check-circle-fill text-gold me-2"></i><strong>Includes:</strong> Houseboat, Hotel, Transfers &amp; Sightseeing</div>
-              </div>
-              <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Kashmir" data-visa-type="Domestic Package">
-                  Explore Kashmir <i class="bi bi-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. Kerala -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white hover-lift">
-            <div class="position-relative" style="height: 230px; overflow: hidden;">
-              <img src="images/destinations/kerala.jpg" alt="Kerala Alleppey Backwaters Houseboat" class="w-100 h-100 object-fit-cover transition-slow">
-              <span class="badge bg-success text-white position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold shadow-sm"><i class="bi bi-water me-1"></i> God's Own Country</span>
-            </div>
-            <div class="card-body p-4 d-flex flex-column">
-              <h4 class="font-heading fw-bold text-navy mb-2">Kerala (Alleppey &amp; Munnar)</h4>
-              <p class="text-muted small mb-3">
-                Private luxury houseboat cruise in Alleppey backwaters, misty Munnar tea gardens, spice plantations, and waterfalls.
-              </p>
-              <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-calendar3 text-gold me-2"></i><strong>Duration:</strong> 4 Nights / 5 Days</div>
-                <div><i class="bi bi-check-circle-fill text-gold me-2"></i><strong>Includes:</strong> Private Houseboat &amp; Munnar Hill Resort</div>
-              </div>
-              <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Kerala" data-visa-type="Domestic Package">
-                  Explore Kerala <i class="bi bi-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. Goa -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white hover-lift">
-            <div class="position-relative" style="height: 230px; overflow: hidden;">
-              <img src="images/destinations/goa.jpg" alt="Goa Beaches and Resorts" class="w-100 h-100 object-fit-cover transition-slow">
-              <span class="badge bg-success text-white position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold shadow-sm"><i class="bi bi-sun me-1"></i> Sun, Sand &amp; Luxury</span>
-            </div>
-            <div class="card-body p-4 d-flex flex-column">
-              <h4 class="font-heading fw-bold text-navy mb-2">Goa (Beaches &amp; Resorts)</h4>
-              <p class="text-muted small mb-3">
-                Golden sand beaches, luxury beachfront resorts, Mandovi sunset river cruises, water sports, and Portuguese heritage villas.
-              </p>
-              <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-calendar3 text-gold me-2"></i><strong>Duration:</strong> 3 Nights / 4 Days</div>
-                <div><i class="bi bi-check-circle-fill text-gold me-2"></i><strong>Includes:</strong> 4-Star Beach Resort, Breakfast &amp; Tours</div>
-              </div>
-              <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Goa" data-visa-type="Domestic Package">
-                  Explore Goa <i class="bi bi-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Himachal Pradesh -->
-        <div class="col-lg-6 col-md-6">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white hover-lift">
-            <div class="position-relative" style="height: 230px; overflow: hidden;">
-              <img src="images/destinations/himachal.jpg" alt="Himachal Pradesh Manali Solang Valley" class="w-100 h-100 object-fit-cover transition-slow">
-              <span class="badge bg-success text-white position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold shadow-sm"><i class="bi bi-tree me-1"></i> Snowy Retreat</span>
-            </div>
-            <div class="card-body p-4 d-flex flex-column">
-              <h4 class="font-heading fw-bold text-navy mb-2">Himachal (Manali, Solang &amp; Shimla)</h4>
-              <p class="text-muted small mb-3">
-                Snow adventures in Solang Valley, Rohtang Pass, Mall Road Shimla, Atal Tunnel, and scenic mountain views.
-              </p>
-              <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-calendar3 text-gold me-2"></i><strong>Duration:</strong> 5 Nights / 6 Days</div>
-                <div><i class="bi bi-check-circle-fill text-gold me-2"></i><strong>Includes:</strong> Shimla, Kullu, Manali Hotel &amp; Cabs</div>
-              </div>
-              <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Himachal Pradesh" data-visa-type="Domestic Package">
-                  Explore Himachal <i class="bi bi-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Darjeeling & Gangtok -->
-        <div class="col-lg-6 col-md-6">
-          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white hover-lift">
-            <div class="position-relative" style="height: 230px; overflow: hidden;">
-              <img src="images/destinations/darjeeling.jpg" alt="Darjeeling Himalayan Tea Gardens" class="w-100 h-100 object-fit-cover transition-slow">
-              <span class="badge bg-success text-white position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold shadow-sm"><i class="bi bi-sunrise me-1"></i> Eastern Himalayas</span>
-            </div>
-            <div class="card-body p-4 d-flex flex-column">
-              <h4 class="font-heading fw-bold text-navy mb-2">Darjeeling &amp; Gangtok (Himalayan Sunrise)</h4>
-              <p class="text-muted small mb-3">
-                Panoramic Kanchenjunga sunrise from Tiger Hill, heritage Himalayan toy train, lush tea estates, and Tsomgo Lake.
-              </p>
-              <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-calendar3 text-gold me-2"></i><strong>Duration:</strong> 4 Nights / 5 Days</div>
-                <div><i class="bi bi-check-circle-fill text-gold me-2"></i><strong>Includes:</strong> Darjeeling &amp; Gangtok Hotel, Transfers &amp; Permits</div>
-              </div>
-              <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Darjeeling" data-visa-type="Domestic Package">
-                  Explore Darjeeling <i class="bi bi-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ==========================================================================
-       PRIVATE AVIATION & CHARTER EXPERIENCES (Private Jet & Helicopter Services)
+       PRIVATE AVIATION & CHARTER EXPERIENCES
        ========================================================================== -->
   <section class="section-padding private-aviation-section position-relative overflow-hidden" id="private-aviation">
     <div class="container position-relative" style="z-index: 2;">
-      <!-- Section Header -->
-      <div class="text-center max-w-700 mx-auto mb-5 aviation-reveal">
+      <div class="text-center max-w-700 mx-auto mb-4 aviation-reveal">
         <div class="aviation-badge">
           <span class="aviation-beacon-dot"></span>
           <span>Exclusive Private Aviation</span>
         </div>
-        <h2 class="section-title text-white">Bespoke Air Charter &amp; Helicopter Services</h2>
+        <h2 class="section-title text-white">VIP Air Charter &amp; Helicopter Transfers</h2>
         <div class="gold-divider mx-auto"></div>
-        <p class="section-subtitle text-light opacity-80">
-          Elevate your journey with discreet, personalized air travel solutions designed for corporate leaders, HNIs, and exclusive itineraries.
+        <p class="section-subtitle text-light opacity-80 mb-0">
+          Discreet, on-demand air mobility solutions tailored for corporate executives, VIP delegations, and luxury itineraries.
         </p>
       </div>
 
-      <!-- Aviation Cards Row -->
       <div class="row g-4 align-items-stretch">
         <!-- Card 1: Private Jet Charter -->
         <div class="col-lg-6 aviation-reveal delay-1">
           <div class="aviation-card h-100">
             <div class="aviation-img-wrap">
-              <img src="images/services/private-jet-charter.jpg" alt="Luxury Private Jet Charter VIP Executive Travel" loading="lazy">
+              <img src="images/services/private-jet-charter.jpg" alt="Luxury Private Jet Charter" loading="lazy">
               <div class="aviation-img-overlay"></div>
               <div class="aviation-badge-float">
                 <i class="bi bi-airplane-fill me-1"></i> Executive Aviation
               </div>
               <div class="aviation-fleet-tag">
-                <i class="bi bi-shield-check text-gold"></i> Global &amp; Domestic Routes
+                <i class="bi bi-shield-check text-gold"></i> Global &amp; Domestic
               </div>
             </div>
 
             <div class="aviation-card-body">
               <div class="aviation-title-row">
-                <div class="aviation-icon-box jet-anim">
-                  ✈️
-                </div>
+                <div class="aviation-icon-box jet-anim">✈️</div>
                 <div>
                   <span class="text-gold text-uppercase fw-bold small letter-spacing-1 d-block mb-1">Tailored Air Mobility</span>
                   <h3 class="aviation-card-title">Private Jet Charter</h3>
                 </div>
               </div>
 
-              <p class="aviation-card-desc">
-                Experience personalised private aviation for business trips, executive travel and exclusive leisure journeys. Enquire about private jet charter options tailored to your itinerary.
+              <p class="aviation-card-desc mb-3">
+                Bespoke private jet travel for corporate missions, executive schedules, and private leisure journeys with absolute discretion.
               </p>
 
-              <ul class="aviation-feature-list">
-                <li>
-                  <i class="bi bi-patch-check-fill"></i>
-                  <span><strong>Personalised Flight Itineraries:</strong> Direct point-to-point connections with flexible departure schedules that adapt to your calendar.</span>
-                </li>
-                <li>
-                  <i class="bi bi-patch-check-fill"></i>
-                  <span><strong>Business &amp; Executive Travel:</strong> Quiet, sound-insulated cabins equipped for confidential meetings, executive discussions, and high-productivity flights.</span>
-                </li>
-                <li>
-                  <i class="bi bi-patch-check-fill"></i>
-                  <span><strong>Exclusive Leisure Journeys:</strong> White-glove handling, gourmet custom dining, spacious leather seating, and discrete VIP terminal access.</span>
-                </li>
-                <li>
-                  <i class="bi bi-patch-check-fill"></i>
-                  <span><strong>Tailored Fleet Selection:</strong> Access to vetted light jets, super-midsize jets, and ultra-long-range aircraft matched to your passenger count and range.</span>
-                </li>
-              </ul>
-
-              <div class="aviation-btn-group">
-                <button class="btn-aviation-gold" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-visa-type="Private Jet Charter" data-destination="Private Jet Charter" data-message="I am interested in Private Jet Charter. Please share tailored charter options for my travel itinerary.">
-                  Enquire Private Jet <i class="bi bi-arrow-right"></i>
-                </button>
-                <a href="https://wa.me/917995974956?text=Hi%20BJ%20Visa%20Consultancy,%20I%20would%20like%20to%20enquire%20about%20Private%20Jet%20Charter%20options%20for%20my%20itinerary." target="_blank" rel="noopener noreferrer" class="btn-aviation-whatsapp" aria-label="WhatsApp enquiry for Private Jet Charter">
-                  <i class="bi bi-whatsapp"></i> WhatsApp
+              <div class="aviation-btn-group mt-auto">
+                <a href="travel-services.html#private-jet" class="btn-aviation-gold">
+                  Explore Air Charter <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -1196,10 +881,10 @@
         <div class="col-lg-6 aviation-reveal delay-2">
           <div class="aviation-card h-100">
             <div class="aviation-img-wrap">
-              <img src="images/services/private-helicopter.jpg" alt="Private Helicopter Services VIP Aerial Transfers" loading="lazy">
+              <img src="images/services/private-helicopter.jpg" alt="Private Helicopter Services" loading="lazy">
               <div class="aviation-img-overlay"></div>
               <div class="aviation-badge-float">
-                <i class="bi bi-geo-alt-fill me-1"></i> Rapid City Transfers
+                <i class="bi bi-geo-alt-fill me-1"></i> Rapid Transfers
               </div>
               <div class="aviation-fleet-tag">
                 <i class="bi bi-clock-history text-gold"></i> Point-to-Point
@@ -1208,44 +893,20 @@
 
             <div class="aviation-card-body">
               <div class="aviation-title-row">
-                <div class="aviation-icon-box heli-anim">
-                  🚁
-                </div>
+                <div class="aviation-icon-box heli-anim">🚁</div>
                 <div>
                   <span class="text-gold text-uppercase fw-bold small letter-spacing-1 d-block mb-1">Rotary Wing Excellence</span>
                   <h3 class="aviation-card-title">Private Helicopter Services</h3>
                 </div>
               </div>
 
-              <p class="aviation-card-desc">
-                Enjoy convenient helicopter travel options for selected destinations, aerial transfers, business travel and special occasions, subject to route availability and operational permissions.
+              <p class="aviation-card-desc mb-3">
+                Point-to-point aerial transfers for executive city hops, remote resort arrivals, and special occasions across approved landing sites.
               </p>
 
-              <ul class="aviation-feature-list">
-                <li>
-                  <i class="bi bi-patch-check-fill"></i>
-                  <span><strong>Aerial Transfers &amp; City Transit:</strong> Bypass congested road traffic with fast, point-to-point urban and intercity helicopter transfers.</span>
-                </li>
-                <li>
-                  <i class="bi bi-patch-check-fill"></i>
-                  <span><strong>Selected Destinations &amp; Helipads:</strong> Direct landings at approved private helipads, luxury resorts, golf retreats, and industrial plant sites.</span>
-                </li>
-                <li>
-                  <i class="bi bi-patch-check-fill"></i>
-                  <span><strong>Special Occasions &amp; Celebrations:</strong> Memorable grand entries for weddings, VIP arrivals, milestone events, and panoramic aerial views.</span>
-                </li>
-                <li>
-                  <i class="bi bi-patch-check-fill"></i>
-                  <span><strong>Operational Permissions &amp; Safety:</strong> Twin-engine helicopters operated by DGCA-certified flight crews with full route availability assessment.</span>
-                </li>
-              </ul>
-
-              <div class="aviation-btn-group">
-                <button class="btn-aviation-gold" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-visa-type="Private Helicopter Services" data-destination="Private Helicopter Services" data-message="I am interested in Private Helicopter Services. Please share route availability and charter options.">
-                  Enquire Helicopter <i class="bi bi-arrow-right"></i>
-                </button>
-                <a href="https://wa.me/917995974956?text=Hi%20BJ%20Visa%20Consultancy,%20I%20would%20like%20to%20enquire%20about%20Private%20Helicopter%20Services%20and%20route%20availability." target="_blank" rel="noopener noreferrer" class="btn-aviation-whatsapp" aria-label="WhatsApp enquiry for Private Helicopter Services">
-                  <i class="bi bi-whatsapp"></i> WhatsApp
+              <div class="aviation-btn-group mt-auto">
+                <a href="travel-services.html#private-helicopter" class="btn-aviation-gold">
+                  Explore Helicopter Services <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -1254,161 +915,22 @@
       </div>
 
       <!-- Trust Bar / Key Aviation Assurances -->
-      <div class="aviation-trust-bar aviation-reveal delay-3">
+      <div class="aviation-trust-bar aviation-reveal delay-3 mt-4">
         <div class="aviation-trust-item">
           <i class="bi bi-shield-lock-fill"></i>
           <span>Absolute Privacy &amp; Discretion</span>
         </div>
         <div class="aviation-trust-item">
           <i class="bi bi-clock-fill"></i>
-          <span>Flexible On-Demand Itineraries</span>
+          <span>Flexible On-Demand Schedules</span>
         </div>
         <div class="aviation-trust-item">
           <i class="bi bi-star-fill"></i>
-          <span>VIP Terminal &amp; Ground Handling</span>
+          <span>VIP Ground Handling</span>
         </div>
         <div class="aviation-trust-item">
           <i class="bi bi-check2-circle"></i>
-          <span>Subject to Route Permissions &amp; Feasibility</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- More Than Visa Assistance Section -->
-  <section class="section-padding bg-light-soft more-than-visa-section">
-    <div class="container">
-      <div class="text-center max-w-700 mx-auto mb-5">
-        <div class="section-eyebrow">MORE THAN VISA ASSISTANCE</div>
-        <h2 class="section-title">Additional Services for a Smoother Travel Experience</h2>
-        <div class="gold-divider mx-auto"></div>
-        <p class="section-subtitle">
-          Along with visa assistance, BJ VISA CONSULTANCY can help you coordinate other travel requirements.
-        </p>
-      </div>
-
-      <div class="row g-4">
-        <!-- 1. Passport Services -->
-        <div class="col-lg-4 col-md-6">
-          <a href="travel-services.html#passport" class="more-travel-card">
-            <div class="more-travel-icon-box">
-              <i class="bi bi-person-vcard"></i>
-            </div>
-            <h4 class="more-travel-title">Passport Services</h4>
-            <p class="more-travel-desc">
-              Comprehensive assistance for fresh passport applications, renewals, Tatkaal express booking, and
-              documentation scrutiny.
-            </p>
-            <div class="more-travel-link">
-              <span>View Details</span> <i class="bi bi-arrow-right"></i>
-            </div>
-          </a>
-        </div>
-
-        <!-- 2. Travel Insurance Assistance -->
-        <div class="col-lg-4 col-md-6">
-          <a href="travel-services.html#insurance" class="more-travel-card">
-            <div class="more-travel-icon-box">
-              <i class="bi bi-shield-check"></i>
-            </div>
-            <h4 class="more-travel-title">Travel Insurance Assistance</h4>
-            <p class="more-travel-desc">
-              Embassy-compliant overseas insurance covering medical emergencies, Schengen €30,000 mandates, trip delays,
-              and lost luggage.
-            </p>
-            <div class="more-travel-link">
-              <span>View Details</span> <i class="bi bi-arrow-right"></i>
-            </div>
-          </a>
-        </div>
-
-        <!-- 3. Flight Ticket Assistance -->
-        <div class="col-lg-4 col-md-6">
-          <a href="travel-services.html#ticketing" class="more-travel-card">
-            <div class="more-travel-icon-box">
-              <i class="bi bi-airplane-engines"></i>
-            </div>
-            <h4 class="more-travel-title">Flight Ticket Assistance</h4>
-            <p class="more-travel-desc">
-              Verifiable flight itineraries for embassy visa submissions and competitive international air ticketing
-              across major world carriers.
-            </p>
-            <div class="more-travel-link">
-              <span>View Details</span> <i class="bi bi-arrow-right"></i>
-            </div>
-          </a>
-        </div>
-
-        <!-- 4. Hotel Booking Assistance -->
-        <div class="col-lg-4 col-md-6">
-          <a href="travel-services.html#hotels" class="more-travel-card">
-            <div class="more-travel-icon-box">
-              <i class="bi bi-buildings"></i>
-            </div>
-            <h4 class="more-travel-title">Hotel Booking Assistance</h4>
-            <p class="more-travel-desc">
-              Confirmed, verifiable hotel vouchers matching your itinerary dates across trusted hospitality chains with
-              flexible cancellation terms.
-            </p>
-            <div class="more-travel-link">
-              <span>View Details</span> <i class="bi bi-arrow-right"></i>
-            </div>
-          </a>
-        </div>
-
-        <!-- 5. Transportation Arrangements -->
-        <div class="col-lg-4 col-md-6">
-          <a href="travel-services.html#transportation" class="more-travel-card">
-            <div class="more-travel-icon-box">
-              <i class="bi bi-car-front"></i>
-            </div>
-            <h4 class="more-travel-title">Transportation Arrangements</h4>
-            <p class="more-travel-desc">
-              Dedicated private airport transfers, executive chauffeur cars, intercity coaches, and international rail
-              passes for effortless mobility.
-            </p>
-            <div class="more-travel-link">
-              <span>View Details</span> <i class="bi bi-arrow-right"></i>
-            </div>
-          </a>
-        </div>
-
-        <!-- 6. International Tour Packages -->
-        <div class="col-lg-4 col-md-6">
-          <a href="travel-services.html#packages" class="more-travel-card">
-            <div class="more-travel-icon-box">
-              <i class="bi bi-globe-americas"></i>
-            </div>
-            <h4 class="more-travel-title">International Tour Packages</h4>
-            <p class="more-travel-desc">
-              Curated holiday packages, guided sightseeing, and bespoke itineraries across Europe, UK, UAE, Asia, and
-              global destinations.
-            </p>
-            <div class="more-travel-link">
-              <span>View Details</span> <i class="bi bi-arrow-right"></i>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- Callout Banner -->
-      <div class="travel-services-cta-banner p-4 p-md-5 rounded-4 mt-5">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-8 text-center text-lg-start">
-            <span class="badge bg-gold text-navy fw-bold px-3 py-1 mb-2">COMPLETE TRAVEL SUPPORT</span>
-            <h4 class="font-heading fw-bold text-white mb-1">
-              One trusted point of contact for multiple travel requirements.
-            </h4>
-            <p class="text-light opacity-75 mb-0 small">
-              Simplify your entire trip planning by coordinating visas, flights, insurance, stays, and transfers under
-              one roof.
-            </p>
-          </div>
-          <div class="col-lg-4 text-center text-lg-end">
-            <a href="travel-services.html" class="btn-gold">
-              Explore Travel Services <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
+          <span>Subject to Route Permissions</span>
         </div>
       </div>
     </div>
@@ -1424,15 +946,10 @@
           <div class="gold-divider"></div>
 
           <p class="lead text-navy fw-medium">
-            A reliable visa support partner can make a meaningful difference to your travel business.
+            BJ VISA CONSULTANCY provides dependable backend visa assistance and documentation guidance for travel agencies, tour operators, and corporate travel desks across India.
           </p>
           <p class="text-muted">
-            <strong>BJ VISA CONSULTANCY</strong> works with travel agencies, tour operators and corporate travel
-            partners to provide B2B visa assistance and documentation support.
-          </p>
-          <p class="text-muted">
-            We respect partner relationships, value confidentiality and believe in building long-term professional
-            associations through ethical practices and clear communication.
+            We protect your client ownership with strict non-solicitation, 100% confidentiality, and transparent communication.
           </p>
 
           <div class="p-3 rounded-3 mt-4 mb-4"
@@ -1455,20 +972,19 @@
         </div>
 
         <div class="col-lg-6">
-          <div class="position-relative">
-            <picture>
+          <div class="rounded-4 overflow-hidden shadow-lg position-relative"
+            style="border: 2px solid rgba(245, 185, 27, 0.4); background: #000B29;">
+            <picture class="w-100 d-block">
               <source srcset="images/b2b/b2b-partner-banner.webp" type="image/webp">
               <img src="images/b2b/b2b-partner-banner.png"
-                alt="B2B Travel Partner Program - Your Trusted Backend Partner" class="rounded-4 shadow-lg w-100"
-                style="max-height: 440px; object-fit: cover; border: 2px solid rgba(245, 185, 27, 0.4);">
+                alt="B2B Travel Partner Program - Your Trusted Backend Partner" class="b2b-home-banner-img">
             </picture>
-            <div
-              class="position-absolute bottom-0 start-0 m-4 p-3 bg-navy text-white rounded-3 shadow border border-warning"
-              style="max-width: 320px;">
-              <h6 class="text-gold font-heading mb-1"><i class="bi bi-briefcase-fill me-1"></i> B2B Travel Partner
-                Program</h6>
-              <p class="small text-white-50 mb-0">Backend visa processing solutions for travel agents across India.</p>
-            </div>
+          </div>
+          <div
+            class="p-3 bg-navy text-white rounded-3 shadow border border-warning mt-3">
+            <h6 class="text-gold font-heading mb-1"><i class="bi bi-briefcase-fill me-1"></i> B2B Travel Partner
+              Program</h6>
+            <p class="small text-white-50 mb-0">Backend visa processing solutions for travel agents across India.</p>
           </div>
         </div>
       </div>

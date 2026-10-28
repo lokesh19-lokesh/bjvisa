@@ -50,9 +50,15 @@
       <a class="navbar-brand" href="index.html">
         <img src="images/logo.png" alt="BJ Visa Consultancy" class="brand-logo-img">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Right Header Actions on Mobile (B2B Button + Toggler) -->
+      <div class="navbar-mobile-actions d-flex align-items-center gap-2 d-lg-none">
+        <a href="b2b.html" class="btn-nav-b2b btn-nav-b2b-header">
+          <i class="bi bi-briefcase-fill"></i> B2B
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      </div>
 
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
@@ -66,7 +72,7 @@
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-cta-group ms-lg-3 mt-3 mt-lg-0 d-flex flex-column flex-sm-row flex-lg-row align-items-stretch align-items-lg-center gap-2">
-          <a href="b2b.html" class="btn-nav-b2b">
+          <a href="b2b.html" class="btn-nav-b2b d-none d-lg-inline-flex">
             <i class="bi bi-briefcase-fill"></i> B2B
           </a>
           <button class="btn-nav-enquire" data-bs-toggle="modal" data-bs-target="#enquiryModal">
@@ -80,17 +86,17 @@
   <!-- Subpage Header Banner -->
   <header class="page-hero-banner hero-about">
     <div class="container position-relative">
-      <div class="row">
-        <div class="col-lg-9">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
           <div class="section-eyebrow section-eyebrow-light">ABOUT BJ VISA CONSULTANCY</div>
-          <h1 class="page-hero-title">More Than a Visa. We Help People Move Closer to What Matters.</h1>
+          <h1 class="page-hero-title mb-2">About BJ Visa Consultancy</h1>
           <p class="lead text-light opacity-90 mb-3">
-            Every visa application begins with a destination. But behind every destination, there is a reason.
+            More Than a Visa. We Help People Move Closer to What Matters.
           </p>
           <div class="page-hero-breadcrumb">
             <a href="index.html">Home</a>
             <i class="bi bi-chevron-right"></i>
-            <span>About BJ Visa Consultancy</span>
+            <span>About Us</span>
           </div>
         </div>
       </div>
@@ -100,35 +106,40 @@
   <!-- Section 1: Behind Every Destination, There Is a Reason -->
   <section class="section-padding bg-white">
     <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <div class="section-eyebrow">ABOUT BJ VISA CONSULTANCY</div>
-          <h2 class="section-title">More Than a Visa. We Help People Move Closer to What Matters.</h2>
-          <div class="gold-divider"></div>
+      <!-- Section 1 Header (Centered & 2 lines on laptop view only; mobile view unchanged) -->
+      <div class="about-reason-header mb-4 mb-lg-5 reveal-on-scroll">
+        <div class="section-eyebrow">ABOUT BJ VISA CONSULTANCY</div>
+        <h2 class="section-title">
+          More Than a Visa. We Help People<br class="d-none d-lg-inline"> Move Closer to What Matters.
+        </h2>
+        <div class="gold-divider"></div>
+      </div>
 
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal-on-scroll">
           <p class="lead text-navy fw-medium">
             Every visa application begins with a destination. But behind every destination, there is a reason.
           </p>
 
           <div class="d-flex flex-column gap-2 mb-4">
-            <div class="d-flex align-items-start gap-3 p-2 rounded-3 bg-light-soft">
-              <i class="bi bi-people-fill text-gold fs-5 mt-1"></i>
+            <div class="reason-micro-card">
+              <div class="reason-icon-wrap"><i class="bi bi-people-fill"></i></div>
               <span class="text-navy fw-medium small">A family planning its first international holiday together.</span>
             </div>
-            <div class="d-flex align-items-start gap-3 p-2 rounded-3 bg-light-soft">
-              <i class="bi bi-heart-fill text-gold fs-5 mt-1"></i>
+            <div class="reason-micro-card">
+              <div class="reason-icon-wrap"><i class="bi bi-heart-fill"></i></div>
               <span class="text-navy fw-medium small">A parent waiting to embrace a child living thousands of miles away.</span>
             </div>
-            <div class="d-flex align-items-start gap-3 p-2 rounded-3 bg-light-soft">
-              <i class="bi bi-briefcase-fill text-gold fs-5 mt-1"></i>
+            <div class="reason-micro-card">
+              <div class="reason-icon-wrap"><i class="bi bi-briefcase-fill"></i></div>
               <span class="text-navy fw-medium small">A business owner preparing for an opportunity that could change the future of their business.</span>
             </div>
-            <div class="d-flex align-items-start gap-3 p-2 rounded-3 bg-light-soft">
-              <i class="bi bi-geo-alt-fill text-gold fs-5 mt-1"></i>
+            <div class="reason-micro-card">
+              <div class="reason-icon-wrap"><i class="bi bi-geo-alt-fill"></i></div>
               <span class="text-navy fw-medium small">A couple finally turning a dream destination into a real journey.</span>
             </div>
-            <div class="d-flex align-items-start gap-3 p-2 rounded-3 bg-light-soft">
-              <i class="bi bi-compass-fill text-gold fs-5 mt-1"></i>
+            <div class="reason-micro-card">
+              <div class="reason-icon-wrap"><i class="bi bi-compass-fill"></i></div>
               <span class="text-navy fw-medium small">A first-time traveller preparing to discover a world they have only imagined.</span>
             </div>
           </div>
@@ -151,13 +162,14 @@
           </div>
         </div>
 
-        <div class="col-lg-6">
-          <div class="position-relative">
+        <div class="col-lg-6 reveal-on-scroll reveal-delay-2">
+          <div class="editorial-image-frame position-relative">
+            <span class="editorial-badge-pill top-0 start-0 m-4"><i class="bi bi-patch-check-fill text-gold me-1"></i> Personal Attention</span>
             <picture>
               <source srcset="images/about/bjvc-customer-support.webp" type="image/webp">
-              <img src="images/about/bjvc-customer-support.png" alt="BJ Visa Consultancy Dedicated Client Support Desk" class="rounded-4 shadow-lg w-100" style="height: 480px; object-fit: cover;">
+              <img src="images/about/bjvc-customer-support.png" alt="BJ Visa Consultancy Dedicated Client Support Desk" style="height: 520px; object-fit: cover; object-position: left center;">
             </picture>
-            <div class="position-absolute bottom-0 end-0 m-4 p-3 bg-navy text-white rounded-3 shadow border border-warning" style="max-width: 300px;">
+            <div class="floating-trust-chip bottom-0 end-0 m-4" style="max-width: 310px;">
               <h6 class="text-gold font-heading mb-1"><i class="bi bi-geo-alt-fill me-1"></i> Hyderabad, Telangana</h6>
               <p class="small text-white-50 mb-0">Assisting clients across Telangana, Andhra Pradesh, and India nationwide.</p>
             </div>
@@ -170,7 +182,7 @@
   <!-- Section 2: Your Trusted Visa Consultant in Hyderabad -->
   <section class="section-padding bg-light-soft">
     <div class="container">
-      <div class="text-center max-w-700 mx-auto mb-5">
+      <div class="text-center max-w-700 mx-auto mb-5 reveal-on-scroll">
         <div class="section-eyebrow">LOCAL EXPERTISE • GLOBAL REACH</div>
         <h2 class="section-title">Your Trusted Visa Consultant in Hyderabad</h2>
         <div class="gold-divider mx-auto"></div>
@@ -179,9 +191,16 @@
         </p>
       </div>
 
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-6">
-          <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm h-100">
+      <div class="row g-4 align-items-center mb-4">
+        <div class="col-lg-6 reveal-on-scroll">
+          <div class="editorial-image-frame position-relative">
+            <span class="editorial-badge-pill bottom-0 start-0 m-4"><i class="bi bi-patch-check-fill text-gold me-1"></i> Professional Guidance</span>
+            <img src="images/about/visa-consultation-guidance.jpg" alt="BJ Visa Consultation Guidance in Hyderabad" style="height: 380px; object-fit: cover;">
+          </div>
+        </div>
+
+        <div class="col-lg-6 reveal-on-scroll reveal-delay-2">
+          <div class="p-4 p-md-5 bg-white rounded-4 shadow-sm h-100 border">
             <h4 class="font-heading fw-bold text-navy mb-3">Making Requirements Easier to Understand</h4>
             <p class="text-muted">
               We understand that international visa requirements can sometimes feel complicated. Different destinations have different rules, supporting document requirements and application procedures. Even knowing where to begin can be overwhelming, especially for first-time travellers.
@@ -194,21 +213,29 @@
             </p>
           </div>
         </div>
+      </div>
 
-        <div class="col-lg-6">
-          <div class="p-4 p-md-5 rounded-4 h-100" style="background: var(--navy-deep); border: 1.5px solid rgba(245, 185, 27, 0.45);">
-            <span class="badge bg-gold text-navy fw-bold px-3 py-1 mb-3">OUR PURPOSE</span>
-            <h4 class="font-heading fw-bold text-white mb-3">Clear, Confident &amp; Reassuring</h4>
-            <p class="text-light opacity-90 mb-3">
-              Our services include assistance for Schengen visas, UK visas, tourist visas, business visas, family visit visas and selected other international destinations.
-            </p>
-            <p class="text-light opacity-90 mb-4">
-              We also provide premium Visa At Your Doorstep (VAYD) assistance for eligible UK and Schengen applicants, subject to applicable service conditions and availability.
-            </p>
-            <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.08); border-left: 3px solid var(--gold);">
-              <p class="text-gold mb-0 fw-semibold">
-                "Our purpose is simple: to help you approach your international travel plans with greater clarity, confidence and peace of mind."
-              </p>
+      <div class="row g-4">
+        <div class="col-lg-12 reveal-on-scroll">
+          <div class="p-4 p-md-5 rounded-4" style="background: var(--navy-deep); border: 1.5px solid rgba(245, 185, 27, 0.45); box-shadow: 0 16px 36px rgba(0, 11, 41, 0.15);">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-7">
+                <span class="badge bg-gold text-navy fw-bold px-3 py-1 mb-3">OUR PURPOSE</span>
+                <h4 class="font-heading fw-bold text-white mb-3">Clear, Confident &amp; Reassuring</h4>
+                <p class="text-light opacity-90 mb-3">
+                  Our services include assistance for Schengen visas, UK visas, tourist visas, business visas, family visit visas and selected other international destinations.
+                </p>
+                <p class="text-light opacity-90 mb-0">
+                  We also provide premium Visa At Your Doorstep (VAYD) assistance for eligible UK and Schengen applicants, subject to applicable service conditions and availability.
+                </p>
+              </div>
+              <div class="col-lg-5">
+                <div class="p-4 rounded-3" style="background: rgba(255, 255, 255, 0.08); border-left: 3px solid var(--gold);">
+                  <p class="text-gold mb-0 fw-semibold fs-6">
+                    "Our purpose is simple: to help you approach your international travel plans with greater clarity, confidence and peace of mind."
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -219,7 +246,7 @@
   <!-- Section 3: Why We Do What We Do -->
   <section class="section-padding bg-white">
     <div class="container">
-      <div class="text-center max-w-700 mx-auto mb-5">
+      <div class="text-center max-w-700 mx-auto mb-5 reveal-on-scroll">
         <div class="section-eyebrow">WHY WE DO WHAT WE DO</div>
         <h2 class="section-title">Because Your Journey Is Personal.</h2>
         <div class="gold-divider mx-auto"></div>
@@ -229,42 +256,57 @@
       </div>
 
       <div class="row g-4 mb-5">
-        <div class="col-lg-4">
-          <div class="empathy-card">
-            <div class="d-flex align-items-center gap-2 mb-3 text-gold fs-4">
-              <i class="bi bi-airplane-engines"></i>
+        <div class="col-lg-4 reveal-on-scroll reveal-delay-1">
+          <div class="empathy-visual-card">
+            <div class="empathy-card-img-wrap">
+              <img src="images/services/family-visa.jpg" alt="Family Holiday Dreams">
+              <div class="empathy-card-badge">
+                <i class="bi bi-airplane-engines"></i>
+              </div>
             </div>
-            <h5 class="font-heading fw-bold text-navy mb-2">Family Holiday Dreams</h5>
-            <p class="text-muted small mb-0">
-              Imagine planning a holiday with your family for months, only to feel overwhelmed by unfamiliar documentation requirements.
-            </p>
+            <div class="empathy-card-body">
+              <h5 class="font-heading fw-bold text-navy mb-2">Family Holiday Dreams</h5>
+              <p class="text-muted small mb-0">
+                Imagine planning a holiday with your family for months, only to feel overwhelmed by unfamiliar documentation requirements.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="empathy-card">
-            <div class="d-flex align-items-center gap-2 mb-3 text-gold fs-4">
-              <i class="bi bi-briefcase"></i>
+        <div class="col-lg-4 reveal-on-scroll reveal-delay-2">
+          <div class="empathy-visual-card">
+            <div class="empathy-card-img-wrap">
+              <img src="images/services/business-visa.jpg" alt="Crucial Business Ventures">
+              <div class="empathy-card-badge">
+                <i class="bi bi-briefcase"></i>
+              </div>
             </div>
-            <h5 class="font-heading fw-bold text-navy mb-2">Crucial Business Ventures</h5>
-            <p class="text-muted small mb-0">
-              Imagine preparing for an important business trip while trying to understand a visa process you have never experienced before.
-            </p>
+            <div class="empathy-card-body">
+              <h5 class="font-heading fw-bold text-navy mb-2">Crucial Business Ventures</h5>
+              <p class="text-muted small mb-0">
+                Imagine preparing for an important business trip while trying to understand a visa process you have never experienced before.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="empathy-card">
-            <div class="d-flex align-items-center gap-2 mb-3 text-gold fs-4">
-              <i class="bi bi-heart"></i>
+        <div class="col-lg-4 reveal-on-scroll reveal-delay-3">
+          <div class="empathy-visual-card">
+            <div class="empathy-card-img-wrap">
+              <img src="images/hero/airport-sunset.jpg" alt="Long-Awaited Reunions">
+              <div class="empathy-card-badge">
+                <i class="bi bi-heart"></i>
+              </div>
             </div>
-            <h5 class="font-heading fw-bold text-navy mb-2">Long-Awaited Reunions</h5>
-            <p class="text-muted small mb-0">
-              Imagine wanting to visit someone you love, but not knowing which documents you need or how to begin.
-            </p>
+            <div class="empathy-card-body">
+              <h5 class="font-heading fw-bold text-navy mb-2">Long-Awaited Reunions</h5>
+              <p class="text-muted small mb-0">
+                Imagine wanting to visit someone you love, but not knowing which documents you need or how to begin.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="p-4 p-md-5 rounded-4 bg-light-soft border">
+      <div class="p-4 p-md-5 rounded-4 bg-light-soft border reveal-on-scroll">
         <div class="row align-items-center g-4">
           <div class="col-lg-8">
             <h4 class="font-heading fw-bold text-navy mb-3">These situations remind us why professional guidance matters.</h4>
@@ -288,7 +330,7 @@
   <!-- Section 4: Our Approach: People First, Paperwork Second -->
   <section class="section-padding why-choose-section">
     <div class="container">
-      <div class="text-center max-w-700 mx-auto mb-5">
+      <div class="text-center max-w-700 mx-auto mb-5 reveal-on-scroll">
         <div class="section-eyebrow section-eyebrow-light">OUR APPROACH</div>
         <h2 class="section-title text-white">People First, Paperwork Second</h2>
         <div class="gold-divider mx-auto"></div>
@@ -297,67 +339,67 @@
         </p>
       </div>
 
-      <div class="row g-4 mb-5">
+      <div class="row g-4 justify-content-center mb-5">
         <!-- 1. We Understand Before We Advise -->
-        <div class="col-lg-4 col-md-6">
-          <div class="why-choose-card text-start h-100 p-4">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-1">
+          <div class="approach-pillar-card text-start h-100 p-4" data-step="01">
             <div class="why-choose-icon-circle mx-0 mb-3">
               <i class="bi bi-person-check-fill"></i>
             </div>
-            <h5 class="why-choose-title">We Understand Before We Advise</h5>
-            <p class="why-choose-desc">
+            <h5 class="why-choose-title text-white">We Understand Before We Advise</h5>
+            <p class="why-choose-desc text-light opacity-80">
               No two applicants are exactly alike. Your travel purpose, personal circumstances and supporting documents all matter. We take these factors into account when guiding you through the applicable process.
             </p>
           </div>
         </div>
 
         <!-- 2. We Believe in Honest Answers -->
-        <div class="col-lg-4 col-md-6">
-          <div class="why-choose-card text-start h-100 p-4">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-2">
+          <div class="approach-pillar-card text-start h-100 p-4" data-step="02">
             <div class="why-choose-icon-circle mx-0 mb-3">
               <i class="bi bi-chat-heart-fill"></i>
             </div>
-            <h5 class="why-choose-title">We Believe in Honest Answers</h5>
-            <p class="why-choose-desc">
+            <h5 class="why-choose-title text-white">We Believe in Honest Answers</h5>
+            <p class="why-choose-desc text-light opacity-80">
               We explain what our services can and cannot do. If something needs attention in your documentation, we believe you deserve to know about it.
             </p>
           </div>
         </div>
 
         <!-- 3. We Treat Documentation Seriously -->
-        <div class="col-lg-4 col-md-6">
-          <div class="why-choose-card text-start h-100 p-4">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-3">
+          <div class="approach-pillar-card text-start h-100 p-4" data-step="03">
             <div class="why-choose-icon-circle mx-0 mb-3">
               <i class="bi bi-file-earmark-ruled-fill"></i>
             </div>
-            <h5 class="why-choose-title">We Treat Documentation Seriously</h5>
-            <p class="why-choose-desc">
+            <h5 class="why-choose-title text-white">We Treat Documentation Seriously</h5>
+            <p class="why-choose-desc text-light opacity-80">
               Accurate and consistent documentation is an important part of preparing a visa application. We help identify missing information and guide you through the relevant requirements.
             </p>
           </div>
         </div>
 
         <!-- 4. We Respect Your Privacy -->
-        <div class="col-lg-4 col-md-6">
-          <div class="why-choose-card text-start h-100 p-4">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-4">
+          <div class="approach-pillar-card text-start h-100 p-4" data-step="04">
             <div class="why-choose-icon-circle mx-0 mb-3">
               <i class="bi bi-shield-lock-fill"></i>
             </div>
-            <h5 class="why-choose-title">We Respect Your Privacy</h5>
-            <p class="why-choose-desc">
+            <h5 class="why-choose-title text-white">We Respect Your Privacy</h5>
+            <p class="why-choose-desc text-light opacity-80">
               Visa applications may involve passports, financial statements, employment records and other personal information. We understand the importance of handling these documents responsibly and confidentially.
             </p>
           </div>
         </div>
 
         <!-- 5. We Stay Committed to Ethical Processing -->
-        <div class="col-lg-4 col-md-6">
-          <div class="why-choose-card text-start h-100 p-4">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-5">
+          <div class="approach-pillar-card text-start h-100 p-4" data-step="05">
             <div class="why-choose-icon-circle mx-0 mb-3">
               <i class="bi bi-patch-check-fill"></i>
             </div>
-            <h5 class="why-choose-title">We Stay Committed to Ethical Processing</h5>
-            <p class="why-choose-desc">
+            <h5 class="why-choose-title text-white">We Stay Committed to Ethical Processing</h5>
+            <p class="why-choose-desc text-light opacity-80">
               We do not encourage fabricated documents, false information, misrepresentation or shortcuts that violate official requirements. We believe trust is built by doing things responsibly, even when the responsible answer takes more explanation.
             </p>
           </div>
@@ -369,7 +411,7 @@
   <!-- Section 5: How It Works: A Clearer Path to Your Destination -->
   <section class="section-padding bg-light-soft">
     <div class="container">
-      <div class="text-center max-w-700 mx-auto mb-5">
+      <div class="text-center max-w-700 mx-auto mb-5 reveal-on-scroll">
         <div class="section-eyebrow">HOW IT WORKS</div>
         <h2 class="section-title">A Clearer Path to Your Destination</h2>
         <div class="gold-divider mx-auto"></div>
@@ -380,7 +422,7 @@
 
       <div class="row g-4">
         <!-- Step 1 -->
-        <div class="col-lg col-md-4 col-sm-6">
+        <div class="col-lg col-md-4 col-sm-6 reveal-on-scroll reveal-delay-1">
           <div class="process-step-card">
             <div class="process-step-num">01</div>
             <h5 class="process-step-title">Tell Us Your Plans</h5>
@@ -391,7 +433,7 @@
         </div>
 
         <!-- Step 2 -->
-        <div class="col-lg col-md-4 col-sm-6">
+        <div class="col-lg col-md-4 col-sm-6 reveal-on-scroll reveal-delay-2">
           <div class="process-step-card">
             <div class="process-step-num">02</div>
             <h5 class="process-step-title">Understand Your Profile</h5>
@@ -402,7 +444,7 @@
         </div>
 
         <!-- Step 3 -->
-        <div class="col-lg col-md-4 col-sm-6">
+        <div class="col-lg col-md-4 col-sm-6 reveal-on-scroll reveal-delay-3">
           <div class="process-step-card">
             <div class="process-step-num">03</div>
             <h5 class="process-step-title">Prepare Your Documents</h5>
@@ -413,7 +455,7 @@
         </div>
 
         <!-- Step 4 -->
-        <div class="col-lg col-md-6 col-sm-6">
+        <div class="col-lg col-md-6 col-sm-6 reveal-on-scroll reveal-delay-4">
           <div class="process-step-card">
             <div class="process-step-num">04</div>
             <h5 class="process-step-title">Review and Coordinate</h5>
@@ -424,7 +466,7 @@
         </div>
 
         <!-- Step 5 -->
-        <div class="col-lg col-md-6 col-sm-12">
+        <div class="col-lg col-md-6 col-sm-12 reveal-on-scroll reveal-delay-5">
           <div class="process-step-card">
             <div class="process-step-num">05</div>
             <h5 class="process-step-title">Move Forward With Confidence</h5>
@@ -435,7 +477,7 @@
         </div>
       </div>
 
-      <div class="p-3 mt-4 rounded-3 text-center bg-white border shadow-sm">
+      <div class="p-3 mt-4 rounded-3 text-center bg-white border shadow-sm reveal-on-scroll">
         <small class="text-muted">
           <i class="bi bi-info-circle text-primary me-1"></i>
           All applications remain subject to the relevant embassy, consulate, immigration authority and visa application centre requirements.
@@ -447,7 +489,7 @@
   <!-- Section 6: Our Visa & Travel Assistance -->
   <section class="section-padding bg-white">
     <div class="container">
-      <div class="text-center max-w-700 mx-auto mb-5">
+      <div class="text-center max-w-700 mx-auto mb-5 reveal-on-scroll">
         <div class="section-eyebrow">OUR VISA &amp; TRAVEL ASSISTANCE</div>
         <h2 class="section-title">Comprehensive Visa &amp; Travel Solutions</h2>
         <div class="gold-divider mx-auto"></div>
@@ -458,85 +500,115 @@
 
       <div class="row g-4">
         <!-- 1. Schengen -->
-        <div class="col-lg-4 col-md-6">
-          <div class="service-card p-4 h-100">
-            <div class="service-strip-icon-box mb-3" style="width: 50px; height: 50px; font-size: 1.3rem;">
-              <i class="bi bi-globe-europe-africa"></i>
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-1">
+          <div class="solution-visual-card">
+            <div class="solution-card-img-wrap">
+              <img src="images/destinations/europe.jpg" alt="Schengen Visa Assistance">
+              <div class="solution-card-icon-tag">
+                <i class="bi bi-globe-europe-africa"></i>
+              </div>
             </div>
-            <h4 class="service-card-title">Schengen Visa Assistance</h4>
-            <p class="service-card-desc">
-              For travellers planning visits to European Schengen destinations, we provide documentation guidance and application-related assistance according to the applicable requirements.
-            </p>
+            <div class="solution-card-body">
+              <h4 class="service-card-title">Schengen Visa Assistance</h4>
+              <p class="service-card-desc">
+                For travellers planning visits to European Schengen destinations, we provide documentation guidance and application-related assistance according to the applicable requirements.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- 2. UK -->
-        <div class="col-lg-4 col-md-6">
-          <div class="service-card p-4 h-100">
-            <div class="service-strip-icon-box mb-3" style="width: 50px; height: 50px; font-size: 1.3rem;">
-              <i class="bi bi-buildings"></i>
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-2">
+          <div class="solution-visual-card">
+            <div class="solution-card-img-wrap">
+              <img src="images/destinations/uk.jpg" alt="UK Visa Assistance">
+              <div class="solution-card-icon-tag">
+                <i class="bi bi-buildings"></i>
+              </div>
             </div>
-            <h4 class="service-card-title">UK Visa Assistance</h4>
-            <p class="service-card-desc">
-              For eligible visitors travelling to the United Kingdom, we help explain the relevant documentation and application preparation process.
-            </p>
+            <div class="solution-card-body">
+              <h4 class="service-card-title">UK Visa Assistance</h4>
+              <p class="service-card-desc">
+                For eligible visitors travelling to the United Kingdom, we help explain the relevant documentation and application preparation process.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- 3. Tourist -->
-        <div class="col-lg-4 col-md-6">
-          <div class="service-card p-4 h-100">
-            <div class="service-strip-icon-box mb-3" style="width: 50px; height: 50px; font-size: 1.3rem;">
-              <i class="bi bi-compass"></i>
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-3">
+          <div class="solution-visual-card">
+            <div class="solution-card-img-wrap">
+              <img src="images/services/tourist-visa.jpg" alt="Tourist Visa Assistance">
+              <div class="solution-card-icon-tag">
+                <i class="bi bi-compass"></i>
+              </div>
             </div>
-            <h4 class="service-card-title">Tourist Visa Assistance</h4>
-            <p class="service-card-desc">
-              For individuals and families planning international holidays, we provide guidance based on the intended destination and purpose of travel.
-            </p>
+            <div class="solution-card-body">
+              <h4 class="service-card-title">Tourist Visa Assistance</h4>
+              <p class="service-card-desc">
+                For individuals and families planning international holidays, we provide guidance based on the intended destination and purpose of travel.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- 4. Business -->
-        <div class="col-lg-4 col-md-6">
-          <div class="service-card p-4 h-100">
-            <div class="service-strip-icon-box mb-3" style="width: 50px; height: 50px; font-size: 1.3rem;">
-              <i class="bi bi-briefcase"></i>
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-4">
+          <div class="solution-visual-card">
+            <div class="solution-card-img-wrap">
+              <img src="images/services/business-visa.jpg" alt="Business Visa Assistance">
+              <div class="solution-card-icon-tag">
+                <i class="bi bi-briefcase"></i>
+              </div>
             </div>
-            <h4 class="service-card-title">Business Visa Assistance</h4>
-            <p class="service-card-desc">
-              For eligible business travellers, we help clarify supporting documentation and application requirements relevant to the intended business visit.
-            </p>
+            <div class="solution-card-body">
+              <h4 class="service-card-title">Business Visa Assistance</h4>
+              <p class="service-card-desc">
+                For eligible business travellers, we help clarify supporting documentation and application requirements relevant to the intended business visit.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- 5. Family Visit -->
-        <div class="col-lg-4 col-md-6">
-          <div class="service-card p-4 h-100">
-            <div class="service-strip-icon-box mb-3" style="width: 50px; height: 50px; font-size: 1.3rem;">
-              <i class="bi bi-people"></i>
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-5">
+          <div class="solution-visual-card">
+            <div class="solution-card-img-wrap">
+              <img src="images/services/family-visa.jpg" alt="Family Visit Visa Assistance">
+              <div class="solution-card-icon-tag">
+                <i class="bi bi-people"></i>
+              </div>
             </div>
-            <h4 class="service-card-title">Family Visit Visa Assistance</h4>
-            <p class="service-card-desc">
-              For travellers wishing to visit relatives abroad, we provide guidance on the applicable requirements and supporting documents.
-            </p>
+            <div class="solution-card-body">
+              <h4 class="service-card-title">Family Visit Visa Assistance</h4>
+              <p class="service-card-desc">
+                For travellers wishing to visit relatives abroad, we provide guidance on the applicable requirements and supporting documents.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- 6. Other Destinations -->
-        <div class="col-lg-4 col-md-6">
-          <div class="service-card p-4 h-100">
-            <div class="service-strip-icon-box mb-3" style="width: 50px; height: 50px; font-size: 1.3rem;">
-              <i class="bi bi-airplane"></i>
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-1">
+          <div class="solution-visual-card">
+            <div class="solution-card-img-wrap">
+              <img src="images/destinations/japan.jpg" alt="Other International Visa Assistance">
+              <div class="solution-card-icon-tag">
+                <i class="bi bi-airplane"></i>
+              </div>
             </div>
-            <h4 class="service-card-title">Other International Visa Assistance</h4>
-            <p class="service-card-desc">
-              We also assist with selected destinations, including Japan, Australia, UAE and other international travel requirements.
-            </p>
+            <div class="solution-card-body">
+              <h4 class="service-card-title">Other International Visa Assistance</h4>
+              <p class="service-card-desc">
+                We also assist with selected destinations, including Japan, Australia, UAE and other international travel requirements.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- 7. Premium VAYD -->
-        <div class="col-lg-12">
+        <div class="col-lg-12 reveal-on-scroll">
           <div class="p-4 rounded-4" style="background: var(--blue-soft); border: 1.5px solid rgba(245, 185, 27, 0.4);">
             <div class="row align-items-center g-3">
               <div class="col-lg-8">
@@ -557,7 +629,7 @@
       </div>
 
       <!-- Supporting travel services banner -->
-      <div class="p-3 mt-4 rounded-3 text-center bg-light-soft border">
+      <div class="p-3 mt-4 rounded-3 text-center bg-light-soft border reveal-on-scroll">
         <p class="text-navy fw-semibold mb-0 small">
           <i class="bi bi-check2-circle text-gold me-1"></i>
           Our supporting travel services include passport assistance, travel insurance assistance, flight tickets, hotel bookings, transportation arrangements and international tour packages.
@@ -570,7 +642,7 @@
   <section class="section-padding bg-light-soft">
     <div class="container">
       <div class="row align-items-center g-5">
-        <div class="col-lg-6">
+        <div class="col-lg-6 reveal-on-scroll">
           <div class="section-eyebrow">PREMIUM SERVICE, WITH YOUR CONVENIENCE IN MIND</div>
           <h2 class="section-title">Your Time Matters. So Does Your Comfort.</h2>
           <div class="gold-divider"></div>
@@ -596,13 +668,14 @@
           </a>
         </div>
 
-        <div class="col-lg-6">
-          <div class="position-relative">
+        <div class="col-lg-6 reveal-on-scroll reveal-delay-2">
+          <div class="editorial-image-frame position-relative">
+            <span class="editorial-badge-pill top-0 end-0 m-4"><i class="bi bi-shield-check text-gold me-1"></i> Official VAYD Support</span>
             <picture>
               <source srcset="images/services/vayd-service-bjvc.webp" type="image/webp">
-              <img src="images/services/vayd-service-bjvc.png" alt="BJ Visa Premium Doorstep Biometric Assistance" class="rounded-4 shadow-lg w-100" style="height: 420px; object-fit: cover;">
+              <img src="images/services/vayd-service-bjvc.png" alt="BJ Visa Premium Doorstep Biometric Assistance" style="height: 420px; object-fit: cover;">
             </picture>
-            <div class="position-absolute bottom-0 start-0 m-4 p-3 bg-navy text-white rounded-3 shadow border border-warning" style="max-width: 300px;">
+            <div class="floating-trust-chip bottom-0 start-0 m-4" style="max-width: 300px;">
               <h6 class="text-gold font-heading mb-1"><i class="bi bi-house-door-fill me-1"></i> Home &amp; Office Doorstep</h6>
               <p class="small text-white-50 mb-0">Eligible UK &amp; Schengen applicants across Hyderabad.</p>
             </div>
@@ -616,7 +689,7 @@
   <section class="section-padding bg-white">
     <div class="container">
       <div class="row align-items-center g-5">
-        <div class="col-lg-6 order-lg-2">
+        <div class="col-lg-6 order-lg-2 reveal-on-scroll">
           <div class="section-eyebrow">SUPPORTING TRAVEL BUSINESSES THROUGH PARTNERSHIP</div>
           <h2 class="section-title">Your Client. Your Relationship. Our Visa Expertise.</h2>
           <div class="gold-divider"></div>
@@ -642,13 +715,14 @@
           </a>
         </div>
 
-        <div class="col-lg-6 order-lg-1">
-          <div class="position-relative">
+        <div class="col-lg-6 order-lg-1 reveal-on-scroll reveal-delay-2">
+          <div class="editorial-image-frame position-relative">
+            <span class="editorial-badge-pill top-0 start-0 m-4"><i class="bi bi-briefcase-fill text-gold me-1"></i> B2B Travel Collaboration</span>
             <picture>
               <source srcset="images/b2b/b2b-partner-banner.webp" type="image/webp">
-              <img src="images/b2b/b2b-partner-banner.png" alt="B2B Travel Agency Partnership" class="rounded-4 shadow-lg w-100" style="height: 420px; object-fit: cover;">
+              <img src="images/b2b/b2b-partner-banner.png" alt="B2B Travel Agency Partnership" style="height: 420px; object-fit: cover;">
             </picture>
-            <div class="position-absolute bottom-0 start-0 m-4 p-3 bg-navy text-white rounded-3 shadow border border-warning" style="max-width: 320px;">
+            <div class="floating-trust-chip bottom-0 start-0 m-4" style="max-width: 320px;">
               <h6 class="text-gold font-heading mb-1"><i class="bi bi-briefcase-fill me-1"></i> Dedicated Agency Desk</h6>
               <p class="small text-white-50 mb-0">Reliable backend processing for travel agencies across India.</p>
             </div>
@@ -661,7 +735,7 @@
   <!-- Section 9: What We Stand For -->
   <section class="section-padding bg-light-soft">
     <div class="container">
-      <div class="text-center max-w-700 mx-auto mb-5">
+      <div class="text-center max-w-700 mx-auto mb-5 reveal-on-scroll">
         <div class="section-eyebrow">WHAT WE STAND FOR</div>
         <h2 class="section-title">Our Guiding Standards</h2>
         <div class="gold-divider mx-auto"></div>
@@ -672,7 +746,7 @@
 
       <div class="row g-4 mb-4">
         <!-- Trust -->
-        <div class="col-lg col-md-4 col-sm-6">
+        <div class="col-lg col-md-4 col-sm-6 reveal-on-scroll reveal-delay-1">
           <div class="stand-for-card">
             <div class="stand-for-icon-box">
               <i class="bi bi-shield-check"></i>
@@ -685,7 +759,7 @@
         </div>
 
         <!-- Precision -->
-        <div class="col-lg col-md-4 col-sm-6">
+        <div class="col-lg col-md-4 col-sm-6 reveal-on-scroll reveal-delay-2">
           <div class="stand-for-card">
             <div class="stand-for-icon-box">
               <i class="bi bi-check2-circle"></i>
@@ -698,7 +772,7 @@
         </div>
 
         <!-- Privacy -->
-        <div class="col-lg col-md-4 col-sm-6">
+        <div class="col-lg col-md-4 col-sm-6 reveal-on-scroll reveal-delay-3">
           <div class="stand-for-card">
             <div class="stand-for-icon-box">
               <i class="bi bi-lock"></i>
@@ -711,7 +785,7 @@
         </div>
 
         <!-- Integrity -->
-        <div class="col-lg col-md-6 col-sm-6">
+        <div class="col-lg col-md-6 col-sm-6 reveal-on-scroll reveal-delay-4">
           <div class="stand-for-card">
             <div class="stand-for-icon-box">
               <i class="bi bi-award"></i>
@@ -724,7 +798,7 @@
         </div>
 
         <!-- Personal Attention -->
-        <div class="col-lg col-md-6 col-sm-12">
+        <div class="col-lg col-md-6 col-sm-12 reveal-on-scroll reveal-delay-5">
           <div class="stand-for-card">
             <div class="stand-for-icon-box">
               <i class="bi bi-person-heart"></i>
@@ -742,7 +816,7 @@
   <!-- Section 10: Our Vision -->
   <section class="section-padding bg-white">
     <div class="container">
-      <div class="vision-banner-box p-4 p-md-5">
+      <div class="vision-banner-box p-4 p-md-5 reveal-on-scroll">
         <div class="row align-items-center g-4">
           <div class="col-lg-8">
             <span class="badge bg-gold text-navy fw-bold px-3 py-1 mb-3">OUR VISION</span>

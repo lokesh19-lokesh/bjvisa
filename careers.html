@@ -50,9 +50,15 @@
       <a class="navbar-brand" href="index.html">
         <img src="images/logo.png" alt="BJ Visa Consultancy" class="brand-logo-img">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Right Header Actions on Mobile (B2B Button + Toggler) -->
+      <div class="navbar-mobile-actions d-flex align-items-center gap-2 d-lg-none">
+        <a href="b2b.html" class="btn-nav-b2b btn-nav-b2b-header">
+          <i class="bi bi-briefcase-fill"></i> B2B
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      </div>
 
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
@@ -66,7 +72,7 @@
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-cta-group ms-lg-3 mt-3 mt-lg-0 d-flex flex-column flex-sm-row flex-lg-row align-items-stretch align-items-lg-center gap-2">
-          <a href="b2b.html" class="btn-nav-b2b">
+          <a href="b2b.html" class="btn-nav-b2b d-none d-lg-inline-flex">
             <i class="bi bi-briefcase-fill"></i> B2B
           </a>
           <button class="btn-nav-enquire" data-bs-toggle="modal" data-bs-target="#enquiryModal">
@@ -159,139 +165,242 @@
     </div>
   </section>
 
-  <!-- Current Opportunities Section -->
-  <section class="section-padding bg-light-soft">
+  <!-- Current Opportunities Section: Exact Reference Design -->
+  <section class="section-padding bg-light-soft" id="opportunitiesSection">
     <div class="container">
-      <div class="text-center max-w-700 mx-auto mb-5">
-        <div class="section-eyebrow">OPEN POSITIONS</div>
-        <h2 class="section-title">Current Opportunities</h2>
-        <div class="gold-divider mx-auto"></div>
+      <div class="text-center max-w-700 mx-auto mb-5 reveal-on-scroll">
+        <span class="text-warning fw-bold text-uppercase small d-inline-block mb-2" style="color: var(--gold, #F5B91B) !important; letter-spacing: 2px;">&mdash; CURRENT OPPORTUNITIES &mdash;</span>
+        <h2 class="section-title text-navy font-heading fw-bold">Join Our Growing Team</h2>
         <p class="section-subtitle">
-          Explore current vacancies at our Hyderabad operations center and apply today.
+          Explore exciting career opportunities and build your future with BJ Visa Consultancy.
         </p>
       </div>
 
-      <div class="row g-4">
-        
-        <!-- Job 1 -->
-        <div class="col-lg-6">
-          <div class="job-card h-100 d-flex flex-column">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <h4 class="font-heading fw-bold text-navy mb-0">Senior Visa Documentation Specialist</h4>
-              <span class="badge bg-gold text-navy fw-bold px-3 py-2">Urgent</span>
+      <div class="row g-4 justify-content-center">
+        <!-- Job Card 1: Travel Consultant / Holiday Package Executive -->
+        <div class="col-lg-6 col-md-12 reveal-on-scroll reveal-delay-1">
+          <div class="realistic-job-card h-100">
+            <!-- Top Photo Banner -->
+            <div class="career-photo-banner">
+              <img src="images/careers/career-travel-banner.jpg" alt="Plan Dream Travel - BJ Visa Consultancy" class="career-banner-img">
+              <div class="banner-badge-text banner-badge-left">
+                <span class="d-block">Plan</span>
+                <span class="d-block">Dream</span>
+                <span class="d-block fw-bold text-navy">Travel</span>
+              </div>
             </div>
-            <div class="mb-3">
-              <span class="job-meta-badge"><i class="bi bi-geo-alt"></i> Hyderabad</span>
-              <span class="job-meta-badge"><i class="bi bi-briefcase"></i> Full-Time</span>
-              <span class="job-meta-badge"><i class="bi bi-clock"></i> 3 - 5 Years Exp</span>
-            </div>
-            <p class="text-muted small mb-3">
-              Lead the pre-submission scrutiny of complex UK, Schengen, and USA visa files. Draft customized cover letters, audit financial proofs, verify employment credentials, and oversee junior documentation executives.
-            </p>
-            <h6 class="font-heading fw-bold text-navy small mb-2">Key Requirements:</h6>
-            <ul class="list-unstyled small text-muted d-flex flex-column gap-1 mb-4">
-              <li><i class="bi bi-check2 text-primary me-2"></i>In-depth knowledge of UKVI and Schengen documentation rules.</li>
-              <li><i class="bi bi-check2 text-primary me-2"></i>Superior written and verbal English communication.</li>
-              <li><i class="bi bi-check2 text-primary me-2"></i>Proven track record in client file auditing.</li>
-            </ul>
-            <div class="mt-auto">
-              <a href="#applySection" class="btn-navy btn-sm px-4">
-                Apply for this Position <i class="bi bi-arrow-right"></i>
-              </a>
+
+            <!-- Card Content Body -->
+            <div class="career-card-body">
+              <!-- Title & Apply Button Row -->
+              <div class="career-header-row">
+                <h3 class="career-card-title">Travel Consultant / Holiday Package Executive</h3>
+                <a href="#applySection" class="btn-card-apply btn-job-apply" data-position="Travel Consultant / Holiday Package Executive">
+                  Apply Now <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+
+              <!-- Metadata Row -->
+              <div class="career-meta-row">
+                <span class="meta-tag"><i class="bi bi-briefcase"></i> Full-Time</span>
+                <span class="meta-tag"><i class="bi bi-geo-alt-fill"></i> Uppal, Hyderabad</span>
+                <span class="meta-tag"><i class="bi bi-cash-stack"></i> &#8377;15,000 &ndash; &#8377;20,000 <i class="bi bi-info-circle text-muted ms-1 small" title="Performance incentives included"></i></span>
+              </div>
+
+              <!-- 3 Feature Highlight Strip -->
+              <div class="feature-strip">
+                <div class="feature-strip-item">
+                  <i class="bi bi-airplane-fill"></i>
+                  <div class="feature-text">Holiday Package<br>Sales &amp; Planning</div>
+                </div>
+                <div class="feature-divider"></div>
+                <div class="feature-strip-item">
+                  <i class="bi bi-buildings"></i>
+                  <div class="feature-text">Hotel &amp; Flight<br>Bookings</div>
+                </div>
+                <div class="feature-divider"></div>
+                <div class="feature-strip-item">
+                  <i class="bi bi-people"></i>
+                  <div class="feature-text">Customer<br>Support</div>
+                </div>
+              </div>
+
+              <!-- Two Columns of Details -->
+              <div class="row g-4 mt-auto">
+                <div class="col-sm-6">
+                  <div class="detail-col-title">Key Responsibilities</div>
+                  <ul class="detail-bullet-list">
+                    <li>Handle customer travel enquiries for domestic and international packages</li>
+                    <li>Prepare customized travel itineraries</li>
+                    <li>Coordinate with hotels, airlines and vendors</li>
+                    <li>Convert enquiries into confirmed bookings</li>
+                    <li>Maintain customer relationships</li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <div class="detail-col-title">Preferred Skills</div>
+                  <ul class="detail-check-list">
+                    <li>Good communication skills</li>
+                    <li>Basic knowledge of travel destinations</li>
+                    <li>Customer handling experience</li>
+                    <li>Fresher's can also apply</li>
+                    <li>Experience in travel agency/tour operators is a plus</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Job 2 -->
-        <div class="col-lg-6">
-          <div class="job-card h-100 d-flex flex-column">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <h4 class="font-heading fw-bold text-navy mb-0">Visa Operations Executive</h4>
-              <span class="badge bg-primary text-white fw-bold px-3 py-2">Active</span>
+        <!-- Job Card 2: Visa Consultant – Internship -->
+        <div class="col-lg-6 col-md-12 reveal-on-scroll reveal-delay-2">
+          <div class="realistic-job-card h-100">
+            <!-- Top Photo Banner -->
+            <div class="career-photo-banner">
+              <img src="images/careers/career-visa-banner.jpg" alt="Turn Aspirations into Opportunities - BJ Visa Consultancy" class="career-banner-img">
+              <div class="banner-badge-text banner-badge-right">
+                <span class="d-block fs-5 fst-italic">Turn</span>
+                <span class="d-block fs-4 fw-bold">Aspirations</span>
+                <span class="d-block small fst-italic">into</span>
+                <span class="d-block fs-4 fw-bold underline-gold">Opportunities</span>
+              </div>
             </div>
-            <div class="mb-3">
-              <span class="job-meta-badge"><i class="bi bi-geo-alt"></i> Hyderabad</span>
-              <span class="job-meta-badge"><i class="bi bi-briefcase"></i> Full-Time</span>
-              <span class="job-meta-badge"><i class="bi bi-clock"></i> 1 - 3 Years Exp</span>
-            </div>
-            <p class="text-muted small mb-3">
-              Manage appointment booking across VFS Global, BLS, and consular portals. File electronic applications, upload digital document packets, coordinate biometric scheduling, and track passport dispatch.
-            </p>
-            <h6 class="font-heading fw-bold text-navy small mb-2">Key Requirements:</h6>
-            <ul class="list-unstyled small text-muted d-flex flex-column gap-1 mb-4">
-              <li><i class="bi bi-check2 text-primary me-2"></i>Experience in VFS appointment monitoring &amp; portal filing.</li>
-              <li><i class="bi bi-check2 text-primary me-2"></i>High attention to detail and data entry precision.</li>
-              <li><i class="bi bi-check2 text-primary me-2"></i>Customer-centric attitude and time management skills.</li>
-            </ul>
-            <div class="mt-auto">
-              <a href="#applySection" class="btn-navy btn-sm px-4">
-                Apply for this Position <i class="bi bi-arrow-right"></i>
-              </a>
+
+            <!-- Card Content Body -->
+            <div class="career-card-body">
+              <!-- Title & Apply Button Row -->
+              <div class="career-header-row">
+                <h3 class="career-card-title">Visa Consultant – Internship</h3>
+                <a href="#applySection" class="btn-card-apply btn-job-apply" data-position="Visa Consultant – Internship">
+                  Apply Now <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+
+              <!-- Metadata Row -->
+              <div class="career-meta-row">
+                <span class="meta-tag"><i class="bi bi-briefcase"></i> Internship</span>
+                <span class="meta-tag"><i class="bi bi-geo-alt-fill"></i> Hyderabad</span>
+                <span class="meta-tag"><i class="bi bi-cash-stack"></i> &#8377;8,000 / month Stipend <i class="bi bi-info-circle text-muted ms-1 small" title="Path to full-time on-roll position"></i></span>
+              </div>
+
+              <!-- 4 Feature Highlight Strip -->
+              <div class="feature-strip">
+                <div class="feature-strip-item">
+                  <i class="bi bi-mortarboard"></i>
+                  <div class="feature-text">Training<br>Provided</div>
+                </div>
+                <div class="feature-divider"></div>
+                <div class="feature-strip-item">
+                  <i class="bi bi-file-earmark-text"></i>
+                  <div class="feature-text">Learn Visa<br>Processes</div>
+                </div>
+                <div class="feature-divider"></div>
+                <div class="feature-strip-item">
+                  <i class="bi bi-people-fill"></i>
+                  <div class="feature-text">Work with<br>Experienced Team</div>
+                </div>
+                <div class="feature-divider"></div>
+                <div class="feature-strip-item">
+                  <i class="bi bi-bar-chart-line-fill"></i>
+                  <div class="feature-text">Career<br>Growth Opportunity</div>
+                </div>
+              </div>
+
+              <!-- Two Columns of Details -->
+              <div class="row g-4 mt-auto">
+                <div class="col-sm-6">
+                  <div class="detail-col-title">Who Can Apply?</div>
+                  <ul class="detail-check-list">
+                    <li>Freshers / Recent Graduates</li>
+                    <li>Fluent in Telugu, English &amp; Hindi (Must)</li>
+                    <li>Good communication skills</li>
+                    <li>Basic computer knowledge</li>
+                    <li>Willingness to learn visa &amp; travel processes</li>
+                    <li>Customer-friendly attitude</li>
+                  </ul>
+                </div>
+                <div class="col-sm-6">
+                  <div class="detail-col-title">Internship Benefits</div>
+                  <ul class="detail-check-list">
+                    <li>On-roll stipend of &#8377;8,000 per month</li>
+                    <li>Hands-on training</li>
+                    <li>Real-time work experience</li>
+                    <li>Learn global visa processes</li>
+                    <li>Attractive incentives &amp; bonus</li>
+                    <li>Opportunity for full-time role based on performance</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- Job 3 -->
-        <div class="col-lg-6">
-          <div class="job-card h-100 d-flex flex-column">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <h4 class="font-heading fw-bold text-navy mb-0">B2B Travel Partner Relationship Manager</h4>
-              <span class="badge bg-navy text-gold fw-bold px-3 py-2">Growth</span>
-            </div>
-            <div class="mb-3">
-              <span class="job-meta-badge"><i class="bi bi-geo-alt"></i> Hyderabad</span>
-              <span class="job-meta-badge"><i class="bi bi-briefcase"></i> Full-Time</span>
-              <span class="job-meta-badge"><i class="bi bi-clock"></i> 2 - 4 Years Exp</span>
-            </div>
-            <p class="text-muted small mb-3">
-              Act as the primary liaison for partner travel agencies across Telangana and Andhra Pradesh. Onboard new agencies, provide tariff briefings, resolve documentation escalations, and manage courier dropbox flows.
-            </p>
-            <h6 class="font-heading fw-bold text-navy small mb-2">Key Requirements:</h6>
-            <ul class="list-unstyled small text-muted d-flex flex-column gap-1 mb-4">
-              <li><i class="bi bi-check2 text-primary me-2"></i>Prior background in B2B travel agency networking in AP/Telangana.</li>
-              <li><i class="bi bi-check2 text-primary me-2"></i>Strong negotiation, relationship building, and presentation skills.</li>
-              <li><i class="bi bi-check2 text-primary me-2"></i>Fluency in Telugu and English (Hindi is an advantage).</li>
-            </ul>
-            <div class="mt-auto">
-              <a href="#applySection" class="btn-navy btn-sm px-4">
-                Apply for this Position <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Job 4 -->
-        <div class="col-lg-6">
-          <div class="job-card h-100 d-flex flex-column">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <h4 class="font-heading fw-bold text-navy mb-0">Customer Relationship &amp; Travel Coordinator</h4>
-              <span class="badge bg-info text-white fw-bold px-3 py-2">Active</span>
-            </div>
-            <div class="mb-3">
-              <span class="job-meta-badge"><i class="bi bi-geo-alt"></i> Hyderabad</span>
-              <span class="job-meta-badge"><i class="bi bi-briefcase"></i> Full-Time</span>
-              <span class="job-meta-badge"><i class="bi bi-clock"></i> 1 - 2 Years Exp</span>
-            </div>
-            <p class="text-muted small mb-3">
-              Engage with inbound visa leads over phone, email, and WhatsApp. Understand applicant requirements, guide them on appropriate visa types, collect initial documents, and follow up promptly throughout the process.
-            </p>
-            <h6 class="font-heading fw-bold text-navy small mb-2">Key Requirements:</h6>
-            <ul class="list-unstyled small text-muted d-flex flex-column gap-1 mb-4">
-              <li><i class="bi bi-check2 text-primary me-2"></i>Pleasant telephonic etiquette and empathetic client handling.</li>
-              <li><i class="bi bi-check2 text-primary me-2"></i>Familiarity with travel itineraries and tour planning.</li>
-              <li><i class="bi bi-check2 text-primary me-2"></i>Proficiency in MS Office and customer management tools.</li>
-            </ul>
-            <div class="mt-auto">
-              <a href="#applySection" class="btn-navy btn-sm px-4">
-                Apply for this Position <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
+
+  <!-- Lightbox Modal for Opportunity 1 Poster -->
+  <div class="modal fade" id="posterModal1" tabindex="-1" aria-labelledby="posterModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-navy text-white shadow-lg rounded-4 overflow-hidden" style="border: 1.5px solid var(--gold);">
+        <div class="modal-header border-bottom border-secondary border-opacity-25 py-3 px-4">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-briefcase-fill text-gold fs-5"></i>
+            <div>
+              <h5 class="modal-title font-heading text-white fw-bold mb-0" id="posterModal1Label">
+                Travel Consultant / Holiday Package Executive
+              </h5>
+              <small class="text-warning">Official Hiring Poster • BJ Visa Consultancy</small>
+            </div>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-2 text-center" style="background: #00072D;">
+          <picture>
+            <source srcset="images/careers/hiring-travel-consultant.webp" type="image/webp">
+            <img src="images/careers/hiring-travel-consultant.jpg" alt="Travel Consultant / Holiday Package Executive Hiring Poster" class="img-fluid rounded-3" style="max-height: 80vh; width: auto; object-fit: contain;">
+          </picture>
+        </div>
+        <div class="modal-footer border-top border-secondary border-opacity-25 py-2 px-4 d-flex justify-content-between align-items-center">
+          <span class="small text-white-50"><i class="bi bi-geo-alt-fill text-gold me-1"></i> Uppal, Hyderabad &bull; ₹15,000 – ₹20,000 / month</span>
+          <a href="https://wa.me/917995974956?text=Hi%20BJ%20Visa%20Consultancy,%20I%20am%20applying%20for%20the%20Travel%20Consultant%20/%20Holiday%20Package%20Executive%20role." target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm px-4">
+            <i class="bi bi-whatsapp me-1"></i> Apply on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal for Opportunity 2 Poster -->
+  <div class="modal fade" id="posterModal2" tabindex="-1" aria-labelledby="posterModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-navy text-white shadow-lg rounded-4 overflow-hidden" style="border: 1.5px solid var(--gold);">
+        <div class="modal-header border-bottom border-secondary border-opacity-25 py-3 px-4">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-mortarboard-fill text-gold fs-5"></i>
+            <div>
+              <h5 class="modal-title font-heading text-white fw-bold mb-0" id="posterModal2Label">
+                Visa Consultant – Internship
+              </h5>
+              <small class="text-warning">Official Hiring Poster • BJ Visa Consultancy</small>
+            </div>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-2 text-center" style="background: #00072D;">
+          <picture>
+            <source srcset="images/careers/hiring-visa-internship.webp" type="image/webp">
+            <img src="images/careers/hiring-visa-internship.jpg" alt="Visa Consultant – Internship Hiring Poster" class="img-fluid rounded-3" style="max-height: 80vh; width: auto; object-fit: contain;">
+          </picture>
+        </div>
+        <div class="modal-footer border-top border-secondary border-opacity-25 py-2 px-4 d-flex justify-content-between align-items-center">
+          <span class="small text-white-50"><i class="bi bi-geo-alt-fill text-gold me-1"></i> Hyderabad &bull; ₹8,000 / month Stipend</span>
+          <a href="https://wa.me/917995974956?text=Hi%20BJ%20Visa%20Consultancy,%20I%20am%20applying%20for%20the%20Visa%20Consultant%20%E2%80%93%20Internship%20position." target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm px-4">
+            <i class="bi bi-whatsapp me-1"></i> Apply on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Submit Resume Form Section -->
   <section class="section-padding bg-white" id="applySection">
@@ -339,13 +448,11 @@
                 <div class="col-md-6">
                   <div class="form-group-custom">
                     <i class="bi bi-briefcase"></i>
-                    <select class="form-select-custom" required>
+                    <select class="form-select-custom" id="positionSelect" required>
                       <option value="" selected disabled>Position Applied For *</option>
-                      <option value="Senior Visa Documentation Specialist">Senior Visa Documentation Specialist</option>
-                      <option value="Visa Operations Executive">Visa Operations Executive</option>
-                      <option value="B2B Travel Partner Relationship Manager">B2B Travel Partner Relationship Manager</option>
-                      <option value="Customer Relationship & Travel Coordinator">Customer Relationship & Travel Coordinator</option>
-                      <option value="General Application">Other / General Application</option>
+                      <option value="Travel Consultant / Holiday Package Executive">Travel Consultant / Holiday Package Executive</option>
+                      <option value="Visa Consultant – Internship">Visa Consultant – Internship</option>
+                      <option value="Other / General Application">Other / General Application</option>
                     </select>
                   </div>
                 </div>

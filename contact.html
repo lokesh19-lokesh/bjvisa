@@ -50,9 +50,15 @@
       <a class="navbar-brand" href="index.html">
         <img src="images/logo.png" alt="BJ Visa Consultancy" class="brand-logo-img">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Right Header Actions on Mobile (B2B Button + Toggler) -->
+      <div class="navbar-mobile-actions d-flex align-items-center gap-2 d-lg-none">
+        <a href="b2b.html" class="btn-nav-b2b btn-nav-b2b-header">
+          <i class="bi bi-briefcase-fill"></i> B2B
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      </div>
 
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
@@ -66,7 +72,7 @@
           <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-cta-group ms-lg-3 mt-3 mt-lg-0 d-flex flex-column flex-sm-row flex-lg-row align-items-stretch align-items-lg-center gap-2">
-          <a href="b2b.html" class="btn-nav-b2b">
+          <a href="b2b.html" class="btn-nav-b2b d-none d-lg-inline-flex">
             <i class="bi bi-briefcase-fill"></i> B2B
           </a>
           <button class="btn-nav-enquire" data-bs-toggle="modal" data-bs-target="#enquiryModal">

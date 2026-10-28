@@ -50,9 +50,15 @@
       <a class="navbar-brand" href="index.html">
         <img src="images/logo.png" alt="BJ Visa Consultancy" class="brand-logo-img">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Right Header Actions on Mobile (B2B Button + Toggler) -->
+      <div class="navbar-mobile-actions d-flex align-items-center gap-2 d-lg-none">
+        <a href="b2b.html" class="btn-nav-b2b btn-nav-b2b-header">
+          <i class="bi bi-briefcase-fill"></i> B2B
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      </div>
 
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
@@ -66,7 +72,7 @@
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-cta-group ms-lg-3 mt-3 mt-lg-0 d-flex flex-column flex-sm-row flex-lg-row align-items-stretch align-items-lg-center gap-2">
-          <a href="b2b.html" class="btn-nav-b2b">
+          <a href="b2b.html" class="btn-nav-b2b d-none d-lg-inline-flex">
             <i class="bi bi-briefcase-fill"></i> B2B
           </a>
           <button class="btn-nav-enquire" data-bs-toggle="modal" data-bs-target="#enquiryModal">
@@ -105,7 +111,7 @@
         <h2 class="section-title">Explore With Absolute Confidence</h2>
         <div class="gold-divider mx-auto"></div>
         <p class="section-subtitle">
-          Select a region or filter through our featured destinations below to discover visa requirements and package highlights.
+          Select a region or filter through our featured destinations below to discover curated travel packages, highlights, and memorable experiences.
         </p>
       </div>
 
@@ -124,7 +130,7 @@
       <div class="row g-4" id="destinationsGrid">
 
         <!-- 1. Thailand -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
+        <div id="thailand" class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/thailand.jpg" alt="Thailand Bangkok Temples" class="w-100 h-100 object-fit-cover transition-slow">
@@ -136,12 +142,12 @@
                 Golden temples of Bangkok, pristine beaches of Phuket and Krabi, vibrant night markets, and warm hospitality.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> Visa Exemption / e-Visa on Arrival</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Tour Support:</strong> Hotels, Transfers &amp; Island Tours</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 5 Nights / 6 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Bangkok City Temples, Coral Island Tour, 4-Star Hotels &amp; Airport Transfers</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Thailand" data-visa-type="Tourist Visa">
-                  Explore Thailand <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Thailand" data-visa-type="Travel Package">
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -149,7 +155,7 @@
         </div>
 
         <!-- 2. Vietnam -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
+        <div id="vietnam" class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/vietnam.jpg" alt="Vietnam Ha Long Bay" class="w-100 h-100 object-fit-cover transition-slow">
@@ -161,12 +167,12 @@
                 Emerald waters of Ha Long Bay cruise, lantern-lit alleys of Hoi An ancient town, golden bridge of Da Nang, and Hanoi street food.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> 90 Days Multiple-Entry eVisa</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> 3 - 4 Working Days</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 6 Nights / 7 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Ha Long Bay Overnight Cruise, Ba Na Hills, Hoi An &amp; Transfers</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Vietnam" data-visa-type="Tourist Visa">
-                  Explore Vietnam <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Vietnam" data-visa-type="Travel Package">
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -174,7 +180,7 @@
         </div>
 
         <!-- 3. Maldives -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
+        <div id="maldives" class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/maldives.jpg" alt="Maldives Overwater Bungalows" class="w-100 h-100 object-fit-cover transition-slow">
@@ -186,12 +192,12 @@
                 Overwater private bungalows, turquoise coral lagoons, seaplane transfers, and premier all-inclusive resorts.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> 30 Days Free Tourist Visa on Arrival</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Support:</strong> Resort Transfers &amp; IMUGA Declarations</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 4 Nights / 5 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Luxury Overwater Villa, Speedboat / Seaplane Transfers &amp; Dining</div>
               </div>
               <div class="mt-auto">
                 <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Maldives" data-visa-type="Travel Package">
-                  Explore Maldives <i class="bi bi-arrow-right"></i>
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -199,7 +205,7 @@
         </div>
 
         <!-- 4. Singapore -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
+        <div id="singapore" class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/singapore.jpg" alt="Singapore Marina Bay" class="w-100 h-100 object-fit-cover transition-slow">
@@ -211,12 +217,12 @@
                 Marina Bay Sands, Gardens by the Bay, Universal Studios, and premier international gastronomic dining.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> Authorized Singapore eVisa</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> 3 - 5 Working Days</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 4 Nights / 5 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Universal Studios, Sentosa Cable Car, Gardens by the Bay &amp; City Tour</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Singapore" data-visa-type="Tourist Visa">
-                  Explore Singapore <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Singapore" data-visa-type="Travel Package">
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -224,7 +230,7 @@
         </div>
 
         <!-- 5. Malaysia -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
+        <div id="malaysia" class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/malaysia.jpg" alt="Malaysia Kuala Lumpur Petronas Towers" class="w-100 h-100 object-fit-cover transition-slow">
@@ -236,12 +242,12 @@
                 Kuala Lumpur Petronas Towers, Batu Caves, Genting Highlands, Langkawi beaches, and Penang street food heritage.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> Visa Exemption / Malaysia MDAC Card</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> Instant / 24 - 48 Hours</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 4 Nights / 5 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Petronas Towers, Genting Cable Car, Batu Caves &amp; Hotel Transfers</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Malaysia" data-visa-type="Tourist Visa">
-                  Explore Malaysia <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Malaysia" data-visa-type="Travel Package">
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -249,7 +255,7 @@
         </div>
 
         <!-- 6. Bali (Indonesia) -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
+        <div id="bali" class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/bali.jpg" alt="Bali Indonesia Temple" class="w-100 h-100 object-fit-cover transition-slow">
@@ -261,12 +267,12 @@
                 Ubud emerald rice terraces, cliffside Uluwatu sunset temples, private pool villas, and spiritual retreats.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> Electronic Visa on Arrival (e-VOA)</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> Instant / 24 Hours</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 5 Nights / 6 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Private Pool Villa, Kintamani Volcano, Uluwatu Temple &amp; Water Sports</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Bali (Indonesia)" data-visa-type="Tourist Visa">
-                  Explore Bali <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Bali (Indonesia)" data-visa-type="Travel Package">
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -274,7 +280,7 @@
         </div>
 
         <!-- 7. Japan -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
+        <div id="japan" class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/japan.jpg" alt="Japan Mount Fuji Cherry Blossoms" class="w-100 h-100 object-fit-cover transition-slow">
@@ -286,12 +292,12 @@
                 Shinkansen bullet trains, cherry blossoms of Kyoto, vibrant Tokyo shopping, sacred Mount Fuji, and traditional onsen ryokans.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> Japan eVisa / Single &amp; Multi-Entry Sticker</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> ~7 - 10 Working Days</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 6 Nights / 7 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Tokyo City Tour, Mount Fuji Excursion, Kyoto Temples &amp; Bullet Train</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Japan" data-visa-type="Tourist Visa">
-                  Explore Japan <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Japan" data-visa-type="Travel Package">
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -299,7 +305,7 @@
         </div>
 
         <!-- 8. Europe (Schengen) -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="europe">
+        <div id="europe" class="col-lg-4 col-md-6 destination-filter-item" data-category="europe">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/europe.jpg" alt="Europe Schengen Visa" class="w-100 h-100 object-fit-cover transition-slow">
@@ -311,12 +317,12 @@
                 Experience France, Switzerland, Italy, Germany, and 29 member states with a single Schengen Visa.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> Short Stay Tourist Visa (Type C)</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> ~15 Working Days</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 9 Nights / 10 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Paris Eiffel Tower, Swiss Alps, Venice Gondola &amp; Guided Tours</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Europe (Schengen)" data-visa-type="Schengen Visa">
-                  Explore Europe <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Europe (Schengen)" data-visa-type="Travel Package">
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -324,7 +330,7 @@
         </div>
 
         <!-- 9. United Kingdom -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="uk">
+        <div id="uk" class="col-lg-4 col-md-6 destination-filter-item" data-category="uk">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/uk.jpg" alt="United Kingdom London Big Ben" class="w-100 h-100 object-fit-cover transition-slow">
@@ -336,12 +342,12 @@
                 London, Edinburgh, Scottish Highlands, and Welsh landscapes. Full UKVI documentation and VAYD doorstep options.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> UK Standard Visitor Visa</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Validity:</strong> 6 Months to 10 Years</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 6 Nights / 7 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> London Eye &amp; Thames River Cruise, Edinburgh Castle &amp; Rail Passes</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="United Kingdom" data-visa-type="UK Visa">
-                  Explore UK <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="United Kingdom" data-visa-type="Travel Package">
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -349,7 +355,7 @@
         </div>
 
         <!-- 10. Dubai / UAE -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="middle-east">
+        <div id="dubai" class="col-lg-4 col-md-6 destination-filter-item" data-category="middle-east">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/dubai.jpg" alt="Dubai UAE Burj Khalifa" class="w-100 h-100 object-fit-cover transition-slow">
@@ -361,12 +367,12 @@
                 Iconic skyscrapers, desert safaris, luxury shopping festivals, and family-friendly world-class amusement parks.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> 30 Days / 60 Days Tourist eVisa</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> 48 - 72 Hours</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 4 Nights / 5 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Burj Khalifa 124th Floor, Desert Safari with BBQ &amp; Dhow Cruise</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Dubai / UAE" data-visa-type="Tourist Visa">
-                  Explore Dubai <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Dubai / UAE" data-visa-type="Travel Package">
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -374,7 +380,7 @@
         </div>
 
         <!-- 11. Australia -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="australia">
+        <div id="australia" class="col-lg-4 col-md-6 destination-filter-item" data-category="australia">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/australia.jpg" alt="Sydney Opera House Australia" class="w-100 h-100 object-fit-cover transition-slow">
@@ -386,12 +392,12 @@
                 Sydney Opera House &amp; Harbour Bridge, Great Barrier Reef, Gold Coast beaches, Melbourne cultural laneways, and wildlife.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> Visitor Visa (Subclass 600)</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Filing:</strong> Electronic ImmiAccount Submission</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 7 Nights / 8 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Sydney Opera House, Blue Mountains, Gold Coast Theme Parks &amp; Transfers</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Australia" data-visa-type="Tourist Visa">
-                  Explore Australia <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Australia" data-visa-type="Travel Package">
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -399,7 +405,7 @@
         </div>
 
         <!-- 12. China -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
+        <div id="china" class="col-lg-4 col-md-6 destination-filter-item" data-category="asia">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/china.jpg" alt="China Great Wall" class="w-100 h-100 object-fit-cover transition-slow">
@@ -411,12 +417,62 @@
                 The Great Wall, Forbidden City Beijing, futuristic Shanghai skyline, and Canton Fair commercial trade delegations.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Visa Type:</strong> L Tourist / M Business Visa</div>
-                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Processing:</strong> Biometric Appointment &amp; Verification</div>
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 6 Nights / 7 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Great Wall of China, Forbidden City Beijing, Shanghai Bund &amp; Bullet Train</div>
               </div>
               <div class="mt-auto">
-                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="China" data-visa-type="Business Visa">
-                  Explore China <i class="bi bi-arrow-right"></i>
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="China" data-visa-type="Travel Package">
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13. Switzerland -->
+        <div id="switzerland" class="col-lg-4 col-md-6 destination-filter-item" data-category="europe">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+            <div class="position-relative" style="height: 220px; overflow: hidden;">
+              <img src="images/destinations/switzerland.jpg" alt="Switzerland Alps and Scenic Lakes" class="w-100 h-100 object-fit-cover transition-slow">
+              <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">Central Europe</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h4 class="font-heading fw-bold text-navy mb-2">Switzerland</h4>
+              <p class="text-muted small mb-3">
+                Snow-capped peaks of Jungfraujoch, scenic Glacier Express journeys, crystal Lake Lucerne cruises, and charming Zurich old town.
+              </p>
+              <div class="p-3 bg-light rounded-3 mb-3 small">
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 6 Nights / 7 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Jungfraujoch Top of Europe, Mount Titlis Cable Car, Lake Lucerne &amp; Rail Pass</div>
+              </div>
+              <div class="mt-auto">
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Switzerland" data-visa-type="Travel Package">
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14. Turkey -->
+        <div id="turkey" class="col-lg-4 col-md-6 destination-filter-item" data-category="middle-east">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+            <div class="position-relative" style="height: 220px; overflow: hidden;">
+              <img src="images/destinations/turkey.jpg" alt="Turkey Istanbul and Cappadocia" class="w-100 h-100 object-fit-cover transition-slow">
+              <span class="badge bg-navy text-gold position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold">Eurasian Wonder</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h4 class="font-heading fw-bold text-navy mb-2">Turkey</h4>
+              <p class="text-muted small mb-3">
+                Hot air balloon sunrise over fairy chimneys in Cappadocia, historic Bosphorus cruises, Hagia Sophia, and vibrant Grand Bazaar.
+              </p>
+              <div class="p-3 bg-light rounded-3 mb-3 small">
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 5 Nights / 6 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Cappadocia Hot Air Balloon, Cave Hotel Stay, Bosphorus Cruise &amp; Tours</div>
+              </div>
+              <div class="mt-auto">
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Turkey" data-visa-type="Travel Package">
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -424,8 +480,8 @@
         </div>
 
         <!-- DOMESTIC DESTINATIONS (INDIA) -->
-        <!-- 13. Kashmir -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
+        <!-- 15. Kashmir -->
+        <div id="kashmir" class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/kashmir.jpg" alt="Kashmir Dal Lake Srinagar Shikara" class="w-100 h-100 object-fit-cover transition-slow">
@@ -437,20 +493,20 @@
                 Srinagar Dal Lake shikara rides, snow activities in Gulmarg, lush meadows of Pahalgam, and Sonamarg glaciers.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Package:</strong> Srinagar, Gulmarg, Pahalgam Houseboat Stay</div>
                 <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 5 Nights / 6 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Dal Lake Deluxe Houseboat, Gulmarg Gondola Ride, Pahalgam &amp; Transfers</div>
               </div>
               <div class="mt-auto">
                 <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Kashmir" data-visa-type="Domestic Package">
-                  Explore Kashmir <i class="bi bi-arrow-right"></i>
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 14. Kerala -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
+        <!-- 16. Kerala -->
+        <div id="kerala" class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/kerala.jpg" alt="Kerala Alleppey Backwaters Houseboat" class="w-100 h-100 object-fit-cover transition-slow">
@@ -462,20 +518,20 @@
                 Private luxury houseboat cruise in Alleppey backwaters, misty Munnar tea plantations, and scenic waterfalls.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Package:</strong> Cochin, Munnar, Thekkady &amp; Alleppey</div>
                 <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 4 Nights / 5 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Alleppey Deluxe Houseboat, Munnar Tea Gardens, Thekkady &amp; Private Cab</div>
               </div>
               <div class="mt-auto">
                 <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Kerala" data-visa-type="Domestic Package">
-                  Explore Kerala <i class="bi bi-arrow-right"></i>
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 15. Goa -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
+        <!-- 17. Goa -->
+        <div id="goa" class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/goa.jpg" alt="Goa Beaches and Resorts" class="w-100 h-100 object-fit-cover transition-slow">
@@ -487,20 +543,20 @@
                 Golden sand beaches, luxury beachfront resorts, sunset cruises on Mandovi river, water sports, and heritage churches.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Package:</strong> North &amp; South Goa with 4-Star Resort</div>
                 <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 3 Nights / 4 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> 4-Star Beachfront Resort, Mandovi River Sunset Cruise &amp; Water Sports</div>
               </div>
               <div class="mt-auto">
                 <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Goa" data-visa-type="Domestic Package">
-                  Explore Goa <i class="bi bi-arrow-right"></i>
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 16. Himachal Pradesh -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
+        <!-- 18. Himachal Pradesh -->
+        <div id="himachal" class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/himachal.jpg" alt="Himachal Pradesh Manali Solang Valley" class="w-100 h-100 object-fit-cover transition-slow">
@@ -512,20 +568,20 @@
                 Snow adventures in Solang Valley, Rohtang Pass, Mall Road Shimla, Atal Tunnel, and scenic cedar pine forests.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Package:</strong> Shimla, Kullu, Manali &amp; Rohtang Pass</div>
                 <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 5 Nights / 6 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Solang Valley Snow Point, Atal Tunnel, Shimla Mall Road &amp; Hotel Cab</div>
               </div>
               <div class="mt-auto">
                 <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Himachal Pradesh" data-visa-type="Domestic Package">
-                  Explore Himachal <i class="bi bi-arrow-right"></i>
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 17. Darjeeling -->
-        <div class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
+        <!-- 19. Darjeeling -->
+        <div id="darjeeling" class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
           <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
             <div class="position-relative" style="height: 220px; overflow: hidden;">
               <img src="images/destinations/darjeeling.jpg" alt="Darjeeling Himalayan Tea Gardens" class="w-100 h-100 object-fit-cover transition-slow">
@@ -537,12 +593,37 @@
                 Panoramic Kanchenjunga sunrise from Tiger Hill, heritage Himalayan toy train, lush tea estates, and Tsomgo Lake.
               </p>
               <div class="p-3 bg-light rounded-3 mb-3 small">
-                <div><i class="bi bi-shield-check text-gold me-2"></i><strong>Package:</strong> Darjeeling, Kalimpong &amp; Gangtok Tour</div>
                 <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 4 Nights / 5 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Tiger Hill Sunrise, Tsomgo Lake Gangtok, Tea Estate Visit &amp; Cab</div>
               </div>
               <div class="mt-auto">
                 <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Darjeeling" data-visa-type="Domestic Package">
-                  Explore Darjeeling <i class="bi bi-arrow-right"></i>
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 20. Andaman Islands -->
+        <div id="andaman" class="col-lg-4 col-md-6 destination-filter-item" data-category="domestic">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden bg-white">
+            <div class="position-relative" style="height: 220px; overflow: hidden;">
+              <img src="images/destinations/andaman.jpg" alt="Andaman Islands Radhanagar Beach Havelock Island" class="w-100 h-100 object-fit-cover transition-slow" loading="lazy">
+              <span class="badge bg-success text-white position-absolute top-0 start-0 m-3 px-3 py-2 fw-semibold"><i class="bi bi-geo-alt-fill me-1"></i> Domestic • Andaman</span>
+            </div>
+            <div class="card-body p-4 d-flex flex-column">
+              <h4 class="font-heading fw-bold text-navy mb-2">Andaman (Island Paradise)</h4>
+              <p class="text-muted small mb-3">
+                Pristine white sands of Radhanagar Beach on Havelock Island, coral reef scuba diving, Neil Island sunset, and Cellular Jail sound &amp; light show.
+              </p>
+              <div class="p-3 bg-light rounded-3 mb-3 small">
+                <div><i class="bi bi-clock-history text-gold me-2"></i><strong>Duration:</strong> 5 Nights / 6 Days</div>
+                <div><i class="bi bi-stars text-gold me-2"></i><strong>Highlights:</strong> Havelock Island Catamaran, Radhanagar Beach, Scuba / Snorkeling &amp; Port Blair Cab</div>
+              </div>
+              <div class="mt-auto">
+                <button class="btn-gold w-100 btn-sm" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-destination="Andaman Islands" data-visa-type="Domestic Package">
+                  Book Your Tour <i class="bi bi-arrow-right"></i>
                 </button>
               </div>
             </div>
@@ -695,8 +776,8 @@
         <div class="modal-header bg-navy text-white border-0 py-3 px-4 position-relative">
           <div class="gold-divider position-absolute top-0 start-0 end-0 m-0 w-100" style="height: 4px;"></div>
           <div>
-            <h5 class="modal-title font-heading fw-bold" id="enquiryModalLabel">Destination Consultation</h5>
-            <small class="text-warning">BJ Visa Consultancy • Your Trusted Partner</small>
+            <h5 class="modal-title font-heading fw-bold" id="enquiryModalLabel">Travel Package Consultation</h5>
+            <small class="text-warning">BJ Visa Consultancy • Curated Travel Packages</small>
           </div>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>

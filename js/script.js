@@ -225,6 +225,16 @@ document.addEventListener('DOMContentLoaded', () => {
         activateFilter(filterParam);
       }
     }
+
+    // Smooth scroll to target card if hash is provided
+    if (window.location.hash) {
+      setTimeout(() => {
+        const targetCard = document.querySelector(window.location.hash);
+        if (targetCard) {
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 300);
+    }
   }
 
   // 5. Pre-fill Universal Enquiry Modal
@@ -256,10 +266,177 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 5.5 Travel Date Range Picker Initialization (Flatpickr)
+  const initTravelDateRangePickers = () => {
+    const pickers = document.querySelectorAll('.travel-range-picker');
+    if (!pickers.length) return;
+
+    if (typeof flatpickr === 'undefined') {
+      console.warn('Flatpickr library not loaded.');
+      return;
+    }
+
+    const formatISO = (d) => {
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      return `${y}-${m}-${day}`;
+    };
+
+    pickers.forEach((pickerInput) => {
+      const form = pickerInput.closest('form');
+      const startInput = form ? form.querySelector('input[name="travelStartDate"]') : null;
+      const endInput = form ? form.querySelector('input[name="travelEndDate"]') : null;
+      const clearBtn = form ? form.querySelector('.date-range-clear-btn') : null;
+
+      const updateStatusBar = (instance, count, f1, f2) => {
+        const statusBar = instance.calendarContainer ? instance.calendarContainer.querySelector('.fp-range-status-bar') : null;
+        if (!statusBar) return;
+        if (count === 2) {
+          statusBar.className = 'fp-range-status-bar completed';
+          statusBar.innerHTML = '<span class="fp-badge"><i class="bi bi-check2"></i> Confirmed</span> ' + f1 + ' – ' + f2;
+        } else if (count === 1) {
+          statusBar.className = 'fp-range-status-bar waiting-end';
+          statusBar.innerHTML = '<span class="fp-badge">Step 2</span> Departure: <strong>' + f1 + '</strong> ➔ <em>Select Return Date</em>';
+        } else {
+          statusBar.className = 'fp-range-status-bar';
+          statusBar.innerHTML = '<span class="fp-badge">Step 1</span> Select Departure Date (From)';
+        }
+      };
+
+      const fpInstance = flatpickr(pickerInput, {
+        mode: 'range',
+        minDate: 'today',
+        dateFormat: 'd M Y',
+        locale: {
+          rangeSeparator: ' – '
+        },
+        disableMobile: true,
+        showMonths: 1,
+        prevArrow: '<i class="bi bi-chevron-left"></i>',
+        nextArrow: '<i class="bi bi-chevron-right"></i>',
+        onReady: function(selectedDates, dateStr, instance) {
+          if (!instance.calendarContainer.querySelector('.fp-range-status-bar')) {
+            const bar = document.createElement('div');
+            bar.className = 'fp-range-status-bar';
+            instance.calendarContainer.insertBefore(bar, instance.calendarContainer.firstChild);
+          }
+          // Support selecting same-day return trip by clicking the same date twice
+          instance.calendarContainer.addEventListener('click', (e) => {
+            const dayElem = e.target.closest('.flatpickr-day');
+            if (!dayElem || dayElem.classList.contains('flatpickr-disabled')) return;
+            if (instance.selectedDates.length === 1 && dayElem.dateObj) {
+              const firstDate = instance.selectedDates[0];
+              const clickedDate = dayElem.dateObj;
+              if (firstDate.getFullYear() === clickedDate.getFullYear() &&
+                  firstDate.getMonth() === clickedDate.getMonth() &&
+                  firstDate.getDate() === clickedDate.getDate()) {
+                e.stopPropagation();
+                instance.setDate([firstDate, firstDate], true);
+                setTimeout(() => instance.close(), 300);
+              }
+            }
+          }, true);
+        },
+        onOpen: function(selectedDates, dateStr, instance) {
+          pickerInput.classList.add('active');
+          if (selectedDates.length === 2) {
+            const f1 = instance.formatDate(selectedDates[0], 'd M Y');
+            const f2 = instance.formatDate(selectedDates[1], 'd M Y');
+            updateStatusBar(instance, 2, f1, f2);
+          } else if (selectedDates.length === 1) {
+            const f1 = instance.formatDate(selectedDates[0], 'd M Y');
+            updateStatusBar(instance, 1, f1);
+          } else {
+            updateStatusBar(instance, 0);
+          }
+        },
+        onClose: function(selectedDates, dateStr, instance) {
+          pickerInput.classList.remove('active');
+          if (selectedDates.length === 1) {
+            const f1 = instance.formatDate(selectedDates[0], 'd M Y');
+            pickerInput.value = `${f1} – Select return date`;
+            pickerInput.classList.add('is-invalid');
+          } else if (selectedDates.length === 2) {
+            pickerInput.classList.remove('is-invalid');
+          } else {
+            pickerInput.classList.remove('is-invalid');
+          }
+        },
+        onChange: function(selectedDates, dateStr, instance) {
+          if (selectedDates.length === 2) {
+            pickerInput.classList.remove('is-invalid');
+            const f1 = instance.formatDate(selectedDates[0], 'd M Y');
+            const f2 = instance.formatDate(selectedDates[1], 'd M Y');
+            pickerInput.value = `${f1} – ${f2}`;
+            if (startInput) startInput.value = formatISO(selectedDates[0]);
+            if (endInput) endInput.value = formatISO(selectedDates[1]);
+            if (clearBtn) clearBtn.classList.remove('d-none');
+            updateStatusBar(instance, 2, f1, f2);
+          } else if (selectedDates.length === 1) {
+            const f1 = instance.formatDate(selectedDates[0], 'd M Y');
+            pickerInput.value = `${f1} – Select return date`;
+            if (startInput) startInput.value = formatISO(selectedDates[0]);
+            if (endInput) endInput.value = '';
+            if (clearBtn) clearBtn.classList.remove('d-none');
+            updateStatusBar(instance, 1, f1);
+          } else {
+            pickerInput.value = '';
+            if (startInput) startInput.value = '';
+            if (endInput) endInput.value = '';
+            if (clearBtn) clearBtn.classList.add('d-none');
+            pickerInput.classList.remove('is-invalid');
+            updateStatusBar(instance, 0);
+          }
+        }
+      });
+
+      if (clearBtn) {
+        clearBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          fpInstance.clear();
+          pickerInput.value = '';
+          if (startInput) startInput.value = '';
+          if (endInput) endInput.value = '';
+          clearBtn.classList.add('d-none');
+          pickerInput.classList.remove('is-invalid');
+          if (fpInstance.isOpen) {
+            updateStatusBar(fpInstance, 0);
+          }
+        });
+      }
+    });
+  };
+
+  initTravelDateRangePickers();
+
   // 6. Generic Form Submission & Validation Simulation
   const handleFormSubmit = (form, successMessage) => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      // Travel date range validation (if field exists in form)
+      const travelPicker = form.querySelector('.travel-range-picker');
+      if (travelPicker) {
+        const startVal = form.querySelector('input[name="travelStartDate"]')?.value;
+        const endVal = form.querySelector('input[name="travelEndDate"]')?.value;
+        const hasText = travelPicker.value.trim().length > 0;
+
+        if (travelPicker.hasAttribute('required') && (!startVal || !endVal)) {
+          e.stopPropagation();
+          travelPicker.classList.add('is-invalid');
+          showToast('Please select your departure and return travel dates.');
+          return;
+        }
+
+        if (hasText && (!startVal || !endVal)) {
+          e.stopPropagation();
+          travelPicker.classList.add('is-invalid');
+          showToast('Please select both departure and return dates for your travel.');
+          return;
+        }
+      }
 
       if (!form.checkValidity()) {
         e.stopPropagation();
@@ -275,6 +452,11 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Processing...`;
       }
 
+      // Collect form payload including travel dates
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+      console.log('Form submission payload:', payload);
+
       // Simulate prompt and professional verification
       setTimeout(() => {
         // Hide modal if form was inside modal
@@ -289,6 +471,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // Reset form
         form.reset();
         form.classList.remove('was-validated');
+
+        // Reset flatpickr instance and clear button if inside this form
+        form.querySelectorAll('.travel-range-picker').forEach(input => {
+          if (input._flatpickr) {
+            input._flatpickr.clear();
+          }
+          input.classList.remove('is-invalid');
+        });
+        const clearBtn = form.querySelector('.date-range-clear-btn');
+        if (clearBtn) clearBtn.classList.add('d-none');
+        const startHidden = form.querySelector('input[name="travelStartDate"]');
+        if (startHidden) startHidden.value = '';
+        const endHidden = form.querySelector('input[name="travelEndDate"]');
+        if (endHidden) endHidden.value = '';
 
         if (submitBtn) {
           submitBtn.disabled = false;
@@ -376,25 +572,74 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 9. Scroll Reveal Animation for Aviation & Interactive Showcase Elements
-  const revealElements = document.querySelectorAll('.aviation-reveal');
+  // 9. Scroll Reveal Animation for Interactive Showcase & Premium Elements
+  const revealElements = document.querySelectorAll('.aviation-reveal, .reveal-on-scroll');
   if (revealElements.length > 0) {
     if ('IntersectionObserver' in window) {
       const revealObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
+            entry.target.classList.add('is-visible', 'is-revealed');
             observer.unobserve(entry.target);
           }
         });
       }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -40px 0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -30px 0px'
       });
 
       revealElements.forEach(el => revealObserver.observe(el));
     } else {
-      revealElements.forEach(el => el.classList.add('is-visible'));
+      revealElements.forEach(el => el.classList.add('is-visible', 'is-revealed'));
     }
   }
+
+  // 11. B2B Read More / Read Less Independent Toggle Handler
+  const b2bToggleButtons = document.querySelectorAll('.btn-b2b-toggle');
+  b2bToggleButtons.forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('aria-controls');
+      const targetContent = document.getElementById(targetId);
+      if (!targetContent) return;
+
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      const textSpan = this.querySelector('.toggle-text');
+
+      if (isExpanded) {
+        // Collapse
+        targetContent.classList.remove('is-expanded');
+        this.setAttribute('aria-expanded', 'false');
+        if (textSpan) textSpan.textContent = 'Read More';
+      } else {
+        // Expand
+        targetContent.classList.add('is-expanded');
+        this.setAttribute('aria-expanded', 'true');
+        if (textSpan) textSpan.textContent = 'Read Less';
+      }
+    });
+  });
+
+
+  // 10. Careers Job Apply Button Smooth Scroll & Position Selection
+  const jobApplyButtons = document.querySelectorAll('.btn-job-apply');
+  jobApplyButtons.forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      const position = this.getAttribute('data-position');
+      const select = document.getElementById('positionSelect') || document.querySelector('#careersForm select');
+      if (select && position) {
+        select.value = position;
+      }
+      const applySection = document.getElementById('applySection');
+      if (applySection) {
+        e.preventDefault();
+        applySection.scrollIntoView({ behavior: 'smooth' });
+        const nameInput = document.querySelector('#careersForm input[type="text"]');
+        if (nameInput) {
+          setTimeout(() => nameInput.focus(), 500);
+        }
+      }
+    });
+  });
 });
+

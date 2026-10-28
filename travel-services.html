@@ -50,9 +50,15 @@
       <a class="navbar-brand" href="index.html">
         <img src="images/logo.png" alt="BJ Visa Consultancy" class="brand-logo-img">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Right Header Actions on Mobile (B2B Button + Toggler) -->
+      <div class="navbar-mobile-actions d-flex align-items-center gap-2 d-lg-none">
+        <a href="b2b.html" class="btn-nav-b2b btn-nav-b2b-header">
+          <i class="bi bi-briefcase-fill"></i> B2B
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      </div>
 
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
@@ -66,7 +72,7 @@
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-cta-group ms-lg-3 mt-3 mt-lg-0 d-flex flex-column flex-sm-row flex-lg-row align-items-stretch align-items-lg-center gap-2">
-          <a href="b2b.html" class="btn-nav-b2b">
+          <a href="b2b.html" class="btn-nav-b2b d-none d-lg-inline-flex">
             <i class="bi bi-briefcase-fill"></i> B2B
           </a>
           <button class="btn-nav-enquire" data-bs-toggle="modal" data-bs-target="#enquiryModal">
@@ -127,15 +133,15 @@
     </div>
   </section>
 
-  <!-- 6 Core Travel Services -->
-  <section class="section-padding bg-light-soft">
+  <!-- Core Travel & Aviation Services -->
+  <section class="section-padding bg-light-soft" id="private-aviation">
     <div class="container">
       <div class="text-center max-w-700 mx-auto mb-4">
         <div class="section-eyebrow">OUR SPECIALIZED SERVICES</div>
         <h2 class="section-title">What We Offer</h2>
         <div class="gold-divider mx-auto"></div>
         <p class="section-subtitle">
-          From passport issuance and flight bookings to private transfers and customized tour packages, discover our specialized travel support.
+          From passport issuance and flight bookings to private jet charters, helicopter transfers, and customized tour packages, discover our specialized travel support.
         </p>
       </div>
 
@@ -158,6 +164,12 @@
         </a>
         <a href="#packages" class="btn btn-sm btn-outline-navy rounded-pill px-3 py-2">
           <i class="bi bi-compass text-gold me-1"></i> Tour Packages
+        </a>
+        <a href="#private-jet" class="btn btn-sm btn-outline-navy rounded-pill px-3 py-2">
+          <i class="bi bi-airplane-engines text-gold me-1"></i> Private Jet Charter
+        </a>
+        <a href="#private-helicopter" class="btn btn-sm btn-outline-navy rounded-pill px-3 py-2">
+          <i class="bi bi-geo-alt-fill text-gold me-1"></i> Helicopter Services
         </a>
       </div>
 
@@ -330,6 +342,80 @@
           </div>
           <div class="col-lg-5">
             <img src="images/services/tour-packages.jpg" alt="International Tour Packages" class="rounded-3 w-100 shadow-sm" style="height: 260px; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 7: Private Jet Charter -->
+      <div class="service-detail-block" id="private-jet">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="service-strip-icon-box" style="width: 52px; height: 52px; font-size: 1.4rem;">
+                ✈️
+              </div>
+              <div>
+                <span class="text-gold text-uppercase fw-bold small letter-spacing-1 d-block mb-1">Tailored Air Mobility</span>
+                <h3 class="font-heading fw-bold mb-0 text-navy">7. Private Jet Charter</h3>
+              </div>
+            </div>
+            <p class="text-muted">
+              Experience personalised private aviation for business trips, executive travel and exclusive leisure journeys. Enquire about private jet charter options tailored to your itinerary.
+            </p>
+            <ul class="service-benefit-list">
+              <li><i class="bi bi-check-circle-fill"></i> <strong>Personalised Flight Itineraries:</strong> Direct point-to-point connections with flexible departure schedules that adapt to your calendar.</li>
+              <li><i class="bi bi-check-circle-fill"></i> <strong>Business &amp; Executive Travel:</strong> Quiet, sound-insulated cabins equipped for confidential meetings, executive discussions, and high-productivity flights.</li>
+              <li><i class="bi bi-check-circle-fill"></i> <strong>Exclusive Leisure Journeys:</strong> White-glove handling, gourmet custom dining, spacious leather seating, and discrete VIP terminal access.</li>
+              <li><i class="bi bi-check-circle-fill"></i> <strong>Tailored Fleet Selection:</strong> Access to vetted light jets, super-midsize jets, and ultra-long-range aircraft matched to your passenger count and range.</li>
+            </ul>
+            <div class="d-flex flex-wrap gap-2">
+              <button class="btn-gold btn-sm px-4" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-visa-type="Private Jet Charter" data-destination="Private Jet Charter" data-message="I am interested in Private Jet Charter. Please share tailored charter options for my travel itinerary.">
+                Enquire Private Jet <i class="bi bi-arrow-right"></i>
+              </button>
+              <a href="https://wa.me/917995974956?text=Hi%20BJ%20Visa%20Consultancy,%20I%20would%20like%20to%20enquire%20about%20Private%20Jet%20Charter%20options%20for%20my%20itinerary." target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-sm px-3">
+                <i class="bi bi-whatsapp"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <img src="images/services/private-jet-charter.jpg" alt="Luxury Private Jet Charter VIP Executive Travel" class="rounded-3 w-100 shadow-sm" style="height: 260px; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 8: Private Helicopter Services -->
+      <div class="service-detail-block" id="private-helicopter">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="service-strip-icon-box" style="width: 52px; height: 52px; font-size: 1.4rem;">
+                🚁
+              </div>
+              <div>
+                <span class="text-gold text-uppercase fw-bold small letter-spacing-1 d-block mb-1">Rotary Wing Excellence</span>
+                <h3 class="font-heading fw-bold mb-0 text-navy">8. Private Helicopter Services</h3>
+              </div>
+            </div>
+            <p class="text-muted">
+              Enjoy convenient helicopter travel options for selected destinations, aerial transfers, business travel and special occasions, subject to route availability and operational permissions.
+            </p>
+            <ul class="service-benefit-list">
+              <li><i class="bi bi-check-circle-fill"></i> <strong>Aerial Transfers &amp; City Transit:</strong> Bypass congested road traffic with fast, point-to-point urban and intercity helicopter transfers.</li>
+              <li><i class="bi bi-check-circle-fill"></i> <strong>Selected Destinations &amp; Helipads:</strong> Direct landings at approved private helipads, luxury resorts, golf retreats, and industrial plant sites.</li>
+              <li><i class="bi bi-check-circle-fill"></i> <strong>Special Occasions &amp; Celebrations:</strong> Memorable grand entries for weddings, VIP arrivals, milestone events, and panoramic aerial views.</li>
+              <li><i class="bi bi-check-circle-fill"></i> <strong>Operational Permissions &amp; Safety:</strong> Twin-engine helicopters operated by DGCA-certified flight crews with full route availability assessment.</li>
+            </ul>
+            <div class="d-flex flex-wrap gap-2">
+              <button class="btn-gold btn-sm px-4" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-visa-type="Private Helicopter Services" data-destination="Private Helicopter Services" data-message="I am interested in Private Helicopter Services. Please share route availability and charter options.">
+                Enquire Helicopter <i class="bi bi-arrow-right"></i>
+              </button>
+              <a href="https://wa.me/917995974956?text=Hi%20BJ%20Visa%20Consultancy,%20I%20would%20like%20to%20enquire%20about%20Private%20Helicopter%20Services%20and%20route%20availability." target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-sm px-3">
+                <i class="bi bi-whatsapp"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <img src="images/services/private-helicopter.jpg" alt="Private Helicopter Services VIP Aerial Transfers" class="rounded-3 w-100 shadow-sm" style="height: 260px; object-fit: cover;">
           </div>
         </div>
       </div>

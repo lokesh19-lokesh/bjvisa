@@ -441,6 +441,49 @@ img {
   box-shadow: 0 0 0 3px rgba(245, 185, 27, 0.25);
 }
 
+/* Mobile Navbar Header Actions (B2B Button + Hamburger Toggler) */
+.navbar-mobile-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-nav-b2b-header {
+  padding: 7px 16px;
+  font-size: 0.90rem;
+  line-height: 1.25;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-bj {
+    padding: 8px 0;
+  }
+  .navbar-bj .brand-logo-img {
+    height: 56px;
+  }
+  .navbar-bj.navbar-scrolled .brand-logo-img {
+    height: 50px;
+  }
+  .navbar-bj .navbar-toggler {
+    padding: 6px 9px;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar-bj .brand-logo-img {
+    height: 48px;
+  }
+  .navbar-mobile-actions {
+    gap: 6px;
+  }
+  .btn-nav-b2b-header {
+    padding: 6px 12px;
+    font-size: 0.84rem;
+    gap: 5px;
+  }
+}
+
 /* --- Buttons --- */
 .btn-gold {
   background: var(--gold-gradient);
@@ -694,8 +737,8 @@ img {
 .hero-vayd-box-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 14px;
+  justify-content: flex-start;
+  gap: 18px;
   margin-bottom: 10px;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(245, 185, 27, 0.25);
@@ -705,6 +748,7 @@ img {
   display: flex;
   flex-direction: column;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .vayd-box-tag {
@@ -732,16 +776,18 @@ img {
   width: 1px;
   height: 38px;
   background: rgba(245, 185, 27, 0.35);
+  flex-shrink: 0;
 }
 
 .vayd-box-doorstep {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   padding: 6px 14px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(245, 185, 27, 0.35);
   border-radius: 10px;
+  flex-shrink: 0;
 }
 
 .vayd-doorstep-text {
@@ -762,6 +808,37 @@ img {
   font-size: 0.95rem;
   font-weight: 800;
   color: var(--gold);
+}
+
+/* Laptop / Desktop: 2-column balanced layout with centered partition line */
+@media (min-width: 992px) {
+  .hero-vayd-box-header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 0;
+  }
+
+  .vayd-box-brand {
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .vayd-box-divider {
+    justify-self: center;
+    align-self: center;
+    width: 1px;
+    height: 38px;
+    background: rgba(245, 185, 27, 0.45);
+  }
+
+  .vayd-box-doorstep {
+    justify-self: center;
+    align-self: center;
+  }
 }
 
 .hero-vayd-ribbon {
@@ -1149,7 +1226,7 @@ textarea.form-control-custom {
 
 .service-strip-grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 16px;
   margin-top: 30px;
 }
@@ -1281,6 +1358,12 @@ textarea.form-control-custom {
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   border: 2px solid #FFFFFF;
+}
+
+.about-visual-card img,
+img[src*="bjvc-customer-support"] {
+  object-fit: cover;
+  object-position: left center !important;
 }
 
 .about-badge-floating {
@@ -1926,6 +2009,20 @@ textarea.form-control-custom {
   color: var(--gold);
 }
 
+.b2b-home-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: 992px) {
+  .b2b-home-banner-img {
+    height: 380px;
+  }
+}
+
 /* --- Final Call To Action Section --- */
 .final-cta-section {
   background: linear-gradient(135deg, var(--navy-deep) 0%, #000F36 50%, var(--navy-dark) 100%);
@@ -2214,6 +2311,11 @@ textarea.form-control-custom {
 
 .hero-about {
   background-image: url('../images/hero/about-hero.jpg');
+  background-position: center 35%;
+}
+
+.hero-b2b {
+  background-image: url('../images/b2b/b2b-hero.jpg');
   background-position: center 35%;
 }
 
@@ -2746,7 +2848,7 @@ textarea.form-control-custom {
 /* --- Responsive Breakpoints --- */
 @media (max-width: 1199.98px) {
   .service-strip-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .why-choose-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -2779,7 +2881,7 @@ textarea.form-control-custom {
     line-height: 1.45;
   }
   .service-strip-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .ready-cta-box {
     border-radius: var(--radius-lg);
@@ -2860,6 +2962,10 @@ textarea.form-control-custom {
     bottom: 82px;
     right: 24px;
   }
+  .about-visual-card img,
+  img[src*="bjvc-customer-support"] {
+    height: 380px !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2880,6 +2986,16 @@ textarea.form-control-custom {
   }
   .service-strip-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .about-visual-card img,
+  img[src*="bjvc-customer-support"] {
+    height: 340px !important;
+  }
+  .about-badge-floating {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    padding: 12px 14px;
   }
 }
 
@@ -2982,6 +3098,14 @@ textarea.form-control-custom {
   100% { transform: rotate(0deg) scale(1.08); }
 }
 
+/* Passport Micro Lift */
+@keyframes passportFlip {
+  0% { transform: scale(1) rotate(0deg); }
+  40% { transform: scale(1.2) rotate(-8deg); }
+  75% { transform: scale(1.12) rotate(4deg); }
+  100% { transform: scale(1.08) rotate(0deg); }
+}
+
 /* Floating WhatsApp Radiating Wave */
 @keyframes whatsappRipple {
   0% {
@@ -2996,6 +3120,11 @@ textarea.form-control-custom {
 }
 
 /* Contextual Icon Motion Triggers on Hover */
+.service-strip-card:hover .service-strip-icon-box i.fa-passport,
+.service-strip-card:hover .service-strip-icon-box i.bi-pass {
+  animation: passportFlip 0.65s ease-in-out;
+}
+
 .service-strip-card:hover .service-strip-icon-box i.bi-compass,
 .service-card:hover .service-card-icon i.bi-compass {
   animation: compassWiggle 0.65s ease-in-out;
@@ -3084,40 +3213,183 @@ textarea.form-control-custom {
 
 /* --- B2B Partner Dedicated Styles --- */
 .b2b-hero-section {
-  background: 
-    linear-gradient(90deg, rgba(2, 6, 23, 0.78) 0%, rgba(2, 6, 23, 0.52) 50%, rgba(2, 6, 23, 0.22) 80%, rgba(2, 6, 23, 0.40) 100%),
-    url('../images/hero/b2b-hero.jpg') center 30%/cover no-repeat;
-  padding: 110px 0 75px;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, rgba(0, 7, 45, 0.96) 0%, rgba(13, 27, 74, 0.93) 100%),
+              url('../images/b2b/b2b-hero.jpg') center/cover no-repeat;
+  padding: 42px 0 55px;
   color: #FFFFFF;
 }
 
 @media (max-width: 991px) {
   .b2b-hero-section {
-    padding: 85px 0 55px;
+    padding: 30px 0 45px;
   }
+}
+
+.b2b-hero-section .container {
+  max-width: 1540px;
 }
 
 .b2b-hero-banner-frame {
   position: relative;
-  border-radius: var(--radius-lg);
+  border-radius: 22px;
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45), 0 0 30px rgba(245, 185, 27, 0.2);
-  border: 2px solid rgba(245, 185, 27, 0.5);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 45px rgba(245, 185, 27, 0.35);
+  border: 2.5px solid rgba(245, 185, 27, 0.65);
   background: #000B29;
+  width: 100%;
 }
 
 .b2b-hero-banner-frame img {
   width: 100%;
   height: auto;
+  min-height: 420px;
+  max-height: 560px;
+  object-fit: cover;
+  object-position: center;
   display: block;
-  object-fit: contain;
-  transition: transform 0.5s ease;
+  transform: scale(1.01);
+  transition: transform 0.4s ease;
 }
 
 .b2b-hero-banner-frame:hover img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 991.98px) {
+  .b2b-hero-banner-frame img {
+    min-height: 280px;
+    max-height: none;
+  }
+}
+
+/* Immersive Background Architecture */
+.b2b-hero-grand {
+  position: relative;
+  overflow: hidden;
+}
+
+.b2b-hero-bg-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.b2b-hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   transform: scale(1.02);
+  transition: transform 10s ease;
+  filter: saturate(1.15) brightness(0.85);
+}
+
+.b2b-hero-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 7, 45, 0.94) 0%, rgba(0, 11, 41, 0.88) 50%, rgba(10, 25, 75, 0.92) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.b2b-eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 185, 27, 0.15);
+  border: 1px solid rgba(245, 185, 27, 0.45);
+  padding: 6px 16px;
+  border-radius: 50px;
+  color: var(--gold);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+}
+
+.b2b-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 10px var(--gold);
+  animation: iconFloat 2s ease-in-out infinite alternate;
+}
+
+.b2b-hero-quote-box {
+  background: rgba(245, 185, 27, 0.10);
+  border-left: 4px solid var(--gold);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 16px 20px;
+  border-radius: 0 12px 12px 0;
+  border-top: 1px solid rgba(245, 185, 27, 0.25);
+  border-right: 1px solid rgba(245, 185, 27, 0.25);
+  border-bottom: 1px solid rgba(245, 185, 27, 0.25);
+}
+
+.b2b-hero-frame-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 8px;
+  background: linear-gradient(135deg, rgba(245, 185, 27, 0.6) 0%, rgba(0, 7, 45, 0.4) 50%, rgba(245, 185, 27, 0.8) 100%);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(245, 185, 27, 0.25);
+}
+
+.b2b-hero-img-glass {
+  border-radius: calc(var(--radius-lg) - 4px);
+  overflow: hidden;
+  position: relative;
+  background: #000B29;
+}
+
+.b2b-grand-visual {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.b2b-hero-frame-wrapper:hover .b2b-grand-visual {
+  transform: scale(1.03);
+}
+
+.b2b-hero-floating-chip {
+  position: absolute;
+  background: rgba(0, 11, 41, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(245, 185, 27, 0.65);
+  color: #FFFFFF;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 4;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  animation: iconFloat 4s ease-in-out infinite;
+}
+
+.chip-top {
+  top: 24px;
+  left: 24px;
+}
+
+.chip-bottom {
+  bottom: 24px;
+  right: 24px;
+  animation-delay: 2s;
 }
 
 .b2b-trust-bar {
@@ -3151,54 +3423,170 @@ textarea.form-control-custom {
   color: rgba(245, 185, 27, 0.5);
 }
 
+/* SECTION 2: WHY PARTNER WITH BJ VISA (Alternating Left Column Showcase) */
+.b2b-why-section {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+}
+
+.b2b-side-img-frame {
+  height: 340px;
+  border: 2px solid rgba(245, 185, 27, 0.35);
+}
+
+.b2b-side-img-tag {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(0, 11, 41, 0.90);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 30px;
+  border: 1px solid rgba(245, 185, 27, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.b2b-philosophy-card {
+  background: var(--blue-soft);
+  border: 2px dashed var(--gold);
+  transition: all var(--transition-normal);
+}
+
+.b2b-philosophy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 7, 45, 0.08);
+  border-color: var(--gold-bright);
+}
+
 .b2b-why-card {
   background: #FFFFFF;
   border: 1.5px solid rgba(0, 7, 45, 0.08);
+  border-top: 3.5px solid transparent;
   border-radius: var(--radius-md);
-  padding: 30px;
+  padding: 24px 20px;
   height: 100%;
   position: relative;
   transition: all var(--transition-normal);
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 14px rgba(0, 7, 45, 0.04);
 }
 
 .b2b-why-card:hover {
   transform: translateY(-6px);
-  border-color: var(--gold);
+  border-color: rgba(0, 7, 45, 0.08);
+  border-top-color: var(--gold);
   box-shadow: 0 16px 36px rgba(0, 7, 45, 0.08), 0 0 16px rgba(245, 185, 27, 0.2);
 }
 
 .b2b-num-badge {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: var(--gold);
   background: rgba(245, 185, 27, 0.12);
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   border: 1px solid rgba(245, 185, 27, 0.35);
+  transition: all 0.3s ease;
 }
 
+.b2b-why-card:hover .b2b-num-badge {
+  background: var(--navy-dark);
+  color: var(--gold);
+  transform: scale(1.08);
+}
+
+/* Service Boxes with Photography Header */
 .b2b-service-box {
   background: #FFFFFF;
   border: 1.5px solid rgba(0, 7, 45, 0.08);
   border-radius: var(--radius-md);
-  padding: 28px 24px;
+  overflow: hidden;
   height: 100%;
   transition: all var(--transition-normal);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .b2b-service-box:hover {
   transform: translateY(-6px);
   border-color: var(--gold);
-  box-shadow: 0 16px 32px rgba(0, 7, 45, 0.08);
+  box-shadow: 0 18px 38px rgba(0, 7, 45, 0.1), 0 0 18px rgba(245, 185, 27, 0.18);
+}
+
+.b2b-service-box-media {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.b2b-service-box-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.b2b-service-box:hover .b2b-service-box-media img {
+  transform: scale(1.08);
+}
+
+.b2b-service-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 7, 45, 0.1) 0%, rgba(0, 7, 45, 0.68) 100%);
+}
+
+.b2b-service-floating-icon {
+  position: absolute;
+  bottom: 12px;
+  left: 18px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #00072D;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.b2b-service-box:hover .b2b-service-floating-icon {
+  background: var(--gold);
+  color: #00072D;
+  transform: scale(1.1);
+}
+
+.b2b-service-box-body {
+  padding: 24px 22px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.b2b-service-featured-banner {
+  padding: 0;
+  border-radius: var(--radius-md);
+}
+
+.b2b-group-banner {
+  background: linear-gradient(135deg, rgba(0, 7, 45, 0.94) 0%, rgba(0, 11, 41, 0.90) 100%), url('../images/hero/airport-sunset.jpg') center/cover no-repeat;
+  border: 2px solid rgba(245, 185, 27, 0.4);
 }
 
 .b2b-dest-card {
@@ -3227,12 +3615,107 @@ textarea.form-control-custom {
   transform: scale(1.05);
 }
 
+.b2b-dest-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(0, 11, 41, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(245, 185, 27, 0.45);
+  color: var(--gold);
+  padding: 4px 10px;
+  border-radius: 50%;
+  font-size: 0.95rem;
+}
+
+/* SECTION 7: COMMITMENTS WITH SHIELD ICONS */
+.b2b-commitment-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  border: 1.5px solid rgba(0, 7, 45, 0.08);
+  border-top: 4px solid var(--gold);
+  padding: 28px 24px;
+  height: 100%;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 14px rgba(0, 7, 45, 0.04);
+}
+
+.b2b-commitment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 7, 45, 0.08), 0 0 14px rgba(245, 185, 27, 0.18);
+  border-color: rgba(245, 185, 27, 0.5);
+  border-top-color: var(--gold);
+}
+
+.b2b-commitment-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(245, 185, 27, 0.12);
+  border: 1px solid rgba(245, 185, 27, 0.35);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+.b2b-commitment-card:hover .b2b-commitment-icon {
+  background: var(--navy-dark);
+  color: var(--gold);
+  transform: scale(1.08);
+}
+
+/* SECTION 8: WHO CAN PARTNER */
+.b2b-who-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(0, 7, 45, 0.08);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  height: 100%;
+  transition: all var(--transition-normal);
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 7, 45, 0.04);
+}
+
+.b2b-who-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+  box-shadow: 0 16px 32px rgba(0, 7, 45, 0.08), 0 0 14px rgba(245, 185, 27, 0.18);
+}
+
+/* SECTION 9: FORM SIDEBAR & CARD */
+.b2b-form-sidebar {
+  border-radius: var(--radius-lg);
+}
+
+.b2b-check-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(245, 185, 27, 0.2);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
 .b2b-form-card {
   background: #FFFFFF;
   border: 1.5px solid rgba(0, 7, 45, 0.1);
   border-radius: var(--radius-lg);
-  padding: 40px;
+  padding: 36px 32px;
   box-shadow: 0 20px 50px rgba(0, 7, 45, 0.08);
+}
+
+@media (max-width: 767.98px) {
+  .b2b-form-card {
+    padding: 24px 18px;
+  }
 }
 
 .b2b-check-pill {
@@ -3271,36 +3754,195 @@ textarea.form-control-custom {
   color: var(--navy-dark);
 }
 
-.b2b-commitment-card {
-  background: #FFFFFF;
-  border-radius: var(--radius-md);
-  border: 1.5px solid rgba(0, 7, 45, 0.08);
-  border-top: 4px solid var(--gold);
-  padding: 28px 24px;
-  height: 100%;
-  transition: all var(--transition-normal);
+.b2b-final-cta-bg {
+  background: linear-gradient(135deg, rgba(0, 7, 45, 0.95) 0%, rgba(0, 11, 41, 0.92) 100%), url('../images/hero/airport-sunset.jpg') center/cover no-repeat !important;
 }
 
-.b2b-commitment-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 32px rgba(0, 7, 45, 0.08);
+/* ==========================================================================
+   B2B WATERMARK BACKGROUNDS SYSTEM
+   Clearly visible, elegant visa & international travel imagery
+   Carefully blended into section backgrounds for high visual richness
+   ========================================================================== */
+
+/* Base positioning for sections with watermarks */
+.b2b-wm-why,
+.b2b-wm-team,
+.b2b-wm-services-stamps,
+.b2b-wm-worldmap,
+.b2b-wm-airplane,
+.b2b-wm-approval,
+.b2b-wm-travelers,
+.b2b-wm-form-portal {
+  position: relative !important;
+  overflow: hidden !important;
 }
 
-.b2b-who-card {
-  background: #FFFFFF;
-  border: 1.5px solid rgba(0, 7, 45, 0.08);
-  border-radius: var(--radius-md);
-  padding: 28px 24px;
-  height: 100%;
-  transition: all var(--transition-normal);
-  text-align: center;
+/* Ensure all content containers, grids, and cards remain above background watermarks */
+.b2b-wm-why > .container,
+.b2b-wm-team > .container,
+.b2b-wm-services-stamps > .container,
+.b2b-wm-worldmap > .container,
+.b2b-wm-airplane > .container,
+.b2b-wm-approval > .container,
+.b2b-wm-travelers > .container,
+.b2b-wm-form-portal > .container {
+  position: relative;
+  z-index: 2;
 }
 
-.b2b-who-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--gold);
-  box-shadow: 0 16px 32px rgba(0, 7, 45, 0.08);
+/* 1. Section 1 (Why Partner): Visible World Map Watermark on Right */
+.b2b-wm-why::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.56) 0%, rgba(255, 255, 255, 0.82) 60%, #ffffff 100%),
+              url('../images/b2b/watermark-world-map.jpg') center right / cover no-repeat;
+  pointer-events: none;
+  z-index: 0;
 }
+
+/* 2. Section 2 (Your Support Team): Watermark on Right Side Behind Image (Left text sits on 100% clean background) */
+.b2b-wm-team::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background: linear-gradient(to left, rgba(248, 250, 252, 0.45) 0%, rgba(248, 250, 252, 0.85) 60%, #f8fafc 100%),
+              url('../images/b2b/watermark-travelers.jpg') center right / cover no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* High-Contrast Typography for Section 2 (Your Visa Support Team) */
+.b2b-team-title {
+  color: #00072D !important;
+  font-family: var(--font-heading);
+  font-weight: 800 !important;
+  font-size: clamp(1.85rem, 2.7vw, 2.4rem);
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+  margin-bottom: 1rem;
+}
+
+.b2b-team-text {
+  color: #0f172a !important; /* Deep solid slate-900 for ultra-clear visibility */
+  font-size: 1.06rem;
+  line-height: 1.75;
+  font-weight: 500;
+  margin-bottom: 1.1rem;
+}
+
+.b2b-team-text strong {
+  color: #00072D !important;
+  font-weight: 800;
+}
+
+/* 3. Section 3 (Visa Services): Passports, Visa Stamps & Boarding Pass Watermark */
+.b2b-wm-services-stamps::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 65%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.80) 55%, #ffffff 100%),
+              url('../images/b2b/watermark-stamps.jpg') center right / cover no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 4. Section 4 (Key Partner Destinations): Global Flight Connections World Map */
+.b2b-wm-worldmap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(248, 250, 252, 0.45) 10%, rgba(248, 250, 252, 0.78) 65%, #f8fafc 100%),
+              url('../images/b2b/watermark-world-map.jpg') center center / cover no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 5. Section 5 (Clear Process Timeline): Airliner Climbing Through Bright Clouds */
+.b2b-wm-airplane::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 62%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.78) 60%, #ffffff 100%),
+              url('../images/b2b/watermark-airplane.jpg') center right / cover no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 6. Section 6 (Partner Commitment): Official Visa Approval & Embassy Seal */
+.b2b-wm-approval::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  background: linear-gradient(to left, rgba(248, 250, 252, 0.50) 0%, rgba(248, 250, 252, 0.80) 60%, #f8fafc 100%),
+              url('../images/b2b/watermark-approval.jpg') center right / cover no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 7. Section 7 (Who Can Partner): Corporate Business Travelers in Modern Terminal */
+.b2b-wm-travelers::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 62%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.80) 60%, #ffffff 100%),
+              url('../images/b2b/watermark-travelers.jpg') center right / cover no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 8. Section 8 (Registration Portal): Subtle Passports & Visa Documentation Watermark */
+.b2b-wm-form-portal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 58%;
+  background: linear-gradient(to left, rgba(248, 250, 252, 0.52) 0%, rgba(248, 250, 252, 0.82) 65%, #f8fafc 100%),
+              url('../images/b2b/watermark-stamps.jpg') center right / cover no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Mobile & Tablet Responsiveness for Watermark Backgrounds */
+@media (max-width: 991.98px) {
+  .b2b-wm-why::before,
+  .b2b-wm-team::before,
+  .b2b-wm-services-stamps::before,
+  .b2b-wm-airplane::before,
+  .b2b-wm-approval::before,
+  .b2b-wm-travelers::before,
+  .b2b-wm-form-portal::before {
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    opacity: 0.65 !important;
+  }
+
+  .b2b-wm-worldmap::before {
+    opacity: 0.70 !important;
+  }
+}
+
 
 /* ==========================================================================
    BJ VISA CONSULTANCY - LUXURY LOGO PRELOADER
@@ -4004,5 +4646,1589 @@ body.preloader-active {
   }
 }
 
+/* ============================================================================
+   Travel Date Range Picker & BJVisa Flatpickr Theme
+   ============================================================================ */
+.travel-daterange-group {
+  position: relative;
+}
+
+.travel-daterange-group i.bi-calendar2-range {
+  color: var(--blue-royal, #004B93) !important;
+  font-size: 0.95rem;
+  left: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.form-control-custom.travel-range-picker {
+  background-color: #FFFFFF !important;
+  border: 1.5px solid var(--gold, #F5B91B) !important;
+  border-radius: var(--radius-sm, 8px) !important;
+  padding: 10px 38px 10px 42px !important;
+  box-shadow: 0 0 0 2.5px rgba(245, 185, 27, 0.22), 0 2px 6px rgba(0, 0, 0, 0.03);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text-dark, #000B29);
+  cursor: pointer;
+  transition: all var(--transition-fast, 0.2s ease);
+}
+
+.form-control-custom.travel-range-picker:hover {
+  border-color: #EAA711 !important;
+  box-shadow: 0 0 0 3px rgba(245, 185, 27, 0.28), 0 3px 8px rgba(0, 0, 0, 0.04);
+}
+
+.form-control-custom.travel-range-picker:focus,
+.form-control-custom.travel-range-picker.active {
+  outline: none;
+  border-color: #EAA711 !important;
+  box-shadow: 0 0 0 3.5px rgba(245, 185, 27, 0.32), 0 4px 12px rgba(245, 185, 27, 0.16) !important;
+  background-color: #FFFFFF !important;
+}
+
+.form-control-custom.travel-range-picker::placeholder {
+  color: #7A8B9E !important;
+  font-size: 0.88rem;
+  font-weight: 400;
+}
+
+.form-control-custom.travel-range-picker.is-invalid {
+  border-color: #DC3545 !important;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25) !important;
+}
+
+.date-range-clear-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  color: #94A3B8;
+  cursor: pointer;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  line-height: 1;
+  transition: color var(--transition-fast, 0.2s ease), transform 0.15s ease;
+}
+
+.date-range-clear-btn:hover {
+  color: #E11D48;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Custom BJVisa Flatpickr Calendar */
+.flatpickr-calendar {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(0, 11, 41, 0.18), 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(245, 185, 27, 0.4);
+  background: #FFFFFF;
+  padding: 6px;
+  z-index: 100050 !important;
+}
+
+/* Flatpickr In-Calendar Range Guide Status Bar */
+.fp-range-status-bar {
+  background: var(--navy-dark, #000B29);
+  color: #FFFFFF;
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid rgba(245, 185, 27, 0.35);
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.fp-range-status-bar .fp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(245, 185, 27, 0.22);
+  color: var(--gold, #F5B91B);
+  border: 1px solid rgba(245, 185, 27, 0.5);
+  border-radius: 4px;
+  padding: 1px 7px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.fp-range-status-bar.waiting-end {
+  background: #001B4D;
+  border-bottom-color: var(--gold, #F5B91B);
+}
+
+.fp-range-status-bar.waiting-end .fp-badge {
+  background: var(--gold, #F5B91B);
+  color: var(--navy-dark, #000B29);
+  font-weight: 800;
+  animation: fpStatusPulse 1.6s infinite ease-in-out;
+}
+
+.fp-range-status-bar.completed {
+  background: #082E1E;
+  border-bottom-color: #22C55E;
+  color: #FFFFFF;
+}
+
+.fp-range-status-bar.completed .fp-badge {
+  background: #22C55E;
+  color: #FFFFFF;
+  border-color: #22C55E;
+}
+
+@keyframes fpStatusPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(0.96); opacity: 0.85; }
+}
+
+.flatpickr-calendar .flatpickr-months {
+  background: var(--navy-dark, #000B29);
+  border-radius: 0;
+  padding: 6px 0;
+  color: #FFFFFF;
+}
+
+.flatpickr-calendar .flatpickr-month {
+  color: #FFFFFF;
+  fill: #FFFFFF;
+}
+
+.flatpickr-calendar .flatpickr-current-month {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #FFFFFF;
+  padding: 4px 0 0 0;
+}
+
+.flatpickr-calendar .flatpickr-current-month .flatpickr-monthDropdown-months {
+  font-weight: 700;
+  color: #FFFFFF;
+  background: var(--navy-dark, #000B29);
+}
+
+.flatpickr-calendar .flatpickr-current-month .numInputWrapper span.arrowUp:after {
+  border-bottom-color: var(--gold, #F5B91B);
+}
+
+.flatpickr-calendar .flatpickr-current-month .numInputWrapper span.arrowDown:after {
+  border-top-color: var(--gold, #F5B91B);
+}
+
+.flatpickr-calendar .flatpickr-prev-month,
+.flatpickr-calendar .flatpickr-next-month {
+  color: var(--gold, #F5B91B);
+  fill: var(--gold, #F5B91B);
+  padding: 6px 12px;
+}
+
+.flatpickr-calendar .flatpickr-prev-month:hover svg,
+.flatpickr-calendar .flatpickr-next-month:hover svg {
+  fill: #FFFFFF;
+}
+
+.flatpickr-calendar .flatpickr-weekday {
+  color: var(--blue-royal, #004B93);
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.flatpickr-calendar .flatpickr-day {
+  border-radius: 8px;
+  font-weight: 500;
+  color: #1E293B;
+  transition: all 0.15s ease-in-out;
+}
+
+.flatpickr-calendar .flatpickr-day:hover {
+  background: rgba(245, 185, 27, 0.25);
+  border-color: transparent;
+}
+
+.flatpickr-calendar .flatpickr-day.today {
+  border-color: var(--gold, #F5B91B);
+}
+
+.flatpickr-calendar .flatpickr-day.selected,
+.flatpickr-calendar .flatpickr-day.startRange,
+.flatpickr-calendar .flatpickr-day.endRange {
+  background: var(--gold, #F5B91B) !important;
+  color: var(--navy-dark, #000B29) !important;
+  border-color: var(--gold, #F5B91B) !important;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(245, 185, 27, 0.45);
+}
+
+.flatpickr-calendar .flatpickr-day.inRange {
+  background: rgba(245, 185, 27, 0.2) !important;
+  border-color: transparent !important;
+  color: var(--navy-dark, #000B29) !important;
+  box-shadow: -5px 0 0 rgba(245, 185, 27, 0.2), 5px 0 0 rgba(245, 185, 27, 0.2) !important;
+}
+
+.flatpickr-calendar .flatpickr-day.flatpickr-disabled,
+.flatpickr-calendar .flatpickr-day.flatpickr-disabled:hover {
+  color: #CBD5E1 !important;
+  background: transparent !important;
+  cursor: not-allowed !important;
+}
+
+@media (max-width: 480px) {
+  .flatpickr-calendar {
+    width: 298px !important;
+  }
+  .flatpickr-days, .dayContainer {
+    width: 286px !important;
+    min-width: 286px !important;
+    max-width: 286px !important;
+  }
+  .flatpickr-day {
+    max-width: 38px !important;
+    height: 38px !important;
+    line-height: 38px !important;
+  }
+}
+
+/* ==========================================================================
+   ABOUT & B2B LUXURY VISUAL PRESENTATION & MOTION ENHANCEMENTS
+   ========================================================================== */
+
+/* 1. Scroll-Triggered Reveal Animation System */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* 2. Editorial Image Frames with Luxury Glow & Accents */
+.editorial-image-frame {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 48px rgba(0, 11, 41, 0.16), 0 4px 14px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(245, 185, 27, 0.35);
+  background: #000B29;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.editorial-image-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 54px rgba(0, 11, 41, 0.22), 0 0 20px rgba(245, 185, 27, 0.18);
+}
+
+.editorial-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-image-frame:hover img {
+  transform: scale(1.03);
+}
+
+.floating-trust-chip {
+  position: absolute;
+  background: rgba(0, 11, 41, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #FFFFFF;
+  border-radius: 12px;
+  padding: 12px 18px;
+  border: 1px solid rgba(245, 185, 27, 0.45);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.floating-trust-chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold, #F5B91B);
+}
+
+/* 3. Empathy Visual Cards (About Page) */
+.empathy-visual-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(0, 11, 41, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 20px rgba(0, 11, 41, 0.05);
+}
+
+.empathy-visual-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--gold, #F5B91B);
+  box-shadow: 0 18px 40px rgba(0, 11, 41, 0.12), 0 0 18px rgba(245, 185, 27, 0.2);
+}
+
+.empathy-card-img-wrap {
+  position: relative;
+  height: 175px;
+  overflow: hidden;
+  background: #000B29;
+}
+
+.empathy-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.empathy-visual-card:hover .empathy-card-img-wrap img {
+  transform: scale(1.07);
+}
+
+.empathy-card-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  background: rgba(0, 11, 41, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(245, 185, 27, 0.45);
+  color: var(--gold, #F5B91B);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.empathy-card-body {
+  padding: 22px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 4. About Page Visa Solutions Visual Cards */
+.solution-visual-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(0, 11, 41, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 18px rgba(0, 11, 41, 0.05);
+}
+
+.solution-visual-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold, #F5B91B);
+  box-shadow: 0 18px 36px rgba(0, 11, 41, 0.1), 0 0 16px rgba(245, 185, 27, 0.16);
+}
+
+.solution-card-img-wrap {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  background: #000B29;
+}
+
+.solution-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.solution-visual-card:hover .solution-card-img-wrap img {
+  transform: scale(1.06);
+}
+
+.solution-card-icon-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 11, 41, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(245, 185, 27, 0.5);
+  color: var(--gold, #F5B91B);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+}
+
+.solution-card-body {
+  padding: 22px;
+  flex: 1 1 auto;
+}
+
+/* 5. Process Step Connected Line (About & B2B) */
+.process-step-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(0, 11, 41, 0.08);
+  border-radius: 16px;
+  padding: 26px 20px;
+  height: 100%;
+  position: relative;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 16px rgba(0, 11, 41, 0.04);
+}
+
+.process-step-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold, #F5B91B);
+  box-shadow: 0 16px 32px rgba(0, 11, 41, 0.09), 0 0 14px rgba(245, 185, 27, 0.18);
+}
+
+.process-step-num {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(245, 185, 27, 0.18) 0%, rgba(245, 185, 27, 0.08) 100%);
+  border: 1px solid rgba(245, 185, 27, 0.45);
+  color: var(--gold, #F5B91B);
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-weight: 800;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.process-step-card:hover .process-step-num {
+  background: var(--gold, #F5B91B);
+  color: var(--navy-dark, #000B29);
+  transform: scale(1.08);
+}
+
+/* 6. Reason Item Micro-Cards in About Section 1 */
+.reason-micro-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 11, 41, 0.07);
+  box-shadow: 0 2px 8px rgba(0, 11, 41, 0.03);
+  transition: all 0.25s ease;
+}
+
+.reason-micro-card:hover {
+  transform: translateX(4px);
+  border-color: rgba(245, 185, 27, 0.5);
+  box-shadow: 0 4px 14px rgba(0, 11, 41, 0.07);
+  background: #FAFCFF;
+}
+
+.reason-micro-card .reason-icon-wrap {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 8px;
+  background: rgba(245, 185, 27, 0.12);
+  border: 1px solid rgba(245, 185, 27, 0.35);
+  color: var(--gold, #F5B91B);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+/* 7. B2B Destination Cards Enhancement */
+.b2b-dest-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(0, 11, 41, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  height: 100%;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 18px rgba(0, 11, 41, 0.05);
+}
+
+.b2b-dest-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold, #F5B91B);
+  box-shadow: 0 20px 40px rgba(0, 11, 41, 0.12), 0 0 16px rgba(245, 185, 27, 0.2);
+}
+
+.b2b-dest-img-wrap {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: #000B29;
+}
+
+.b2b-dest-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.b2b-dest-card:hover .b2b-dest-img-wrap img {
+  transform: scale(1.07);
+}
+
+.b2b-dest-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(0, 11, 41, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(245, 185, 27, 0.45);
+  color: var(--gold, #F5B91B);
+  padding: 3px 10px;
+  border-radius: 16px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+/* 8. B2B Partner Cards & Why Cards Refinements */
+.b2b-why-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(0, 11, 41, 0.08);
+  border-top: 3px solid transparent;
+  border-radius: 16px;
+  padding: 30px 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 16px rgba(0, 11, 41, 0.04);
+}
+
+.b2b-why-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 11, 41, 0.08);
+  border-top-color: var(--gold, #F5B91B);
+  box-shadow: 0 18px 36px rgba(0, 11, 41, 0.08), 0 0 14px rgba(245, 185, 27, 0.16);
+}
+
+.b2b-service-box {
+  position: relative;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(0, 11, 41, 0.08);
+  border-radius: 16px;
+  padding: 28px 24px;
+  height: 100%;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 16px rgba(0, 11, 41, 0.04);
+}
+
+.b2b-service-box:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold, #F5B91B);
+  box-shadow: 0 18px 36px rgba(0, 11, 41, 0.08), 0 0 14px rgba(245, 185, 27, 0.16);
+}
+
+.b2b-who-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(0, 11, 41, 0.08);
+  border-radius: 16px;
+  padding: 30px 22px;
+  height: 100%;
+  text-align: center;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 16px rgba(0, 11, 41, 0.04);
+}
+
+.b2b-who-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold, #F5B91B);
+  box-shadow: 0 18px 36px rgba(0, 11, 41, 0.08), 0 0 14px rgba(245, 185, 27, 0.16);
+}
+
+.b2b-who-card .service-strip-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: rgba(245, 185, 27, 0.12);
+  border: 1.5px solid rgba(245, 185, 27, 0.4);
+  color: var(--gold, #F5B91B);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px auto;
+  font-size: 1.45rem;
+  transition: all 0.3s ease;
+}
+
+.b2b-who-card:hover .service-strip-icon-box {
+  background: var(--navy-dark, #000B29);
+  color: var(--gold, #F5B91B);
+  transform: scale(1.08);
+}
+
+.b2b-commitment-card {
+  position: relative;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(0, 11, 41, 0.08);
+  border-left: 3px solid var(--gold, #F5B91B);
+  border-radius: 16px;
+  padding: 26px 22px;
+  height: 100%;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 11, 41, 0.04);
+}
+
+.b2b-commitment-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 11, 41, 0.12);
+  border-left-color: var(--gold, #F5B91B);
+  box-shadow: 0 16px 32px rgba(0, 11, 41, 0.08), 0 0 14px rgba(245, 185, 27, 0.16);
+}
+
+/* ==========================================================================
+   ENHANCED LUXURY SUITE FOR ABOUT & B2B PAGES
+   ========================================================================== */
+
+/* Editorial Image Frame Corner Brackets */
+.editorial-image-frame::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 24px;
+  height: 24px;
+  border-top: 2px solid var(--gold, #F5B91B);
+  border-left: 2px solid var(--gold, #F5B91B);
+  border-top-left-radius: 6px;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0.85;
+}
+
+.editorial-image-frame::after {
+  content: "";
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  border-bottom: 2px solid var(--gold, #F5B91B);
+  border-right: 2px solid var(--gold, #F5B91B);
+  border-bottom-right-radius: 6px;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0.85;
+}
+
+.editorial-badge-pill {
+  position: absolute;
+  background: rgba(0, 11, 41, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #FFFFFF;
+  border-radius: 30px;
+  padding: 6px 16px;
+  border: 1px solid rgba(245, 185, 27, 0.5);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  z-index: 4;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* About Page Hero Showcase */
+.about-hero-showcase {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(245, 185, 27, 0.45);
+  border-radius: 20px;
+  padding: 26px 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 25px rgba(245, 185, 27, 0.15);
+  position: relative;
+  overflow: hidden;
+  animation: heroCardFloat 5s ease-in-out infinite alternate;
+}
+
+@keyframes heroCardFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-6px); }
+}
+
+.about-hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 185, 27, 0.15);
+  border: 1px solid rgba(245, 185, 27, 0.4);
+  color: var(--gold-bright, #FFD747);
+  padding: 5px 14px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* About Page Section 4 - Approach Pillar Cards (Dark Section) */
+.approach-pillar-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  border-top: 3.5px solid var(--gold, #F5B91B);
+  border-radius: 18px;
+  padding: 30px 24px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.approach-pillar-card::before {
+  content: attr(data-step);
+  position: absolute;
+  right: 18px;
+  top: 10px;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(245, 185, 27, 0.07);
+  line-height: 1;
+  pointer-events: none;
+  transition: color 0.4s ease;
+}
+
+.approach-pillar-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold, #F5B91B);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35), 0 0 25px rgba(245, 185, 27, 0.2);
+}
+
+.approach-pillar-card:hover::before {
+  color: rgba(245, 185, 27, 0.18);
+}
+
+.approach-pillar-card .why-choose-icon-circle {
+  transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.approach-pillar-card:hover .why-choose-icon-circle {
+  transform: scale(1.12);
+  background: var(--gold, #F5B91B);
+  color: var(--navy-dark, #000B29);
+}
+
+/* B2B Hero Floating Credential Chips */
+.b2b-hero-floating-chip {
+  position: absolute;
+  background: rgba(0, 11, 41, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #FFFFFF;
+  border-radius: 30px;
+  padding: 8px 18px;
+  border: 1px solid rgba(245, 185, 27, 0.55);
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  z-index: 4;
+}
+
+.b2b-hero-floating-chip.chip-top {
+  top: 18px;
+  right: 18px;
+  animation: b2bChipFloat1 5s ease-in-out infinite alternate;
+}
+
+.b2b-hero-floating-chip.chip-bottom {
+  bottom: 18px;
+  left: 18px;
+  animation: b2bChipFloat2 6s ease-in-out infinite alternate;
+}
+
+@keyframes b2bChipFloat1 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-6px); }
+}
+
+@keyframes b2bChipFloat2 {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(6px); }
+}
+
+/* B2B Form Card Custom Styling */
+.b2b-form-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(245, 185, 27, 0.35);
+  border-radius: 22px;
+  padding: 44px 38px;
+  box-shadow: 0 22px 55px rgba(0, 7, 45, 0.09), 0 0 25px rgba(245, 185, 27, 0.08);
+}
+
+@media (max-width: 767.98px) {
+  .b2b-form-card {
+    padding: 24px 16px;
+  }
+  .b2b-hero-floating-chip {
+    display: none;
+  }
+  .editorial-image-frame img {
+    height: 300px !important;
+  }
+  .editorial-image-frame .floating-trust-chip {
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 12px !important;
+    margin: 0 !important;
+    max-width: calc(100% - 24px) !important;
+    padding: 10px 14px !important;
+  }
+  .editorial-image-frame .floating-trust-chip h6 {
+    font-size: 0.9rem !important;
+  }
+  .editorial-image-frame .floating-trust-chip p {
+    font-size: 0.78rem !important;
+  }
+  .editorial-image-frame .editorial-badge-pill {
+    top: 12px !important;
+    right: 12px !important;
+    margin: 0 !important;
+    font-size: 0.75rem !important;
+    padding: 4px 10px !important;
+  }
+  .page-hero-banner.hero-b2b .btn-gold,
+  .page-hero-banner.hero-b2b .btn {
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   CAREERS PAGE CURRENT OPPORTUNITIES ENHANCEMENTS
+   ========================================================================== */
+.career-opportunity-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(0, 11, 41, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 26px rgba(0, 11, 41, 0.06);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.career-opportunity-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold, #F5B91B);
+  box-shadow: 0 20px 48px rgba(0, 11, 41, 0.12), 0 0 20px rgba(245, 185, 27, 0.18);
+}
+
+/* --- Careers Page - Realistic Website Job Cards --- */
+.realistic-job-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(0, 11, 41, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 7, 45, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.realistic-job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 7, 45, 0.1);
+  border-color: rgba(245, 185, 27, 0.45);
+}
+
+.career-photo-banner {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #00072D;
+}
+
+.career-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.realistic-job-card:hover .career-banner-img {
+  transform: scale(1.02);
+}
+
+.banner-badge-text {
+  pointer-events: none;
+}
+
+.banner-badge-left {
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1.15;
+  color: #001A4E;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+.banner-badge-right {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-family: 'Outfit', cursive, sans-serif;
+  line-height: 1.1;
+  color: #00072D;
+  text-align: right;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+.underline-gold {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-gold::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2.5px;
+  background: #F5B91B;
+  border-radius: 2px;
+}
+
+.career-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.career-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.career-card-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: #00072D;
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.btn-card-apply {
+  background: var(--gold, #F5B91B);
+  color: #00072D;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(245, 185, 27, 0.35);
+  transition: all 0.2s ease;
+  border: none;
+  flex-shrink: 0;
+}
+
+.btn-card-apply:hover {
+  background: #E5A812;
+  color: #00072D;
+  box-shadow: 0 5px 14px rgba(245, 185, 27, 0.5);
+  transform: translateY(-1px);
+}
+
+.career-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+  margin-bottom: 16px;
+}
+
+.meta-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #475569;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.meta-tag i {
+  color: #475569;
+  font-size: 1rem;
+}
+
+.feature-strip {
+  background: #F4F7FB;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feature-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: center;
+  text-align: left;
+  padding: 2px 6px;
+}
+
+.feature-strip-item i {
+  color: #00072D;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.feature-strip-item .feature-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #00072D;
+  line-height: 1.25;
+}
+
+.feature-divider {
+  width: 1px;
+  height: 32px;
+  background: #CBD5E1;
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+
+.detail-col-title {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #00072D;
+  margin-bottom: 10px;
+}
+
+.detail-bullet-list {
+  list-style: disc;
+  padding-left: 18px;
+  margin-bottom: 0;
+}
+
+.detail-bullet-list li {
+  font-size: 0.845rem;
+  line-height: 1.48;
+  color: #475569;
+  margin-bottom: 7px;
+}
+
+.detail-check-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.detail-check-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 7px;
+  font-size: 0.845rem;
+  line-height: 1.48;
+  color: #475569;
+}
+
+.detail-check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 15px;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F5B91B'%3E%3Cpath d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 767.98px) {
+  .career-card-body {
+    padding: 20px 16px;
+  }
+  .career-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .btn-card-apply {
+    width: 100%;
+    justify-content: center;
+  }
+  .feature-strip {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .feature-divider {
+    display: none;
+  }
+  .feature-strip-item {
+    justify-content: flex-start;
+    padding: 0;
+  }
+}
+
+
+
+/* ==========================================================================
+   B2B READ MORE / READ LESS EXPANDABLE SYSTEM
+   Smooth accordion expansion, navy-blue and gold branding, accessible
+   ========================================================================== */
+.b2b-expandable-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease, margin 0.35s ease;
+  will-change: max-height, opacity;
+}
+
+.b2b-expandable-content.is-expanded {
+  max-height: 900px;
+  opacity: 1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-b2b-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(0, 7, 45, 0.2);
+  border-radius: 20px;
+  padding: 5px 16px;
+  font-family: var(--font-heading, sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #00072D;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(0, 7, 45, 0.04);
+}
+
+.btn-b2b-toggle:hover {
+  background: var(--blue-soft, #f0f4f9);
+  border-color: var(--gold, #F5B91B);
+  color: #001B5E;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 7, 45, 0.08);
+}
+
+.btn-b2b-toggle .toggle-icon {
+  font-size: 0.72rem;
+  color: var(--gold, #F5B91B);
+  transition: transform 0.3s ease;
+}
+
+.btn-b2b-toggle[aria-expanded="true"] {
+  background: #00072D;
+  border-color: var(--gold, #F5B91B);
+  color: #FFFFFF;
+}
+
+.btn-b2b-toggle[aria-expanded="true"] .toggle-icon {
+  transform: rotate(180deg);
+  color: var(--gold, #F5B91B);
+}
+
+/* Light version for dark hero / cta backgrounds */
+.btn-b2b-toggle-light {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(245, 185, 27, 0.5);
+  color: #FFFFFF;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.btn-b2b-toggle-light:hover {
+  background: rgba(245, 185, 27, 0.2);
+  border-color: var(--gold, #F5B91B);
+  color: var(--gold, #F5B91B);
+}
+
+.btn-b2b-toggle-light[aria-expanded="true"] {
+  background: var(--gold, #F5B91B);
+  border-color: var(--gold, #F5B91B);
+  color: #00072D;
+}
+
+.btn-b2b-toggle-light[aria-expanded="true"] .toggle-icon {
+  color: #00072D;
+}
+
+/* ==========================================================================
+   LAPTOP VIEW: REDUCE SECTION-TO-SECTION SPACING ACROSS ALL WEBSITE
+   Targets screens 992px and wider (laptops and desktops)
+   Mobile and tablet views (< 992px) remain unchanged
+   ========================================================================== */
+@media (min-width: 992px) {
+  /* Standard section vertical padding reduced from 80px to 48px */
+  .section-padding {
+    padding: 48px 0 !important;
+  }
+
+  .section-padding-sm {
+    padding: 32px 0 !important;
+  }
+
+  /* Home Service Strip section reduced from 60px to 34px */
+  .service-strip-section {
+    padding: 34px 0 !important;
+  }
+
+  /* Why Choose section reduced from 80px to 48px */
+  .why-choose-section {
+    padding: 48px 0 !important;
+  }
+
+  /* Final CTA section reduced from 85px to 52px */
+  .final-cta-section {
+    padding: 52px 0 !important;
+  }
+
+  /* Ready CTA banner section */
+  .ready-cta-section {
+    padding: 24px 0 36px 0 !important;
+  }
+
+  /* Inner page hero banner slightly tightened */
+  .page-hero-banner {
+    padding: 68px 0 58px 0 !important;
+  }
+
+  /* Section headers bottom margin (reduces mb-5 from 48px to 32px) */
+  .section-padding > .container > .mb-5,
+  .why-choose-section > .container > .mb-5,
+  section > .container > .text-center.mb-5 {
+    margin-bottom: 2rem !important;
+  }
+
+  /* Gold divider tighter vertical margins inside section headers */
+  .gold-divider.mx-auto {
+    margin-top: 10px !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* About Page Section 1: Center eyebrow, heading, and divider in laptop view only */
+  .about-reason-header {
+    text-align: center !important;
+    max-width: 860px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 2.5rem !important;
+  }
+  .about-reason-header .gold-divider {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 10px !important;
+    margin-bottom: 18px !important;
+  }
+  .about-reason-header .section-title {
+    font-size: clamp(2rem, 2.6vw, 2.45rem);
+    line-height: 1.25;
+  }
+}
+
+/* ==========================================================================
+   COMPREHENSIVE MASTER RESPONSIVE SYSTEM (ALL VIEWPORTS & DEVICES)
+   Ensures flawless cross-device experience across Mobile, Tablet, Laptop,
+   Desktop, and Ultra-Wide screens.
+   ========================================================================== */
+
+/* 1. Global Responsive Safety Rules */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+img, picture, svg, video {
+  max-width: 100%;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+}
+
+/* 2. Extra Large & 4K Displays (>= 1400px) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1360px;
+  }
+  .page-hero-banner > .container {
+    max-width: 1360px;
+  }
+}
+
+/* 3. Laptops & Compact Desktops (992px to 1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-nav .nav-link {
+    padding-left: 0.45rem !important;
+    padding-right: 0.45rem !important;
+    font-size: 0.90rem !important;
+  }
+  .btn-nav-b2b {
+    padding: 6px 12px !important;
+    font-size: 0.82rem !important;
+  }
+  .btn-nav-enquire {
+    padding: 6px 14px !important;
+    font-size: 0.85rem !important;
+  }
+  .page-hero-title {
+    font-size: clamp(2rem, 3.2vw, 2.75rem);
+  }
+  .service-card,
+  .b2b-dest-card,
+  .destination-filter-item .card {
+    padding: 20px 16px;
+  }
+}
+
+/* 4. Tablets & iPad Screens (768px to 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .section-padding {
+    padding: 55px 0 !important;
+  }
+  .navbar-collapse {
+    background: #00072D;
+    padding: 20px;
+    border-radius: 14px;
+    margin-top: 12px;
+    border: 1px solid rgba(245, 185, 27, 0.25);
+  }
+  .navbar-nav .nav-link {
+    color: #FFFFFF !important;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .hero-vayd-box {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .about-visual-card img,
+  .editorial-image-frame img {
+    height: 380px !important;
+  }
+  .modal-dialog {
+    max-width: 92% !important;
+    margin: 1.5rem auto !important;
+  }
+  .ready-cta-box {
+    padding: 35px 28px !important;
+  }
+}
+
+/* 5. Mobile Devices (< 768px) */
+@media (max-width: 767.98px) {
+  .section-padding {
+    padding: 45px 0 !important;
+  }
+  .section-title {
+    font-size: clamp(1.6rem, 5.5vw, 1.95rem) !important;
+    line-height: 1.25 !important;
+  }
+  .section-subtitle {
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+  }
+  .section-eyebrow {
+    font-size: 0.72rem !important;
+    padding: 5px 14px !important;
+    letter-spacing: 1.5px !important;
+  }
+  .navbar-collapse {
+    background: #00072D;
+    padding: 20px 16px;
+    border-radius: 14px;
+    margin-top: 10px;
+    border: 1px solid rgba(245, 185, 27, 0.3);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+  }
+  .navbar-nav .nav-link {
+    color: #FFFFFF !important;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 1rem;
+  }
+  .nav-cta-group {
+    margin-top: 16px !important;
+  }
+  .btn-nav-enquire {
+    width: 100% !important;
+    text-align: center;
+    padding: 10px 16px;
+  }
+  .page-hero-banner {
+    padding: 45px 0 35px 0 !important;
+    min-height: auto !important;
+  }
+  .page-hero-title {
+    font-size: clamp(1.75rem, 6vw, 2.2rem) !important;
+    line-height: 1.2 !important;
+  }
+  .page-hero-banner p.lead {
+    font-size: 0.98rem !important;
+    line-height: 1.5 !important;
+  }
+  .page-hero-breadcrumb {
+    font-size: 0.78rem !important;
+    padding: 4px 10px !important;
+  }
+  .btn-gold,
+  .btn-navy,
+  .btn-whatsapp-hero {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .form-group-custom .form-control-custom,
+  .form-group-custom .form-select-custom {
+    font-size: 0.92rem;
+    padding: 10px 12px 10px 38px;
+  }
+  .modal-dialog {
+    margin: 0.75rem !important;
+  }
+  .modal-body {
+    padding: 16px !important;
+  }
+  .floating-whatsapp {
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 1.5rem !important;
+    bottom: 16px !important;
+    right: 16px !important;
+  }
+  .back-to-top {
+    bottom: 74px !important;
+    right: 18px !important;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .footer-bj {
+    padding-top: 45px !important;
+  }
+  .footer-bj .footer-brand-title {
+    font-size: 1.25rem !important;
+  }
+}
+
+/* 6. Extra Small Phones (< 400px - iPhone SE, Galaxy Fold, Small Androids) */
+@media (max-width: 400px) {
+  .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  .navbar-bj .brand-logo-img {
+    height: 44px !important;
+  }
+  .btn-nav-b2b-header {
+    padding: 4px 8px !important;
+    font-size: 0.75rem !important;
+  }
+  .section-title {
+    font-size: 1.55rem !important;
+  }
+  .hero-vayd-title {
+    font-size: 2.3rem !important;
+  }
+  .hero-vayd-subheading {
+    font-size: 1.15rem !important;
+  }
+  .b2b-form-card,
+  .hero-enquiry-card {
+    padding: 18px 12px !important;
+    border-radius: 14px !important;
+  }
+  .b2b-check-pill {
+    padding: 8px 12px !important;
+    font-size: 0.84rem !important;
+  }
+  .floating-trust-chip {
+    left: 8px !important;
+    right: 8px !important;
+    bottom: 8px !important;
+    padding: 8px 10px !important;
+    font-size: 0.75rem !important;
+  }
+}
 
 

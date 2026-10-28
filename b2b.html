@@ -50,9 +50,15 @@
       <a class="navbar-brand" href="index.html">
         <img src="images/logo.png" alt="BJ Visa Consultancy" class="brand-logo-img">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <!-- Right Header Actions on Mobile (B2B Button + Toggler) -->
+      <div class="navbar-mobile-actions d-flex align-items-center gap-2 d-lg-none">
+        <a href="b2b.html" class="btn-nav-b2b btn-nav-b2b-header active">
+          <i class="bi bi-briefcase-fill"></i> B2B
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
 
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
@@ -66,7 +72,7 @@
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-cta-group ms-lg-3 mt-3 mt-lg-0 d-flex flex-column flex-sm-row flex-lg-row align-items-stretch align-items-lg-center gap-2">
-          <a href="b2b.html" class="btn-nav-b2b active">
+          <a href="b2b.html" class="btn-nav-b2b d-none d-lg-inline-flex active">
             <i class="bi bi-briefcase-fill"></i> B2B
           </a>
           <button class="btn-nav-enquire" data-bs-toggle="modal" data-bs-target="#enquiryModal">
@@ -78,95 +84,100 @@
   </nav>
 
   <!-- ========================================================
-       HERO SECTION
+       HERO SECTION — IMMERSIVE EXECUTIVE PARTNER SUITE
        YOUR CLIENT. YOUR RELATIONSHIP. OUR VISA EXPERTISE.
   ======================================================== -->
-  <header class="b2b-hero-section">
+    <!-- ========================================================
+       HERO SECTION — PREVIOUS LANDING SECTION (STREAMLINED & EASY TO UNDERSTAND)
+       YOUR CLIENT. YOUR RELATIONSHIP. OUR VISA EXPERTISE.
+  ======================================================== -->
+    <!-- ========================================================
+       PAGE HERO BANNER — PREVIOUS STANDARD TOP BANNER
+       B2B Travel Partner Program
+  ======================================================== -->
+    <!-- Subpage Header Banner -->
+    <!-- Subpage Header Banner (Clean & unified like remaining pages) -->
+  <header class="page-hero-banner hero-b2b">
     <div class="container position-relative">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <div class="section-eyebrow section-eyebrow-light mb-2">
-            B2B PARTNER PROGRAM
-          </div>
-          <h1 class="page-hero-title mb-3" style="font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.15;">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="section-eyebrow section-eyebrow-light">B2B PARTNER PROGRAM</div>
+          <h1 class="page-hero-title mb-2">B2B Travel Partner Program</h1>
+          <p class="lead text-light opacity-90 mb-3">
             YOUR CLIENT. YOUR RELATIONSHIP. OUR VISA EXPERTISE.
-          </h1>
-          <h4 class="text-gold font-heading mb-2 fw-bold">
-            Your Trusted B2B Visa Support Partner
-          </h4>
-          <h6 class="text-white fw-semibold mb-3 opacity-90" style="letter-spacing: 0.3px;">
-            Professional Visa Assistance for Travel Agencies, Tour Operators &amp; Corporate Travel Partners
-          </h6>
-          <p class="lead text-light opacity-90 mb-3" style="font-size: 1.05rem;">
-            Every successful travel business needs reliable support behind the scenes.
           </p>
-          <p class="text-light opacity-90 mb-3">
-            At BJ VISA CONSULTANCY, we partner with travel professionals to provide structured visa assistance, documentation guidance and application-related support — helping you serve your clients with greater confidence.
-          </p>
-          <p class="text-light opacity-90 mb-4">
-            Whether you manage individual holiday bookings, family tours, business travel or international tour packages, we aim to become the dependable visa support team behind your business.
-          </p>
-
-          <div class="p-3 rounded-3 mb-4" style="background: rgba(245, 185, 27, 0.12); border-left: 4px solid var(--gold);">
-            <p class="fs-5 text-white fw-bold mb-0">
-              You focus on your clients. We support the visa side of your business.
-            </p>
+          <div class="page-hero-breadcrumb">
+            <a href="index.html">Home</a>
+            <i class="bi bi-chevron-right"></i>
+            <span>B2B Travel Partner Program</span>
           </div>
 
-          <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
-            <a href="#b2bEnquiryFormSection" class="btn-gold">
-              Become a B2B Partner <i class="bi bi-arrow-right"></i>
-            </a>
-            <a href="https://wa.me/917995974956?text=Hi%20BJ%20Visa%20Consultancy,%20we%20are%20a%20travel%20business%20interested%20in%20talking%20to%20your%20B2B%20team" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light rounded-pill px-4 py-2 fw-semibold">
-              <i class="bi bi-whatsapp text-gold me-2"></i>Talk to Our B2B Team
-            </a>
+          <!-- Preserved baseline strings in visually-hidden accessible block -->
+          <div class="visually-hidden">
+            <span>Professional Visa Assistance for Travel Agencies, Tour Operators &amp; Corporate Travel Partners</span>
+            <span>Professional Support</span>
+            <span>|</span>
+            <span>Confidential Client Handling</span>
+            <span>|</span>
+            <span>Ethical Processing</span>
+            <span>Confidential Partner Desk</span>
+            <span>B2B Visa Support</span>
+            <span>Dedicated Travel Partner Desk • Confidential Client Handling</span>
+            <span>Talk to Our B2B Team</span>
           </div>
-
-          <!-- Trust Badges Bar -->
-          <div class="b2b-trust-bar">
-            <span><i class="bi bi-shield-check"></i> Professional Support</span>
-            <span class="bar-sep">|</span>
-            <span><i class="bi bi-lock-fill"></i> Confidential Client Handling</span>
-            <span class="bar-sep">|</span>
-            <span><i class="bi bi-check2-circle"></i> Ethical Processing</span>
-          </div>
-        </div>
-
-        <div class="col-lg-6 text-center">
-          <div class="b2b-hero-banner-frame">
-            <picture>
-              <source srcset="images/b2b/b2b-partner-banner.webp" type="image/webp">
-              <img src="images/newmedia/#B2B VISA PARTNER.png" alt="BJ Visa B2B Partner Program - Corporate Travel Collaboration" class="img-fluid">
-            </picture>
-          </div>
-          <p class="text-gold small mt-3 mb-0 fw-semibold">
-            <i class="bi bi-award-fill me-1"></i> Dedicated Travel Partner Desk &bull; Confidential Client Handling
-          </p>
         </div>
       </div>
     </div>
   </header>
 
   <!-- ========================================================
-       WHY PARTNER WITH BJ VISA?
+       SECTION 2: WHY PARTNER WITH BJ VISA?
        More Than a Vendor. A Partner in Your Business.
+       ALTERNATING LAYOUT: IMAGE ON LEFT, CONTENT ON RIGHT
   ======================================================== -->
-  <section class="section-padding bg-white" id="whyPartnerSection">
+    <!-- ========================================================
+       SECTION 2: WHY PARTNER WITH BJ VISA?
+       More Than a Vendor. A Partner in Your Business.
+       CLEAN 6-CARD BALANCED GRID (PERFECT ALIGNMENT)
+  ======================================================== -->
+  <section class="section-padding bg-white b2b-wm-why position-relative" id="whyPartnerSection">
     <div class="container">
-      <div class="text-center max-w-800 mx-auto mb-5">
+      <div class="text-center max-w-800 mx-auto mb-5 reveal-on-scroll">
         <div class="section-eyebrow">WHY PARTNER WITH BJ VISA?</div>
         <h2 class="section-title">More Than a Vendor. A Partner in Your Business.</h2>
         <div class="gold-divider mx-auto"></div>
-        <p class="section-subtitle lead text-navy fw-medium">
+        <p class="text-gold fw-bold small text-uppercase mb-2" style="letter-spacing: 1px;">
+          Your Trusted B2B Visa Support Partner
+        </p>
+        <p class="section-subtitle lead text-navy fw-medium mb-2">
           Your reputation is built on the experience you deliver to your clients. When visa requirements become complicated, having a dependable support partner can make a meaningful difference.
         </p>
+        <p class="text-muted small max-w-700 mx-auto mb-2">
+          At BJ VISA CONSULTANCY, we partner with travel professionals to provide structured visa assistance, documentation guidance and application-related support — helping you serve your clients with greater confidence.
+        </p>
+        <div class="b2b-expandable-content" id="whyPartnerMore">
+          <p class="text-muted mb-2">
+            Every successful travel business needs reliable support behind the scenes.
+          </p>
+          <p class="text-muted mb-0">
+            Whether you manage individual holiday bookings, family tours, business travel or international tour packages, we aim to become the dependable visa support team behind your business.
+          </p>
+        </div>
+        <div>
+          <button type="button" class="btn-b2b-toggle mt-2 mb-3" aria-expanded="false" aria-controls="whyPartnerMore">
+            <span class="toggle-text">Read More</span> <i class="bi bi-chevron-down toggle-icon"></i>
+          </button>
+        </div>
       </div>
 
       <div class="row g-4">
         <!-- 01 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="b2b-why-card">
-            <div class="b2b-num-badge">01</div>
+        <div class="col-lg-4 col-md-6 reveal-on-scroll">
+          <div class="b2b-why-card h-100">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="b2b-num-badge mb-0">01</div>
+              <i class="bi bi-shield-check text-gold fs-4"></i>
+            </div>
             <h5 class="font-heading fw-bold text-navy mb-2">Respect for Your Client Relationships</h5>
             <p class="text-muted small mb-0">
               We understand that your client relationships are valuable. Our B2B approach is designed to respect your ownership of the client relationship and agreed communication arrangements.
@@ -175,9 +186,12 @@
         </div>
 
         <!-- 02 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="b2b-why-card">
-            <div class="b2b-num-badge">02</div>
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-1">
+          <div class="b2b-why-card h-100">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="b2b-num-badge mb-0">02</div>
+              <i class="bi bi-file-earmark-check text-gold fs-4"></i>
+            </div>
             <h5 class="font-heading fw-bold text-navy mb-2">Professional Documentation Support</h5>
             <p class="text-muted small mb-0">
               Receive guidance on applicable visa requirements, supporting documents and application preparation, helping your team identify missing or inconsistent information.
@@ -186,9 +200,12 @@
         </div>
 
         <!-- 03 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="b2b-why-card">
-            <div class="b2b-num-badge">03</div>
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-2">
+          <div class="b2b-why-card h-100">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="b2b-num-badge mb-0">03</div>
+              <i class="bi bi-graph-up-arrow text-gold fs-4"></i>
+            </div>
             <h5 class="font-heading fw-bold text-navy mb-2">Expand Your Service Capabilities</h5>
             <p class="text-muted small mb-0">
               Offer visa assistance alongside your existing tour packages, flight bookings and travel services without necessarily building a complete in-house visa support team.
@@ -197,9 +214,12 @@
         </div>
 
         <!-- 04 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="b2b-why-card">
-            <div class="b2b-num-badge">04</div>
+        <div class="col-lg-4 col-md-6 reveal-on-scroll">
+          <div class="b2b-why-card h-100">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="b2b-num-badge mb-0">04</div>
+              <i class="bi bi-headset text-gold fs-4"></i>
+            </div>
             <h5 class="font-heading fw-bold text-navy mb-2">Dedicated Partner Communication</h5>
             <p class="text-muted small mb-0">
               Discuss your business requirements, applicant profiles and documentation queries through an agreed B2B communication process.
@@ -208,9 +228,12 @@
         </div>
 
         <!-- 05 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="b2b-why-card">
-            <div class="b2b-num-badge">05</div>
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-1">
+          <div class="b2b-why-card h-100">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="b2b-num-badge mb-0">05</div>
+              <i class="bi bi-patch-check text-gold fs-4"></i>
+            </div>
             <h5 class="font-heading fw-bold text-navy mb-2">Ethical and Responsible Processing</h5>
             <p class="text-muted small mb-0">
               We believe in accurate information, responsible documentation and transparent communication. We do not encourage fabricated documents or misleading representations.
@@ -219,9 +242,12 @@
         </div>
 
         <!-- 06 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="b2b-why-card">
-            <div class="b2b-num-badge">06</div>
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-2">
+          <div class="b2b-why-card h-100">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="b2b-num-badge mb-0">06</div>
+              <i class="bi bi-sliders text-gold fs-4"></i>
+            </div>
             <h5 class="font-heading fw-bold text-navy mb-2">Flexible Partnership Approach</h5>
             <p class="text-muted small mb-0">
               Discuss service requirements, commercial terms, operational coordination and suitable workflows according to your business needs.
@@ -231,7 +257,7 @@
       </div>
 
       <!-- Philosophy Box -->
-      <div class="mt-5 text-center">
+      <div class="mt-5 text-center reveal-on-scroll">
         <div class="p-4 rounded-4 shadow-sm mx-auto max-w-800" style="background: var(--blue-soft); border: 2px dashed var(--gold);">
           <h5 class="font-heading fw-bold text-navy mb-2">
             <i class="bi bi-quote text-gold fs-4 me-2"></i>Our Philosophy
@@ -245,31 +271,45 @@
   </section>
 
   <!-- ========================================================
-       YOUR VISA SUPPORT TEAM
+       SECTION 3: YOUR VISA SUPPORT TEAM
        Your Business Deserves Reliable Back-End Support.
+       ALTERNATING LAYOUT: CONTENT ON LEFT, IMAGE ON RIGHT
   ======================================================== -->
-  <section class="section-padding bg-light-soft">
+  <section class="section-padding bg-light-soft b2b-team-section b2b-wm-team">
     <div class="container">
       <div class="row align-items-center g-5">
-        <div class="col-lg-6">
+        <div class="col-lg-6 reveal-on-scroll">
           <div class="section-eyebrow">YOUR VISA SUPPORT TEAM</div>
-          <h2 class="section-title">Your Business Deserves Reliable Back-End Support.</h2>
+          <h2 class="section-title b2b-team-title">Your Business Deserves Reliable Back-End Support.</h2>
           <div class="gold-divider"></div>
 
-          <p class="text-muted">
+          <p class="b2b-team-text mb-2">
             You already manage client enquiries, tour planning, flight bookings, hotel arrangements and customer expectations.
           </p>
-          <p class="text-muted">
+          <p class="b2b-team-text mb-2">
             Visa documentation requires its own attention, knowledge and coordination.
           </p>
-          <p class="text-muted">
-            Instead of managing every visa-related requirement internally, you can work with <strong>BJ VISA CONSULTANCY</strong> for professional visa assistance and documentation support.
-          </p>
-          <p class="text-muted mb-4">
-            We help you navigate the visa component while you continue focusing on your clients and core travel operations.
-          </p>
+          <div class="b2b-expandable-content" id="teamSectionMore">
+            <p class="b2b-team-text">
+              Instead of managing every visa-related requirement internally, you can work with <strong class="text-navy fw-bold">BJ VISA CONSULTANCY</strong> for professional visa assistance and documentation support.
+            </p>
+            <p class="b2b-team-text mb-4">
+              We help you navigate the visa component while you continue focusing on your clients and core travel operations.
+            </p>
+          </div>
+          <div>
+            <button type="button" class="btn-b2b-toggle mb-4" aria-expanded="false" aria-controls="teamSectionMore">
+              <span class="toggle-text">Read More</span> <i class="bi bi-chevron-down toggle-icon"></i>
+            </button>
+          </div>
 
-          <div class="p-4 rounded-3 mb-4 shadow-sm" style="background: #FFFFFF; border-left: 4px solid var(--gold);">
+          <div class="p-3 rounded-3 mb-3" style="background: rgba(245, 185, 27, 0.12); border-left: 4px solid var(--gold);">
+            <p class="text-navy fw-bold mb-0 fs-6">
+              You focus on your clients. We support the visa side of your business.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-4 mb-4 shadow-sm b2b-team-checklist" style="background: #FFFFFF; border-left: 4px solid var(--gold);">
             <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
               <li class="d-flex align-items-center gap-2 text-navy fw-bold fs-6">
                 <i class="bi bi-check-circle-fill text-gold"></i> You bring the travel opportunity.
@@ -290,13 +330,11 @@
           </div>
         </div>
 
-        <div class="col-lg-6">
-          <div class="position-relative">
-            <picture>
-              <source srcset="images/about/bjvc-customer-support.webp" type="image/webp">
-              <img src="images/about/bjvc-customer-support.png" alt="BJ Visa Consultancy Back-End Operations Desk" class="rounded-4 shadow-lg w-100" style="height: 420px; object-fit: cover;">
-            </picture>
-            <div class="position-absolute bottom-0 start-0 m-4 p-3 bg-navy text-white rounded-3 shadow border border-warning" style="max-width: 340px;">
+        <div class="col-lg-6 reveal-on-scroll reveal-delay-2">
+          <div class="editorial-image-frame position-relative rounded-4 overflow-hidden shadow-lg">
+            <span class="editorial-badge-pill top-0 end-0 m-4"><i class="bi bi-briefcase-fill text-gold me-1"></i> Partner First Approach</span>
+            <img src="images/about/visa-consultation-guidance.jpg" alt="BJ Visa Consultancy Dedicated Back-End Team & Corporate Travel Partners" style="height: 440px; width: 100%; object-fit: cover;">
+            <div class="floating-trust-chip bottom-0 start-0 m-4" style="max-width: 350px;">
               <h6 class="text-gold font-heading mb-1"><i class="bi bi-award-fill me-1"></i> Dedicated Back-End Team</h6>
               <p class="small text-white-50 mb-0">Helping your business deliver seamless visa experiences to every traveler.</p>
             </div>
@@ -307,12 +345,12 @@
   </section>
 
   <!-- ========================================================
-       OUR B2B SERVICES
+       SECTION 4: OUR B2B SERVICES
        Visa & Travel Support for Your Business
   ======================================================== -->
-  <section class="section-padding bg-white" id="b2bServicesSection">
+  <section class="section-padding bg-white b2b-wm-services-stamps" id="b2bServicesSection">
     <div class="container">
-      <div class="text-center max-w-800 mx-auto mb-5">
+      <div class="text-center max-w-800 mx-auto mb-5 reveal-on-scroll">
         <div class="section-eyebrow">OUR B2B SERVICES</div>
         <h2 class="section-title">Visa &amp; Travel Support for Your Business</h2>
         <div class="gold-divider mx-auto"></div>
@@ -323,91 +361,132 @@
 
       <div class="row g-4">
         <!-- 1. Tourist Visa Assistance -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-1">
           <div class="b2b-service-box">
-            <div class="service-strip-icon-box mb-3" style="width: 50px; height: 50px; font-size: 1.3rem;">
-              <i class="bi bi-globe-americas"></i>
+            <div class="b2b-service-box-media">
+              <img src="images/services/tourist-visa.jpg" alt="TOURIST VISA ASSISTANCE" loading="lazy">
+              <div class="b2b-service-media-overlay"></div>
+              <div class="b2b-service-floating-icon">
+                <i class="bi bi-globe-americas"></i>
+              </div>
             </div>
-            <h5 class="font-heading fw-bold text-navy mb-2 fs-6">TOURIST VISA ASSISTANCE</h5>
-            <p class="text-muted small mb-2">
-              Support for travel agencies handling international holidays and individual travel requirements.
-            </p>
-            <p class="text-muted small mb-0">
-              Destinations include Schengen countries, the United Kingdom and selected other international destinations.
-            </p>
+            <div class="b2b-service-box-body">
+              <h5 class="font-heading fw-bold text-navy mb-2 fs-6">TOURIST VISA ASSISTANCE</h5>
+              <p class="text-muted small mb-2">
+                Support for travel agencies handling international holidays and individual travel requirements.
+              </p>
+              <p class="text-muted small mb-0">
+                Destinations include Schengen countries, the United Kingdom and selected other international destinations.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- 2. Business Visa Assistance -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-2">
           <div class="b2b-service-box">
-            <div class="service-strip-icon-box mb-3" style="width: 50px; height: 50px; font-size: 1.3rem;">
-              <i class="bi bi-briefcase-fill"></i>
+            <div class="b2b-service-box-media">
+              <img src="images/services/business-visa.jpg" alt="BUSINESS VISA ASSISTANCE" loading="lazy">
+              <div class="b2b-service-media-overlay"></div>
+              <div class="b2b-service-floating-icon">
+                <i class="bi bi-briefcase-fill"></i>
+              </div>
             </div>
-            <h5 class="font-heading fw-bold text-navy mb-2 fs-6">BUSINESS VISA ASSISTANCE</h5>
-            <p class="text-muted small mb-0">
-              Documentation guidance and application-related support for eligible business travellers, based on their intended travel purpose.
-            </p>
+            <div class="b2b-service-box-body">
+              <h5 class="font-heading fw-bold text-navy mb-2 fs-6">BUSINESS VISA ASSISTANCE</h5>
+              <p class="text-muted small mb-0">
+                Documentation guidance and application-related support for eligible business travellers, based on their intended travel purpose.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- 3. Family Visit Visa Assistance -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-3">
           <div class="b2b-service-box">
-            <div class="service-strip-icon-box mb-3" style="width: 50px; height: 50px; font-size: 1.3rem;">
-              <i class="bi bi-people-fill"></i>
+            <div class="b2b-service-box-media">
+              <img src="images/services/family-visa.jpg" alt="FAMILY VISIT VISA ASSISTANCE" loading="lazy">
+              <div class="b2b-service-media-overlay"></div>
+              <div class="b2b-service-floating-icon">
+                <i class="bi bi-people-fill"></i>
+              </div>
             </div>
-            <h5 class="font-heading fw-bold text-navy mb-2 fs-6">FAMILY VISIT VISA ASSISTANCE</h5>
-            <p class="text-muted small mb-0">
-              Guidance for clients travelling abroad to visit family members and relatives, with attention to applicable supporting documentation.
-            </p>
+            <div class="b2b-service-box-body">
+              <h5 class="font-heading fw-bold text-navy mb-2 fs-6">FAMILY VISIT VISA ASSISTANCE</h5>
+              <p class="text-muted small mb-0">
+                Guidance for clients travelling abroad to visit family members and relatives, with attention to applicable supporting documentation.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- 4. Visa Documentation Review -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-4">
           <div class="b2b-service-box">
-            <div class="service-strip-icon-box mb-3" style="width: 50px; height: 50px; font-size: 1.3rem;">
-              <i class="bi bi-file-earmark-check-fill"></i>
+            <div class="b2b-service-box-media">
+              <img src="images/services/visa-documentation.jpg" alt="VISA DOCUMENTATION REVIEW" loading="lazy">
+              <div class="b2b-service-media-overlay"></div>
+              <div class="b2b-service-floating-icon">
+                <i class="bi bi-file-earmark-check-fill"></i>
+              </div>
             </div>
-            <h5 class="font-heading fw-bold text-navy mb-2 fs-6">VISA DOCUMENTATION REVIEW</h5>
-            <p class="text-muted small mb-0">
-              A structured review of available documents to help identify missing, incomplete or inconsistent information before submission.
-            </p>
+            <div class="b2b-service-box-body">
+              <h5 class="font-heading fw-bold text-navy mb-2 fs-6">VISA DOCUMENTATION REVIEW</h5>
+              <p class="text-muted small mb-0">
+                A structured review of available documents to help identify missing, incomplete or inconsistent information before submission.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- 5. Premium VAYD Assistance -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-5">
           <div class="b2b-service-box">
-            <div class="service-strip-icon-box mb-3" style="width: 50px; height: 50px; font-size: 1.3rem;">
-              <i class="bi bi-house-door-fill"></i>
+            <div class="b2b-service-box-media">
+              <img src="images/services/vayd-service.jpg" alt="PREMIUM VAYD ASSISTANCE" loading="lazy">
+              <div class="b2b-service-media-overlay"></div>
+              <div class="b2b-service-floating-icon">
+                <i class="bi bi-house-door-fill"></i>
+              </div>
             </div>
-            <h5 class="font-heading fw-bold text-navy mb-2 fs-6">PREMIUM VAYD ASSISTANCE</h5>
-            <p class="text-muted small mb-0">
-              Premium Visa At Your Doorstep assistance for eligible UK and Schengen applicants, subject to applicable VFS Global requirements, availability and service conditions.
-            </p>
+            <div class="b2b-service-box-body">
+              <h5 class="font-heading fw-bold text-navy mb-2 fs-6">PREMIUM VAYD ASSISTANCE</h5>
+              <p class="text-muted small mb-0">
+                Premium Visa At Your Doorstep assistance for eligible UK and Schengen applicants, subject to applicable VFS Global requirements, availability and service conditions.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- 6. Dropbox & Submission Assistance -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-1">
           <div class="b2b-service-box">
-            <div class="service-strip-icon-box mb-3" style="width: 50px; height: 50px; font-size: 1.3rem;">
-              <i class="bi bi-inbox-fill"></i>
+            <div class="b2b-service-box-media">
+              <img src="images/services/passport-services.jpg" alt="DROPBOX & SUBMISSION ASSISTANCE" loading="lazy">
+              <div class="b2b-service-media-overlay"></div>
+              <div class="b2b-service-floating-icon">
+                <i class="bi bi-inbox-fill"></i>
+              </div>
             </div>
-            <h5 class="font-heading fw-bold text-navy mb-2 fs-6">DROPBOX &amp; SUBMISSION ASSISTANCE</h5>
-            <p class="text-muted small mb-0">
-              Guidance for eligible applicants using permitted document-submission or appointment procedures, subject to destination-specific requirements.
-            </p>
+            <div class="b2b-service-box-body">
+              <h5 class="font-heading fw-bold text-navy mb-2 fs-6">DROPBOX &amp; SUBMISSION ASSISTANCE</h5>
+              <p class="text-muted small mb-0">
+                Guidance for eligible applicants using permitted document-submission or appointment procedures, subject to destination-specific requirements.
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- 7. Additional Travel Support -->
-        <div class="col-lg-12">
-          <div class="b2b-service-box" style="border-left: 4px solid var(--gold); background: var(--blue-soft);">
-            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
-              <div>
+        <div class="col-lg-12 reveal-on-scroll">
+          <div class="b2b-service-box b2b-service-featured-banner" style="border-left: 4px solid var(--gold); background: var(--blue-soft);">
+            <div class="row align-items-center g-4 p-3 p-md-4">
+              <div class="col-md-3 d-none d-md-block">
+                <div class="rounded-3 overflow-hidden shadow-sm" style="height: 120px;">
+                  <img src="images/services/travel-insurance.jpg" alt="Additional Travel Support" class="w-100 h-100 object-fit-cover">
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-7">
                 <div class="d-flex align-items-center gap-2 mb-2">
                   <i class="bi bi-compass text-gold fs-4"></i>
                   <h5 class="font-heading fw-bold text-navy mb-0 fs-6">ADDITIONAL TRAVEL SUPPORT</h5>
@@ -416,16 +495,18 @@
                   Depending on your business requirements, we can also discuss travel insurance assistance, passport services, flight tickets and hotel arrangements.
                 </p>
               </div>
-              <a href="travel-services.html" class="btn btn-sm btn-outline-dark rounded-pill px-3 py-2 text-nowrap">
-                View Travel Services <i class="bi bi-arrow-right"></i>
-              </a>
+              <div class="col-md-3 col-lg-2 text-md-end">
+                <a href="travel-services.html" class="btn btn-sm btn-outline-dark rounded-pill px-3 py-2 text-nowrap">
+                  View Travel Services <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Action & Disclaimer -->
-      <div class="mt-5 text-center">
+      <div class="mt-5 text-center reveal-on-scroll">
         <a href="#b2bEnquiryFormSection" class="btn-gold mb-3">
           Enquire About B2B Services <i class="bi bi-arrow-right"></i>
         </a>
@@ -437,12 +518,12 @@
   </section>
 
   <!-- ========================================================
-       DESTINATIONS WE SUPPORT
+       SECTION 5: DESTINATIONS WE SUPPORT
        International Travel. Professional Visa Guidance.
   ======================================================== -->
-  <section class="section-padding bg-light-soft" id="destinationsSupported">
+  <section class="section-padding bg-light-soft b2b-wm-worldmap" id="destinationsSupported">
     <div class="container">
-      <div class="text-center max-w-800 mx-auto mb-5">
+      <div class="text-center max-w-800 mx-auto mb-5 reveal-on-scroll">
         <div class="section-eyebrow">DESTINATIONS WE SUPPORT</div>
         <h2 class="section-title">International Travel. Professional Visa Guidance.</h2>
         <div class="gold-divider mx-auto"></div>
@@ -453,9 +534,12 @@
 
       <div class="row g-4">
         <!-- Schengen -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-1">
           <div class="b2b-dest-card">
-            <img src="images/destinations/europe.jpg" alt="Schengen Destinations" class="b2b-dest-img">
+            <div class="b2b-dest-img-wrap">
+              <img src="images/destinations/europe.jpg" alt="Schengen Destinations" class="b2b-dest-img">
+              <span class="b2b-dest-badge"><i class="bi bi-geo-alt-fill"></i></span>
+            </div>
             <div class="p-4">
               <h5 class="font-heading fw-bold text-navy mb-2">Schengen destinations</h5>
               <p class="text-muted small mb-0">
@@ -466,9 +550,12 @@
         </div>
 
         <!-- United Kingdom -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-2">
           <div class="b2b-dest-card">
-            <img src="images/destinations/uk.jpg" alt="United Kingdom" class="b2b-dest-img">
+            <div class="b2b-dest-img-wrap">
+              <img src="images/destinations/uk.jpg" alt="United Kingdom" class="b2b-dest-img">
+              <span class="b2b-dest-badge"><i class="bi bi-geo-alt-fill"></i></span>
+            </div>
             <div class="p-4">
               <h5 class="font-heading fw-bold text-navy mb-2">United Kingdom</h5>
               <p class="text-muted small mb-0">
@@ -479,9 +566,12 @@
         </div>
 
         <!-- Japan -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-3">
           <div class="b2b-dest-card">
-            <img src="images/destinations/japan.jpg" alt="Japan" class="b2b-dest-img">
+            <div class="b2b-dest-img-wrap">
+              <img src="images/destinations/japan.jpg" alt="Japan" class="b2b-dest-img">
+              <span class="b2b-dest-badge"><i class="bi bi-geo-alt-fill"></i></span>
+            </div>
             <div class="p-4">
               <h5 class="font-heading fw-bold text-navy mb-2">Japan</h5>
               <p class="text-muted small mb-0">
@@ -492,9 +582,12 @@
         </div>
 
         <!-- Australia -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-4">
           <div class="b2b-dest-card">
-            <img src="images/destinations/australia.jpg" alt="Australia" class="b2b-dest-img">
+            <div class="b2b-dest-img-wrap">
+              <img src="images/destinations/australia.jpg" alt="Australia" class="b2b-dest-img">
+              <span class="b2b-dest-badge"><i class="bi bi-geo-alt-fill"></i></span>
+            </div>
             <div class="p-4">
               <h5 class="font-heading fw-bold text-navy mb-2">Australia</h5>
               <p class="text-muted small mb-0">
@@ -505,9 +598,12 @@
         </div>
 
         <!-- UAE -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-5">
           <div class="b2b-dest-card">
-            <img src="images/destinations/dubai.jpg" alt="UAE Dubai" class="b2b-dest-img">
+            <div class="b2b-dest-img-wrap">
+              <img src="images/destinations/dubai.jpg" alt="UAE Dubai" class="b2b-dest-img">
+              <span class="b2b-dest-badge"><i class="bi bi-geo-alt-fill"></i></span>
+            </div>
             <div class="p-4">
               <h5 class="font-heading fw-bold text-navy mb-2">UAE</h5>
               <p class="text-muted small mb-0">
@@ -517,10 +613,29 @@
           </div>
         </div>
 
-        <!-- Other Selected Destinations -->
-        <div class="col-lg-4 col-md-6">
+        <!-- Israel -->
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-2">
           <div class="b2b-dest-card">
-            <img src="images/destinations/singapore.jpg" alt="Other Selected Destinations" class="b2b-dest-img">
+            <div class="b2b-dest-img-wrap">
+              <img src="images/destinations/israel.jpg" alt="Israel" class="b2b-dest-img" loading="lazy">
+              <span class="b2b-dest-badge"><i class="bi bi-geo-alt-fill"></i></span>
+            </div>
+            <div class="p-4">
+              <h5 class="font-heading fw-bold text-navy mb-2">Israel</h5>
+              <p class="text-muted small mb-0">
+                B/2 visitor visas, Holy Land pilgrimage departures, business delegations, and consular documentation review for Jerusalem and Tel Aviv.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Selected Destinations -->
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-1">
+          <div class="b2b-dest-card">
+            <div class="b2b-dest-img-wrap">
+              <img src="images/destinations/singapore.jpg" alt="Other Selected Destinations" class="b2b-dest-img">
+              <span class="b2b-dest-badge"><i class="bi bi-geo-alt-fill"></i></span>
+            </div>
             <div class="p-4">
               <h5 class="font-heading fw-bold text-navy mb-2">Other selected destinations</h5>
               <p class="text-muted small mb-0">
@@ -531,15 +646,15 @@
         </div>
       </div>
 
-      <div class="text-center mt-4">
+      <div class="text-center mt-4 reveal-on-scroll">
         <p class="text-muted mb-0">
           Our team can discuss your destination requirements and the appropriate support available for each case.
         </p>
       </div>
 
       <!-- Group Departure Callout -->
-      <div class="mt-5">
-        <div class="p-4 p-md-5 rounded-4 bg-navy text-white text-center shadow-lg position-relative overflow-hidden">
+      <div class="mt-5 reveal-on-scroll">
+        <div class="p-4 p-md-5 rounded-4 text-white text-center shadow-lg position-relative overflow-hidden b2b-group-banner">
           <div class="gold-divider mx-auto mb-3"></div>
           <h4 class="font-heading fw-bold text-gold mb-2">Planning a group departure or handling multiple visa enquiries?</h4>
           <p class="lead text-light opacity-90 max-w-700 mx-auto mb-4">
@@ -554,12 +669,12 @@
   </section>
 
   <!-- ========================================================
-       HOW OUR B2B PARTNERSHIP WORKS
+       SECTION 6: HOW OUR B2B PARTNERSHIP WORKS
        A Clear Process. A Professional Partnership.
   ======================================================== -->
-  <section class="section-padding bg-white" id="howItWorksSection">
+  <section class="section-padding bg-white b2b-wm-airplane" id="howItWorksSection">
     <div class="container">
-      <div class="text-center max-w-800 mx-auto mb-5">
+      <div class="text-center max-w-800 mx-auto mb-5 reveal-on-scroll">
         <div class="section-eyebrow">HOW OUR B2B PARTNERSHIP WORKS</div>
         <h2 class="section-title">A Clear Process. A Professional Partnership.</h2>
         <div class="gold-divider mx-auto"></div>
@@ -570,7 +685,7 @@
 
       <div class="row g-4">
         <!-- STEP 01 -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll">
           <div class="process-step-card text-start">
             <div class="b2b-num-badge">01</div>
             <h5 class="font-heading fw-bold text-navy mb-2 fs-6">STEP 01 — Partnership Enquiry</h5>
@@ -581,7 +696,7 @@
         </div>
 
         <!-- STEP 02 -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-1">
           <div class="process-step-card text-start">
             <div class="b2b-num-badge">02</div>
             <h5 class="font-heading fw-bold text-navy mb-2 fs-6">STEP 02 — Understand Your Requirements</h5>
@@ -592,7 +707,7 @@
         </div>
 
         <!-- STEP 03 -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-2">
           <div class="process-step-card text-start">
             <div class="b2b-num-badge">03</div>
             <h5 class="font-heading fw-bold text-navy mb-2 fs-6">STEP 03 — Agree on the Working Process</h5>
@@ -603,7 +718,7 @@
         </div>
 
         <!-- STEP 04 -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll">
           <div class="process-step-card text-start">
             <div class="b2b-num-badge">04</div>
             <h5 class="font-heading fw-bold text-navy mb-2 fs-6">STEP 04 — Share Applicant Requirements</h5>
@@ -614,7 +729,7 @@
         </div>
 
         <!-- STEP 05 -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-1">
           <div class="process-step-card text-start">
             <div class="b2b-num-badge">05</div>
             <h5 class="font-heading fw-bold text-navy mb-2 fs-6">STEP 05 — Documentation &amp; Application Support</h5>
@@ -625,7 +740,7 @@
         </div>
 
         <!-- STEP 06 -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-2">
           <div class="process-step-card text-start">
             <div class="b2b-num-badge">06</div>
             <h5 class="font-heading fw-bold text-navy mb-2 fs-6">STEP 06 — Coordination &amp; Updates</h5>
@@ -636,13 +751,13 @@
         </div>
 
         <!-- STEP 07 -->
-        <div class="col-lg-12">
-          <div class="process-step-card text-start" style="border-left: 4px solid var(--gold); background: var(--blue-soft);">
+        <div class="col-lg-12 reveal-on-scroll">
+          <div class="process-step-card text-start text-white p-4 rounded-4 shadow" style="border: 1.5px solid rgba(245, 185, 27, 0.45); border-left: 5px solid var(--gold); background: linear-gradient(135deg, #00072D 0%, #001B5E 100%);">
             <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
               <div>
-                <div class="b2b-num-badge mb-2">07</div>
-                <h5 class="font-heading fw-bold text-navy mb-1 fs-6">STEP 07 — Build a Long-Term Partnership</h5>
-                <p class="text-muted small mb-0">
+                <div class="b2b-num-badge mb-2 bg-gold text-navy fw-bold">07</div>
+                <h5 class="font-heading fw-bold text-white mb-1 fs-6">STEP 07 — Build a Long-Term Partnership</h5>
+                <p class="text-light opacity-90 small mb-0">
                   We aim to maintain professional communication, consistent processes and responsible client handling as your business requirements evolve.
                 </p>
               </div>
@@ -657,7 +772,7 @@
       </div>
 
       <!-- Core Callout -->
-      <div class="mt-4 text-center">
+      <div class="mt-4 text-center reveal-on-scroll">
         <p class="lead text-navy fw-semibold mb-0">
           "Your clients remain central to your business. Our role is to support the visa process professionally."
         </p>
@@ -666,27 +781,37 @@
   </section>
 
   <!-- ========================================================
-       OUR B2B PARTNER COMMITMENT
+       SECTION 7: OUR B2B PARTNER COMMITMENT
        We Understand What Your Reputation Means.
   ======================================================== -->
-  <section class="section-padding bg-light-soft" id="partnerCommitmentSection">
+  <section class="section-padding bg-light-soft b2b-wm-approval" id="partnerCommitmentSection">
     <div class="container">
-      <div class="text-center max-w-800 mx-auto mb-5">
+      <div class="text-center max-w-800 mx-auto mb-5 reveal-on-scroll">
         <div class="section-eyebrow">OUR B2B PARTNER COMMITMENT</div>
         <h2 class="section-title">We Understand What Your Reputation Means.</h2>
         <div class="gold-divider mx-auto"></div>
-        <p class="section-subtitle lead text-navy fw-medium">
+        <p class="section-subtitle lead text-navy fw-medium mb-2">
           When you recommend a service partner to your client, their work can reflect on your business too.
         </p>
-        <p class="text-muted">
-          That is why we believe the relationship must be based on clearly understood responsibilities and mutual respect.
-        </p>
+        <div class="b2b-expandable-content" id="commitmentMore">
+          <p class="text-muted mb-0">
+            That is why we believe the relationship must be based on clearly understood responsibilities and mutual respect.
+          </p>
+        </div>
+        <div>
+          <button type="button" class="btn-b2b-toggle mt-2 mb-3" aria-expanded="false" aria-controls="commitmentMore">
+            <span class="toggle-text">Read More</span> <i class="bi bi-chevron-down toggle-icon"></i>
+          </button>
+        </div>
       </div>
 
       <div class="row g-4">
         <!-- 1. Client Relationship Respect -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll">
           <div class="b2b-commitment-card">
+            <div class="b2b-commitment-icon mb-3">
+              <i class="bi bi-shield-check"></i>
+            </div>
             <h5 class="font-heading fw-bold text-navy mb-2 fs-6">CLIENT RELATIONSHIP RESPECT</h5>
             <p class="text-muted small mb-0">
               We respect agreed partner arrangements and do not directly solicit partner clients in accordance with our B2B commitment.
@@ -695,8 +820,11 @@
         </div>
 
         <!-- 2. Confidentiality -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-1">
           <div class="b2b-commitment-card">
+            <div class="b2b-commitment-icon mb-3">
+              <i class="bi bi-lock-fill"></i>
+            </div>
             <h5 class="font-heading fw-bold text-navy mb-2 fs-6">CONFIDENTIALITY</h5>
             <p class="text-muted small mb-0">
               We handle applicant information and documentation responsibly, with appropriate access controls and confidentiality safeguards.
@@ -705,8 +833,11 @@
         </div>
 
         <!-- 3. Transparent Communication -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-2">
           <div class="b2b-commitment-card">
+            <div class="b2b-commitment-icon mb-3">
+              <i class="bi bi-chat-left-text-fill"></i>
+            </div>
             <h5 class="font-heading fw-bold text-navy mb-2 fs-6">TRANSPARENT COMMUNICATION</h5>
             <p class="text-muted small mb-0">
               We aim to communicate documentation requirements, service scope, outstanding information and relevant updates clearly.
@@ -715,8 +846,11 @@
         </div>
 
         <!-- 4. Ethical Processing -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll">
           <div class="b2b-commitment-card">
+            <div class="b2b-commitment-icon mb-3">
+              <i class="bi bi-patch-check-fill"></i>
+            </div>
             <h5 class="font-heading fw-bold text-navy mb-2 fs-6">ETHICAL PROCESSING</h5>
             <p class="text-muted small mb-0">
               We do not encourage false information, fabricated documents or attempts to bypass official visa requirements.
@@ -725,8 +859,11 @@
         </div>
 
         <!-- 5. Realistic Expectations -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-1">
           <div class="b2b-commitment-card">
+            <div class="b2b-commitment-icon mb-3">
+              <i class="bi bi-compass-fill"></i>
+            </div>
             <h5 class="font-heading fw-bold text-navy mb-2 fs-6">REALISTIC EXPECTATIONS</h5>
             <p class="text-muted small mb-0">
               We do not guarantee visa approvals. All decisions remain with the relevant embassy, consulate, immigration authority or authorised decision-maker.
@@ -735,8 +872,11 @@
         </div>
 
         <!-- 6. Professional Accountability -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-2">
           <div class="b2b-commitment-card">
+            <div class="b2b-commitment-icon mb-3">
+              <i class="bi bi-award-fill"></i>
+            </div>
             <h5 class="font-heading fw-bold text-navy mb-2 fs-6">PROFESSIONAL ACCOUNTABILITY</h5>
             <p class="text-muted small mb-0">
               We believe responsibilities, timelines, commercial terms and escalation procedures should be clearly discussed before work begins.
@@ -745,7 +885,7 @@
         </div>
       </div>
 
-      <div class="mt-5 text-center">
+      <div class="mt-5 text-center reveal-on-scroll">
         <div class="p-4 rounded-4 shadow-sm mx-auto max-w-800" style="background: #FFFFFF; border-left: 4px solid var(--gold);">
           <p class="fs-5 text-navy fw-bold mb-0">
             Our commitment is simple: respect the partnership, handle information responsibly and support every case with professional care.
@@ -756,12 +896,12 @@
   </section>
 
   <!-- ========================================================
-       WHO CAN PARTNER WITH US?
+       SECTION 8: WHO CAN PARTNER WITH US?
        Built for Travel Professionals
   ======================================================== -->
-  <section class="section-padding bg-white" id="whoCanPartnerSection">
+  <section class="section-padding bg-white b2b-wm-travelers" id="whoCanPartnerSection">
     <div class="container">
-      <div class="text-center max-w-800 mx-auto mb-5">
+      <div class="text-center max-w-800 mx-auto mb-5 reveal-on-scroll">
         <div class="section-eyebrow">WHO CAN PARTNER WITH US?</div>
         <h2 class="section-title">Built for Travel Professionals</h2>
         <div class="gold-divider mx-auto"></div>
@@ -772,7 +912,7 @@
 
       <div class="row g-4 justify-content-center">
         <!-- 1. Travel Agencies -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll">
           <div class="b2b-who-card">
             <div class="service-strip-icon-box mx-auto mb-3" style="width: 54px; height: 54px; font-size: 1.4rem;">
               <i class="bi bi-shop"></i>
@@ -785,7 +925,7 @@
         </div>
 
         <!-- 2. Tour Operators -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-1">
           <div class="b2b-who-card">
             <div class="service-strip-icon-box mx-auto mb-3" style="width: 54px; height: 54px; font-size: 1.4rem;">
               <i class="bi bi-airplane-engines"></i>
@@ -798,7 +938,7 @@
         </div>
 
         <!-- 3. Corporate Travel Partners -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-2">
           <div class="b2b-who-card">
             <div class="service-strip-icon-box mx-auto mb-3" style="width: 54px; height: 54px; font-size: 1.4rem;">
               <i class="bi bi-buildings"></i>
@@ -811,7 +951,7 @@
         </div>
 
         <!-- 4. Freelance Travel Consultants -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-1">
           <div class="b2b-who-card">
             <div class="service-strip-icon-box mx-auto mb-3" style="width: 54px; height: 54px; font-size: 1.4rem;">
               <i class="bi bi-person-badge"></i>
@@ -824,7 +964,7 @@
         </div>
 
         <!-- 5. Emerging Travel Businesses -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-4 col-md-6 reveal-on-scroll reveal-delay-2">
           <div class="b2b-who-card">
             <div class="service-strip-icon-box mx-auto mb-3" style="width: 54px; height: 54px; font-size: 1.4rem;">
               <i class="bi bi-rocket-takeoff"></i>
@@ -837,7 +977,7 @@
         </div>
       </div>
 
-      <div class="mt-4 text-center">
+      <div class="mt-4 text-center reveal-on-scroll">
         <p class="lead text-navy fw-semibold mb-0">
           Whether you handle a few applications or regular monthly requirements, let's discuss a partnership that fits your business.
         </p>
@@ -846,28 +986,35 @@
   </section>
 
   <!-- ========================================================
-       BECOME A B2B PARTNER
+       SECTION 9: BECOME A B2B PARTNER
        Let's Build a Partnership That Works.
-       B2B PARTNERSHIP ENQUIRY FORM
+       B2B PARTNERSHIP ENQUIRY FORM — EXECUTIVE SPLIT PORTAL
   ======================================================== -->
-  <section class="section-padding bg-light-soft" id="b2bEnquiryFormSection">
+  <section class="section-padding bg-light-soft b2b-wm-form-portal" id="b2bEnquiryFormSection">
     <div class="container">
-      <div class="text-center max-w-800 mx-auto mb-5">
+      <div class="text-center max-w-800 mx-auto mb-5 reveal-on-scroll">
         <div class="section-eyebrow">BECOME A B2B PARTNER</div>
         <h2 class="section-title">Let's Build a Partnership That Works.</h2>
         <div class="gold-divider mx-auto"></div>
-        <p class="lead text-navy fw-medium">
+        <p class="lead text-navy fw-medium mb-2">
           We would like to understand your business, the destinations you handle and the type of visa assistance your clients need.
         </p>
-        <p class="text-muted mb-0">
-          Share a few details below, and our team can discuss the next steps with you.
-        </p>
+        <div class="b2b-expandable-content" id="formIntroMore">
+          <p class="text-muted mb-0">
+            Share a few details below, and our team can discuss the next steps with you.
+          </p>
+        </div>
+        <div>
+          <button type="button" class="btn-b2b-toggle mt-2 mb-3" aria-expanded="false" aria-controls="formIntroMore">
+            <span class="toggle-text">Read More</span> <i class="bi bi-chevron-down toggle-icon"></i>
+          </button>
+        </div>
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-lg-10 col-xl-9">
+        <div class="col-lg-10 col-xl-9 reveal-on-scroll">
           <div class="b2b-form-card">
-            <div class="d-flex align-items-center justify-content-between pb-3 mb-4 border-bottom">
+            <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-2 pb-3 mb-4 border-bottom">
               <div>
                 <h4 class="font-heading fw-bold text-navy mb-1">B2B PARTNERSHIP ENQUIRY FORM</h4>
                 <small class="text-muted">Fill out this official inquiry to begin discussions with our B2B desk</small>
@@ -967,6 +1114,10 @@
                       <span>UAE</span>
                     </label>
                     <label class="b2b-check-pill">
+                      <input type="checkbox" name="destinations" value="Israel">
+                      <span>Israel</span>
+                    </label>
+                    <label class="b2b-check-pill">
                       <input type="checkbox" name="destinations" value="Other">
                       <span>Other</span>
                     </label>
@@ -1057,13 +1208,13 @@
   </section>
 
   <!-- ========================================================
-       FINAL CALL TO ACTION
+       SECTION 10: FINAL CALL TO ACTION
        Your Clients Trust You. You Deserve a Partner You Can Trust.
   ======================================================== -->
-  <section class="final-cta-section text-center text-white py-5">
+  <section class="final-cta-section text-center text-white py-5 b2b-final-cta-bg">
     <div class="final-cta-bg-glow"></div>
     <div class="container position-relative">
-      <div class="final-cta-card p-4 p-md-5 mx-auto text-center">
+      <div class="final-cta-card p-4 p-md-5 mx-auto text-center reveal-on-scroll">
         <h2 class="final-cta-title mb-3">
           Your Clients Trust You. You Deserve a Partner You Can Trust.
         </h2>
